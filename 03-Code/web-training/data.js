@@ -440,7 +440,7 @@ const AGRIZEN_DATA = {
     ]
   },
   "scriptPH": {
-    "title": "BẢNG KỊCH BẢN TƯ VẤN BỘ 3: PH14 + RƯỚC ĐÒNG + VÔ GẠO\n(Chính sách: Mua Combo 3 bộ [RĐ + VG + PH14] tặng 1 lon Rước Đòng – Phun chung 1 bình)",
+    "title": "BẢNG KỊCH BẢN TƯ VẤN BỘ 3: PH14 + RƯỚC ĐÒNG + VÔ GẠO\n(Chính sách: 1 Combo 3 lon tặng 1 lon Rước Đòng [Nhận 4 lon] – 2 Combo 6 lon tặng 2 lon Rước Đòng [Nhận 8 lon])",
     "noticeTitle": "3 Điểm Cốt Lõi Về Bộ 3 & PH14 Dành Cho Tư Vấn Viên:",
     "notes": [
       "1. PH14 LÀ CHẤT DẪN BẮT BUỘC PHẢI CÓ MẶT TRONG TẤT CẢ CÁC GIAI ĐOẠN: Từ đẻ nhánh, làm đòng đến trổ chín đều phải có PH14 đi kèm.",
@@ -449,7 +449,7 @@ const AGRIZEN_DATA = {
     ],
     "headers": [
       "Bước",
-      "Phân loại cửa tiếp cận",
+      "Phân loại cử tiếp cận",
       "Tại sao PH14 CẤP THIẾT & Kết quả đạt được",
       "Cách pha chung & Lời thoại chốt đơn theo Bảng Giá Mới"
     ],
@@ -461,34 +461,34 @@ const AGRIZEN_DATA = {
         "handling": "• 3 CÂU HỎI THĂM RUỘNG:\n1. \"Ruộng mình sạ giống gì, bữa nay lúa được bao nhiêu ngày rồi chú?\"\n2. \"Nhổ thử bụi lúa lên coi rễ cám trắng hay bị nghẹt phèn đen đầu rễ vậy chú?\"\n3. \"Đợt này rải phân NPK lúa bắt nhanh không chú, có bị hao phân không?\"\n\n👉 Câu gỡ giá nếu khách hỏi:\n\"Dạ chú yên tâm, hàng lon thiếc Mỹ tính ra 1 công cho 1 cử xịt thuốc chỉ có mười mấy đến hai mươi ngàn đồng thôi, rẻ hơn chú rải nửa bao phân nhiều.\""
       },
       {
-        "step": "Bước 2\n(CỬA 1)",
+        "step": "Bước 2\n(CỬ 1)",
         "stage": "Lúa Nhỏ: Đẻ Nhánh / Nở Bụi\n\n(15 – 35 ngày)\n\n🌱 PH14 (Chủ lực) + Rước Đòng (Dưỡng chồi)",
         "guidance": "• TẠI SAO CẦN PH14:\n- Rơm rạ mục sinh axit làm ngộ độc rễ. Đất chua (pH < 5.0) làm lân bị bọc khóa, rễ nghẹt đen.\n- PH14: Kiềm Biochar Mỹ kéo pH lên > 6.0 sau 3-5 ngày, giải độc axit, bung rễ cám trắng xóa.\n- Hỗ trợ: Mở đường cho rễ hút sạch phân NPK, cộng hưởng cùng ZAKi Rước Đòng làm nở bụi cực mạnh, chồi hữu hiệu mập mạp.",
         "handling": "• CÁCH PHA CHUNG 1 LẦN:\nCho nước vào 2/3 bình → Đổ PH14 quậy đều → Rót ZAKi Rước Đòng vào sau → Xịt 1 lượt duy nhất, không tốn thêm công!\n\n• LỜI THOẠI CẤP THIẾT:\n\"Chú ơi, đất đang phèn mà chú không giải độc rễ thì rải bao phân nào xuống cũng trôi mất nửa bao. Chú xịt PH14 kèm lon Rước Đòng 1 lần một, vừa cứu bộ rễ bung trắng, vừa nở bụi kín ruộng mà bớt hẳn 1 cử rải phân NPK đắt đỏ chú nha!\""
       },
       {
-        "step": "Bước 2\n(CỬA 2)",
+        "step": "Bước 2\n(CỬ 2)",
         "stage": "Lúa Làm Đòng: Tim Đèn / Ôm Bắp\n\n(40 – 55 ngày)\n\n🌾 Rước Đòng (Chủ lực) + PH14 (Dẫn truyền)",
         "guidance": "• TẠI SAO CỬ ĐÒNG VẪN CẦN PH14:\n- Giữa vụ đất bị nén chặt, phèn đáy xì lên làm tụt pH đột ngột, thối rễ đáy → lúa nghẹn đòng, thui mầm hoa, đòng ngắn ngủn.\n- PH14: Làm \"chất đệm\" ổn định pH vùng rễ, kích thích dòng nhựa luyện đẩy dinh dưỡng Lân 32.5% của ZAKi Rước Đòng lên lá và đòng nhanh gấp đôi.\n- Kết quả: Đòng no tròn mập bắp, tăng từ 130 hạt lên 180–220 hạt/bông, trổ thoát rộ 100%.",
         "handling": "• CÁCH PHA CHUNG 1 LẦN:\nĐổ chung PH14 + Rước Đòng + thuốc sâu rầy/vi khuẩn vào 1 bình 25L hoặc 1 bồn Drone bay xịt êm ru.\n\n• LỜI THOẠI CẤP THIẾT:\n\"Nhiều chú nghĩ cử đòng không cần PH14 là uổng lắm! Cây lúa ôm đòng cần lực hút cực mạnh, rễ mà bị phèn bóp nghẹt thì đòng bị teo liền. Có PH14 dẫn đường, đòng mọng bắp, bông dài tới nách, sau này trổ thoát đồng loạt không lo nghẹn đòng chú ơi.\""
       },
       {
-        "step": "Bước 2\n(CỬA 3)",
+        "step": "Bước 2\n(CỬ 3)",
         "stage": "Lúa Trổ / Vô Sữa / Cong Trái Me\n\n(60 – 80 ngày)\n\n🍚 Vô Gạo (Chủ lực) + PH14 (Giữ rễ)",
         "guidance": "• TẠI SAO VÔ GẠO PHẢI CÓ PH14 ĐI CÙNG:\n- Cuối vụ rễ dễ già cỗi, đen rụi sớm làm lúa bị \"đứt sữa\", lá đòng vàng sụm → hạt sát trong cậy bị lép lửng (mất 15-20% sản lượng khi gặt).\n- PH14: Giữ ẩm và giữ sức sống cho chùm rễ đến ngày gặt, đảm bảo cây bơm nước và dinh dưỡng liên tục lên bông.\n- Hỗ trợ: Bơm dòng Kali sữa ZAKi Vô Gạo nén tinh bột xối xả vào tận hạt cậy cổ bông, hạt chắc mẩy, sáng trấu, tăng 14% trọng lượng hạt (TGW).",
         "handling": "• CÁCH PHA CHUNG 1 LẦN:\nĐổ chung PH14 + Vô Gạo + thuốc lem lép/đạo ôn cổ bông vào cùng 1 bình xịt hoặc bình Drone.\n\n• LỜI THOẠI CẤP THIẾT:\n\"Cử này PH14 giữ cho bộ rễ sống dai để bơm sữa liên tục, kết hợp lon Vô Gạo kali sữa nén chặt hạt lúa tới cậy. Cân lúa nặng ký, không bao giờ lo bị ngót ký khi phơi sấy chú ạ.\""
       },
       {
         "step": "Bước 3",
-        "stage": "Báo Giá Theo Bảng Giá Mới & Đòn Bẩy \"3 Tặng 1\"",
-        "guidance": "• MỤC TIÊU CHIẾN LƯỢC:\n- Ruộng 5-10 công: Báo 1 Bộ (3 lon) hoặc 2 Bộ (6 lon).\n- Ruộng 15-30 công: Đánh thẳng gói 3 tặng 1 (Mua 3 Bộ Tặng 1 lon Rước Đòng - Nhận 10 lon) để khách chốt số lượng lớn tiết kiệm gần 1,9 triệu!",
-        "handling": "• BÁO GIÁ CHUẨN XÁC TỪNG MỨC:\n\n1. GÓI TRẢI NGHIỆM (1 Bộ = 3 lon):\n• Gồm: 1 PH14 + 1 Rước Đòng + 1 Vô Gạo.\n• Giá bán: 1.342.000đ (Giá gốc 1.880.000đ - Tiết kiệm 538k).\n\n2. GÓI RUỘNG NHỎ (2 Bộ = 6 lon):\n• Gồm: 2 PH14 + 2 Rước Đòng + 2 Vô Gạo.\n• Giá bán: 2.594.400đ (Giá gốc 3.760.000đ - Tiết kiệm 1.165k).\n\n3. GÓI CHỦ LỰC: 3 TẶNG 1 (Mua 3 Bộ Tặng 1 Lon Rước Đòng - Nhận 10 lon thiếc):\n• Gồm: 3 PH14 + 3 Rước Đòng + 3 Vô Gạo + TẶNG THÊM 1 LON RƯỚC ĐÒNG (Tổng nhận 10 lon 1L).\n• Giá bán ưu đãi: 3.778.800đ (Giá gốc 5.640.000đ - Tiết kiệm 1.861.200đ).\n• Chia nhỏ chi phí: Tính ra mỗi lon 1L chỉ còn ~377.000đ/lon, xịt cho cả 3 cử trọn vụ.\n• Bao cước bưu điện tận nhà."
+        "stage": "Báo Giá Ước Lượng Ngắn Gọn (Chia Khách Theo Ha)",
+        "guidance": "• PHÂN LOẠI KHÁCH THEO DIỆN TÍCH:\n- Khách DƯỚI 1 HA (< 10 công): Bán 1 Combo (3 lon tặng 1 lon Rước Đòng = Nhận 4 lon).\n- Khách TỪ 2 HA TRỞ LÊN (≥ 20 công): Chốt từ 2 Combo trở lên (6 lon tặng 2 lon Rước Đòng = Nhận 8 lon).\n\n• CÔNG THỨC ƯỚC LƯỢNG GIÁ:\nChia thẳng trên tổng số lon thực nhận (chia 4 lon và chia 8 lon) để chứng minh giá mỗi lon thuốc Mỹ chỉ hơn 300 ngàn!",
+        "handling": "• 2 VÍ DỤ BÁO GIÁ NGẮN GỌN:\n\n1. KHÁCH DƯỚI 1 HA (Chốt 1 Combo - Nhận 4 lon):\n• Mua 1 Combo (3 lon: 1 PH14 + 1 RĐ + 1 VG) + TẶNG 1 LON RƯỚC ĐÒNG ➔ TỔNG NHẬN 4 LON 1L.\n• Giá bán: 1.342.000đ (Bao cước).\n👉 Chia trên 4 lon: 1.342.000đ / 4 lon = ~335.000đ/lon.\n\n2. KHÁCH TỪ 2 HA TRỞ LÊN (Chốt từ 2 Combo - Nhận 8 lon):\n• Mua 2 Combo (6 lon: 2 PH14 + 2 RĐ + 2 VG) + TẶNG 2 LON RƯỚC ĐÒNG ➔ TỔNG NHẬN 8 LON 1L.\n• Giá bán: 2.594.400đ (Bao cước).\n👉 Chia trên 8 lon: 2.594.400đ / 8 lon = ~324.000đ/lon.\n\n• LỜI THOẠI CHỐT NHANH:\n\"Ruộng chú [dưới 1 ha / trên 2 ha], con xếp cho chú [1 Combo nhận 4 lon / 2 Combo nhận 8 lon], tính ra chia đều mỗi lon thuốc Mỹ chỉ có [335 ngàn / 324 ngàn], xài trọn vẹn các cử lúa trúng mùa. Con gửi về Ấp nào cho chú đây?\""
       },
       {
         "step": "Bước 4",
         "stage": "Chốt Đơn Quyết Đoán & Khóa Địa Chỉ",
         "guidance": "• MỤC TIÊU:\n- Nhấn mạnh quyền lợi kiểm tra hàng thực tế lon thiếc Mỹ.\n- Khóa địa chỉ giao hàng dứt khoát.",
-        "handling": "• 3 CAM KẾT & CÂU HỎI KHÓA:\n✔ 100% nguyên lon thiếc nắp giật nhập khẩu, tem Cục BVTV.\n✔ Bưu điện giao tới nhà, khui thùng kiểm tra đủ lon thiếc mới trả tiền.\n✔ Thuốc mát cây 100%, kỹ sư theo sát từng cử xịt.\n\n👉 Câu hỏi khóa:\n\"Dạ vậy con xếp chương trình 3 tặng 1 này nhận tròn 10 lon thiếc giá 3.778.800đ gửi về cho chú Năm ở Ấp nào, Xã nào của Huyện mình đây chú?\""
+        "handling": "• 3 CAM KẾT & CÂU HỎI KHÓA:\n✔ 100% nguyên lon thiếc nắp giật nhập khẩu, tem Cục BVTV.\n✔ Bưu điện giao tới nhà, khui thùng kiểm tra đủ lon thiếc mới trả tiền.\n✔ Thuốc mát cây 100%, kỹ sư theo sát từng cử xịt.\n\n👉 Câu hỏi khóa:\n\"Dạ ruộng chú [dưới 1 ha lấy 1 Combo nhận 4 lon giá 1.342.000đ / từ 2 ha lấy 2 Combo nhận 8 lon giá 2.594.400đ], con gửi về cho chú Năm ở Ấp nào, Xã nào của Huyện mình đây chú?\""
       },
       {
         "step": "Bước 5",

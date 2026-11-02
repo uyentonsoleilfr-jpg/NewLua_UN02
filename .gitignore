@@ -23,4 +23,10 @@ src/
 01-Contracts/
 02-Assets/
 03-Code/
-Tac_Nghiep_Telesales_USU.xlsx
+04-Data/
+05-Du_Lieu_Thuc_Te/
+
+# Google Drive virtual files
+*.gsheet
+*.gdoc
+*.gslides

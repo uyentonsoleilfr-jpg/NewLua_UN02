@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageProducts = document.getElementById('page-products');
   const pageScriptVG = document.getElementById('page-script-vg');
   const pageScriptPH = document.getElementById('page-script-ph');
+  const pageScriptNetto = document.getElementById('page-script-netto');
   const pageScheduleRice = document.getElementById('page-schedule-rice');
   const pageAlkalineDeep = document.getElementById('page-alkaline-deep');
   const pageRiceDict = document.getElementById('page-rice-dict');
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageTitles = {
     'products': {
       title: '1. THÔNG TIN SẢN PHẨM CHI TIẾT & KỸ THUẬT',
-      desc: 'Dữ liệu trích xuất chuẩn xác từ Hồ sơ Kỹ thuật Cục BVTV & Tài Liệu Bán Hàng'
+      desc: 'Dữ liệu trích xuất chuẩn xác từ Hồ sơ Kỹ thuật Cục BVTV & Bảng Giá Mới Nhất'
     },
     'script-vg': {
       title: '2. KỊCH BẢN TƯ VẤN 5 BƯỚC - ZAKi (RƯỚC ĐÒNG & VÔ GẠO)',
@@ -42,36 +43,39 @@ document.addEventListener('DOMContentLoaded', () => {
       title: '3. Kịch bản Bộ 3 (PH14)',
       desc: 'Quy trình tư vấn 5 bước phối hợp PH14 + Rước Đòng + Vô Gạo phun chung 1 bình theo các cử sinh lý lúa'
     },
+    'script-netto': {
+      title: '4. KỊCH BẢN UPSELL NETTO PLUS (THUỐC TRỪ SÂU DẠNG SỮA 10EW)',
+      desc: 'Quy trình 5 bước tư vấn 4 cữ đón đầu ngoài ruộng, giải mã diện tích 20-30 công và chốt gói Mua 3 Tặng 1 Luke'
+    },
     'schedule-rice': {
-      title: '4. MÙA VỤ LÚA',
+      title: '5. MÙA VỤ LÚA',
       desc: 'Lịch mùa vụ 3 miền, 5 giai đoạn sinh trưởng kèm ảnh thực tế và quy trình bón phân chuẩn'
     },
     'alkaline-deep': {
-      title: '5. KIỀM SINH HỌC BIOCHAR',
+      title: '6. KIỀM SINH HỌC BIOCHAR',
       desc: 'Bản chất khoa học kiềm sinh học pH > 13, công nghệ Biochar hoạt hóa Mỹ và quy chuẩn lịch tưới 4 nhóm cây trồng'
     },
     'rice-dict': {
-      title: '6. TỪ ĐIỂN LÚA (50 THUẬT NGỮ NÔNG DÂN 3 MIỀN)',
+      title: '7. TỪ ĐIỂN LÚA (50 THUẬT NGỮ NÔNG DÂN 3 MIỀN)',
       desc: 'Cẩm nang tra cứu 50 từ ngữ tiếng lóng vùng miền, dấu hiệu nhận biết ngoài ruộng và mẫu câu tư vấn khéo léo'
     },
     'crop-dict': {
-      title: '7. TỪ ĐIỂN CÂY TRỒNG (BỆNH ĐẤT & SO SÁNH CÁCH LÀM)',
+      title: '8. TỪ ĐIỂN CÂY TRỒNG (BỆNH ĐẤT & SO SÁNH CÁCH LÀM)',
       desc: 'Giải thích các hiện tượng thổ nhưỡng, bệnh rễ, ngộ độc đất và bảng so sánh cách làm cũ vs Biochar Mỹ'
     },
     'rice-varieties': {
-      title: '8. GIỐNG LÚA',
+      title: '9. GIỐNG LÚA',
       desc: 'Tra cứu thông số thời gian sinh trưởng, giá bán, năng suất và lịch phun chuẩn theo từng ngày tuổi cho các giống lúa chủ lực'
     },
     'crop-types': {
-      title: '9. LOẠI CÂY TRỒNG',
+      title: '10. LOẠI CÂY TRỒNG',
       desc: 'Cẩm nang tra cứu vấn đề thổ nhưỡng, độ pH đất lý tưởng, liều tưới pH 14 và lịch chăm sóc cho các nhóm cây trồng chủ lực'
     },
     'voucher-generator': {
-      title: '10. CÔNG CỤ TẠO PHIẾU CAM KẾT & BẢO HÀNH ĐIỆN TỬ',
+      title: '11. CÔNG CỤ TẠO PHIẾU CAM KẾT & BẢO HÀNH ĐIỆN TỬ',
       desc: 'Nhập tên khách hàng và xuất ngay phiếu cam kết ZAKI chính hãng gửi Zalo trong 5 giây'
     }
   };
-
   // Switch Page View
   const switchPage = (pageId) => {
     currentPage = pageId;
@@ -97,6 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
     pageScriptPH.style.display = pageId === 'script-ph' ? 'block' : 'none';
     if (pageId === 'script-ph') {
       renderScriptPH();
+    }
+    if (pageScriptNetto) {
+      pageScriptNetto.style.display = pageId === 'script-netto' ? 'block' : 'none';
+      if (pageId === 'script-netto') {
+        renderScriptNetto();
+      }
     }
     if (pageScheduleRice) pageScheduleRice.style.display = pageId === 'schedule-rice' ? 'block' : 'none';
     if (pageAlkalineDeep) pageAlkalineDeep.style.display = pageId === 'alkaline-deep' ? 'block' : 'none';
@@ -139,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Render Page 1: Product Detail Card (Balanced Layout)
+  // Render Page 1: Product Detail Card (Balanced Layout - Price Under Image)
   const renderProductDetail = (productId) => {
     const product = AGRIZEN_DATA.products.find(p => p.id === productId);
     if (!product) return;
@@ -164,10 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let dilutionRatesHtml = '';
     if (product.dosage.dilutionRates && product.dosage.dilutionRates.length > 0) {
       dilutionRatesHtml = `
-        <div style="background: #f0f7ec; border: 1px solid var(--brand-200); border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 16px;">
-          <div style="font-size: 13.5px; font-weight: 800; color: var(--brand-900); margin-bottom: 4px;">💧 Tỷ Lệ Pha Nước Chuẩn:</div>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 4px; padding-left: 0; margin: 0;">
-            ${product.dosage.dilutionRates.map(r => `<li style="font-size: 13.5px; color: var(--text-main); font-weight: 600;">• ${r}</li>`).join('')}
+        <div class="dilution-rates-box">
+          <div class="dilution-title">💧 Định Mức Pha Nước & Phun Xịt Chuẩn:</div>
+          <ul class="dilution-list">
+            ${product.dosage.dilutionRates.map(r => `<li>• ${r}</li>`).join('')}
           </ul>
         </div>
       `;
@@ -196,57 +206,113 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
+    // 5. Pricing Box (Placed UNDER Image in Left Column)
+    let pricingHtml = '';
+    if (product.pricing) {
+      const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'vo-gao' ? 'price-gold' : '');
+      pricingHtml = `
+        <div class="prod-price-card ${priceThemeClass}">
+          <div class="price-card-header">
+            <div class="price-val-group">
+              <div class="price-card-label">GIÁ BÁN ƯU ĐÃI:</div>
+              <span class="price-card-sale">${product.pricing.sale}</span>
+              <div class="price-card-listed">Giá gốc: <del>${product.pricing.listed}</del></div>
+            </div>
+            ${product.pricing.discount ? `<span class="price-card-discount">${product.pricing.discount}</span>` : ''}
+          </div>
+
+          <div class="price-card-unit">Quy cách: <strong>${product.pricing.unit || product.packaging}</strong></div>
+
+          ${product.pricing.offer ? `
+            <div class="price-card-offer">
+              <div class="offer-badge-title">🎁 Chính Sách Khuyến Mãi:</div>
+              <div class="offer-badge-desc">${product.pricing.offer}</div>
+            </div>
+          ` : ''}
+
+          ${product.pricing.policyNote ? `
+            <div class="price-policy-subnote">${product.pricing.policyNote}</div>
+          ` : ''}
+
+          <div class="price-guarantee-footer">
+            <div>✓ Freeship toàn quốc</div>
+            <div>✓ Khui thùng kiểm tra trước khi nhận</div>
+          </div>
+        </div>
+      `;
+    }
+
     productCardContainer.innerHTML = `
       <article class="product-card ${product.theme}">
-        <!-- Header -->
-        <div class="prod-header">
-          <div class="prod-meta-tags">
-            <span class="tag-badge ${product.id === 'vo-gao' ? 'tag-gold' : 'tag-primary'}">${product.badgeIcon} ${product.tag}</span>
-            <span class="tag-badge tag-secondary">Mã: ${product.code}</span>
-            <span class="tag-badge tag-secondary">Quy cách: ${product.packaging}</span>
-            <span class="tag-badge tag-gold">Hồ sơ Cục BVTV: ${product.registeredName}</span>
+        <!-- Hero Split: Cột Trái (Ảnh + Giá) Cân Đối Chuẩn Chiều Cao Cột Phải (Tags + Info + Specs) -->
+        <div class="prod-hero-split">
+          <!-- Cột Trái: Ảnh Sản Phẩm (Không Nhãn Nổi) & Bảng Giá Ngay Dưới Ảnh -->
+          <div class="prod-visual-col">
+            <div class="prod-image-frame">
+              ${product.image ? `
+                <img src="${product.image}" alt="${product.fullName}" class="prod-real-img" loading="lazy">
+              ` : `
+                <div class="prod-no-img">
+                  <span class="prod-fallback-icon">${product.badgeIcon}</span>
+                  <span class="prod-fallback-label">${product.tabName}</span>
+                </div>
+              `}
+            </div>
+
+            ${pricingHtml}
           </div>
-          <h2 class="prod-title">${product.fullName}</h2>
-          <p class="prod-desc">${product.shortDesc}</p>
-          
-          <div class="prod-origin-bar">
-            <div><strong>Nguồn gốc / Xuất xứ:</strong> ${product.origin}</div>
-            <div><strong>Độc quyền phân phối:</strong> ${product.distributor}</div>
+
+          <!-- Cột Phải: Thông Tin Chi Tiết & Thành Phần Hoạt Chất -->
+          <div class="prod-info-col">
+            <div class="prod-meta-tags">
+              <span class="tag-badge ${product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : 'tag-primary')}">${product.badgeIcon} ${product.tag}</span>
+              <span class="tag-badge tag-secondary">Mã: ${product.code}</span>
+              <span class="tag-badge tag-secondary">Quy cách: ${product.packaging}</span>
+              <span class="tag-badge tag-gold">Hồ sơ Cục BVTV: ${product.registeredName}</span>
+            </div>
+
+            <h2 class="prod-title">${product.fullName}</h2>
+            <p class="prod-desc">${product.shortDesc}</p>
+            
+            <div class="prod-origin-bar">
+              <div><strong>Nguồn gốc:</strong> ${product.origin}</div>
+              <div><strong>Phân phối:</strong> ${product.distributor}</div>
+            </div>
+
+            <!-- Block 1: Chỉ Tiêu & Thành Phần Hoạt Chất (Specs Grid) -->
+            <div class="specs-full-section">
+              <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : '')}">
+                <span>🔬</span>
+                <span>Chỉ Tiêu & Thành Phần Hoạt Chất</span>
+              </h3>
+              <div class="specs-grid">
+                ${specsHtml}
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Block 1: Chỉ Tiêu & Thành Phần Hoạt Chất (Full-width Specs Grid) -->
-        <div class="specs-full-section">
-          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : ''}">
-            <span>🔬</span>
-            <span>Chỉ Tiêu & Thành Phần Hoạt Chất</span>
-          </h3>
-          <div class="specs-grid">
-            ${specsHtml}
-          </div>
-        </div>
-
-        <!-- Block 2: Cơ Chế Tác Động (Balanced 2-Column Grid) -->
+        <!-- Block 2: Cơ Chế Tác Động Ngoài Ruộng -->
         <div class="mechanisms-full-section">
-          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : ''}">
+          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : '')}">
             <span>🌱</span>
-            <span>Cơ Chế Tác Động Cốt Lõi</span>
+            <span>Cơ Chế Tác Động Ngoài Ruộng</span>
           </h3>
           <div class="mechanisms-grid">
             ${mechanismsHtml}
           </div>
         </div>
 
-        <!-- Block 3: Liều Lượng & Lịch Phun/Tưới Chi Tiết (Full-width Card with 2-Column Crop Grid) -->
+        <!-- Block 3: Liều Lượng & Lịch Phun/Tưới Chi Tiết -->
         <div class="dosage-card">
-          <h3 class="block-title">
+          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : '')}">
             <span>🧪</span>
             <span>Liều Lượng & Lịch Phun / Tưới Chuẩn</span>
           </h3>
           ${dilutionRatesHtml}
           ${cropsHtml}
           
-          <div class="mixing-protocol-box">
+          <div class="mixing-protocol-box ${product.id === 'netto-plus' ? 'mixing-danger-alert' : ''}">
             <strong>⚠️ Nguyên tắc phối trộn & Phun Drone:</strong> ${product.dosage.mixingRule}
           </div>
         </div>
@@ -258,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="battle-content">${product.battlecard.weakness}</div>
           </div>
           <div class="battle-side agrizen">
-            <div class="battle-title">✅ Ưu Thế Vượt Trội Của Dòng ZAKi / pH 14</div>
+            <div class="battle-title">✅ Ưu Thế Vượt Trội Của Sản Phẩm</div>
             <div class="battle-content">${product.battlecard.ourEdge}</div>
           </div>
         </div>
@@ -329,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="script-notice-banner">
           <div class="notice-heading">
             <span>📌</span>
-            <span>${scriptData.noticeTitle || '3 Lưu Ý Bắt Buộc Dành Cho Tư Vấn Viên:'}</span>
+            <span>${scriptData.noticeTitle || '3 Lưu Ý Quan Trọng:'}</span>
           </div>
           <ul class="notice-list">
             ${notesHtml}
@@ -363,6 +429,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Render Page 3: Script PH
   const renderScriptPH = () => {
     renderScriptTable(pageScriptPH, AGRIZEN_DATA.scriptPH, '🧪');
+  };
+
+  // Render Page 4: Script Netto Plus (Master Table format exactly like Tab 2 & Tab 3)
+  const renderScriptNetto = () => {
+    if (!pageScriptNetto || !AGRIZEN_DATA.scriptNetto) return;
+    renderScriptTable(pageScriptNetto, AGRIZEN_DATA.scriptNetto, '🛡️');
   };
 
   // Render Page 4: Interactive Seasons & Growth Stages
@@ -425,7 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="stage-block-box">
             <div class="stage-block-label">
               <span>🎯</span>
-              <span>Mục Tiêu Bứt Phá Năng Suất:</span>
+              <span>Mục Tiêu Năng Suất Thu Hoạch:</span>
             </div>
             <div class="stage-block-text">${activeStage.yieldGoal}</div>
           </div>
