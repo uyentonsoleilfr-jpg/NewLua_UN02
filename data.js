@@ -454,7 +454,7 @@ const AGRIZEN_DATA = {
         "weakness": "Dễ kết tủa khi gặp nước phèn chua, khó hấp thu, dùng quá liều dễ gây cháy lá.",
         "ourEdge": "Dạng Chelate hữu cơ chuẩn Châu Âu, tan trong suốt, an toàn tuyệt đối."
       },
-      "image": "",
+      "image": "assets/images/sp_combi.jpg",
       "pricing": {
         "listed": "25.000đ/gói",
         "sale": "25.000đ/gói",
@@ -518,7 +518,7 @@ const AGRIZEN_DATA = {
         "weakness": "Độ trải kém, hay bị bọt nhiều gây nghẹt bơm Drone, không chống được mưa rào.",
         "ourEdge": "Hoạt chất Silicon hữu cơ 100%, không bọt cặn, chống mưa cấp tốc sau 15 phút."
       },
-      "image": "",
+      "image": "assets/images/sp_loang_trai.jpg",
       "pricing": {
         "listed": "127.000đ/chai",
         "sale": "85.000đ/chai",

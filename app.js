@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Pricing Box (Placed UNDER Image in Left Column)
     let pricingHtml = '';
     if (product.pricing) {
-      const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'vo-gao' ? 'price-gold' : '');
+      const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'vo-gao' ? 'price-gold' : (product.id === 'mix-combi' ? 'price-combi' : (product.id === 'sieu-loang-trai' ? 'price-luke' : '')));
       pricingHtml = `
         <div class="prod-price-card ${priceThemeClass}">
           <div class="price-card-header">
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- Cột Phải: Thông Tin Chi Tiết & Thành Phần Hoạt Chất -->
           <div class="prod-info-col">
             <div class="prod-meta-tags">
-              <span class="tag-badge ${product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : 'tag-primary')}">${product.badgeIcon} ${product.tag}</span>
+              <span class="tag-badge ${product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : (product.id === 'mix-combi' ? 'tag-blue' : (product.id === 'sieu-loang-trai' ? 'tag-teal' : 'tag-primary')))}">${product.badgeIcon} ${product.tag}</span>
               <span class="tag-badge tag-secondary">Mã: ${product.code}</span>
               <span class="tag-badge tag-secondary">Quy cách: ${product.packaging}</span>
               <span class="tag-badge tag-gold">Hồ sơ Cục BVTV: ${product.registeredName}</span>
@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <!-- Block 1: Chỉ Tiêu & Thành Phần Hoạt Chất (Specs Grid) -->
             <div class="specs-full-section">
-              <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : '')}">
+              <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))}">
                 <span>🔬</span>
                 <span>Chỉ Tiêu & Thành Phần Hoạt Chất</span>
               </h3>
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Block 2: Cơ Chế Tác Động Ngoài Ruộng -->
         <div class="mechanisms-full-section">
-          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : '')}">
+          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))}">
             <span>🌱</span>
             <span>Cơ Chế Tác Động Ngoài Ruộng</span>
           </h3>
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Block 3: Liều Lượng & Lịch Phun/Tưới Chi Tiết -->
         <div class="dosage-card">
-          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : '')}">
+          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))}">
             <span>🧪</span>
             <span>Liều Lượng & Lịch Phun / Tưới Chuẩn</span>
           </h3>
