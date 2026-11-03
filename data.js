@@ -116,6 +116,7 @@ const AGRIZEN_DATA = {
       },
       "image": "assets/images/sp_ph14.jpg",
       "pricing": {
+        "usageRate": "1 Lon 1L xịt 20 – 30 công tầm cắt (1.000m²) / Bay Drone 2 – 3 ha",
         "listed": "460.000đ/lon",
         "sale": "322.000đ/lon",
         "discount": "-30%",
@@ -157,6 +158,10 @@ const AGRIZEN_DATA = {
         {
           "name": "Tỷ trọng dung dịch",
           "value": "1.25"
+        },
+        {
+          "name": "Tốc độ hấp thu qua lá",
+          "value": "Thấm sâu 95% sau 2 giờ (Chống tia UV)"
         }
       ],
       "mechanisms": [
@@ -199,6 +204,7 @@ const AGRIZEN_DATA = {
       "usageRate": "Pha 25 - 35ml / bình 25L (Ước lượng 1 lon 1L pha 30 - 35 bình 25L, xịt cho 30 công 1.000m² ~ 3 ha). Bay Drone: 1L bay 3 ha (30 công).",
       "image": "assets/images/sp_ruoc_dong.jpg",
       "pricing": {
+        "usageRate": "1 Lon 1L xịt 20 – 30 công tầm cắt (1.000m²) / Bay Drone 2 – 3 ha",
         "listed": "670.000đ/lon",
         "sale": "480.000đ/lon",
         "discount": "-28%",
@@ -240,6 +246,10 @@ const AGRIZEN_DATA = {
         {
           "name": "Tỷ trọng dung dịch",
           "value": "1.45 (Lỏng sữa siêu mịn)"
+        },
+        {
+          "name": "Độ pH_H2O",
+          "value": "6.0 (Dạng sữa PK hữu cơ mát bông)"
         }
       ],
       "mechanisms": [
@@ -282,6 +292,7 @@ const AGRIZEN_DATA = {
       "usageRate": "Pha 25 - 35ml / bình 25L (Ước lượng 1 lon 1L pha 30 - 35 bình 25L, xịt cho 30 công 1.000m² ~ 3 ha). Bay Drone: 1L bay 3 ha (30 công).",
       "image": "assets/images/sp_vo_gao.jpg",
       "pricing": {
+        "usageRate": "1 Lon 1L xịt 20 – 30 công tầm cắt (1.000m²) / Bay Drone 2 – 3 ha",
         "listed": "750.000đ/lon",
         "sale": "540.000đ/lon",
         "discount": "-28%",
@@ -305,6 +316,7 @@ const AGRIZEN_DATA = {
       "origin": "Vbook Hoa Kỳ (Ủy quyền bởi Anhui Huaxing Chemical) - KCN Thái Hòa, Tây Ninh",
       "distributor": "CÔNG TY CỔ PHẦN PHÂN BÓN MN",
       "pricing": {
+        "usageRate": "1 Chai 1L xịt 20 – 30 công tầm cắt (1.000m²) / Bay Drone 2 – 3 ha",
         "listed": "650.000đ/chai",
         "sale": "495.000đ/chai",
         "discount": "-24%",
@@ -424,6 +436,10 @@ const AGRIZEN_DATA = {
         {
           "name": "Bo hòa tan (B)",
           "value": "5.000 ppm"
+        },
+        {
+          "name": "Dạng liên kết & Độ tan",
+          "value": "100% EDTA Chelate Ba Lan (Tan trong suốt 100%)"
         }
       ],
       "mechanisms": [
@@ -456,6 +472,7 @@ const AGRIZEN_DATA = {
       },
       "image": "assets/images/sp_combi.jpg",
       "pricing": {
+        "usageRate": "1 Gói 25g pha 200L nước / Phun kèm 1 lon ZAKi Rước Đòng hoặc Vô Gạo",
         "listed": "25.000đ/gói",
         "sale": "25.000đ/gói",
         "discount": "Chính Hãng",
@@ -489,6 +506,18 @@ const AGRIZEN_DATA = {
         {
           "name": "Độ dàn trải bề mặt",
           "value": "Gấp 5 lần so với chất bám dính thông thường"
+        },
+        {
+          "name": "Độ an toàn máy bay Drone",
+          "value": "Không bọt cặn, chống nghẹt béc phun sương"
+        },
+        {
+          "name": "Định mức pha nước",
+          "value": "5 – 10ml / bình 25L (Chai 100ml pha 200 – 300L)"
+        },
+        {
+          "name": "Khả năng phối trộn",
+          "value": "Tương thích 100% với phân bón lá & thuốc BVTV"
         }
       ],
       "mechanisms": [
@@ -520,6 +549,7 @@ const AGRIZEN_DATA = {
       },
       "image": "assets/images/sp_loang_trai.jpg",
       "pricing": {
+        "usageRate": "1 Chai 100ml pha 200 – 300L nước (10 – 15 bình 25L / 1 – 2 bồn Drone)",
         "listed": "127.000đ/chai",
         "sale": "85.000đ/chai",
         "discount": "-33%",
