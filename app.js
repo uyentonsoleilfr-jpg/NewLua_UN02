@@ -274,13 +274,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   };
 
-  // Render Page 1: Product Detail Card (Balanced Layout - Price Under Image)
-
+  // Render Page 1: Product Detail Card (Balanced Layout - Price Under Image, Separated Cards)
   const renderProductDetail = (productId) => {
     const product = AGRIZEN_DATA.products.find(p => p.id === productId);
     if (!product) return;
 
-    // 1. Specs Grid (Card cấu trúc nguyên bản, dễ nhìn, đối xứng)
+    // 1. Specs Grid (2 Cột x 3 Hàng Chuẩn Đẹp)
     const specsHtml = product.specs.map(s => `
       <div class="spec-card-item">
         <span class="spec-card-name">${s.name}</span>
@@ -332,10 +331,13 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
-    // 5. Pricing Box (Thêm thông tin bảo hành & định mức để tự cân đối, không kéo dãn)
+    // 5. Pricing Box (Cột Trái Cân Đối: Giá, Quy cách, Ưu đãi, Cam kết)
     let pricingHtml = '';
+    const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'vo-gao' ? 'price-gold' : (product.id === 'mix-combi' ? 'price-combi' : (product.id === 'sieu-loang-trai' ? 'price-luke' : '')));
+    const titleColorClass = product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')));
+    const tagThemeClass = product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : (product.id === 'mix-combi' ? 'tag-blue' : (product.id === 'sieu-loang-trai' ? 'tag-teal' : 'tag-primary')));
+
     if (product.pricing) {
-      const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'vo-gao' ? 'price-gold' : (product.id === 'mix-combi' ? 'price-combi' : (product.id === 'sieu-loang-trai' ? 'price-luke' : '')));
       pricingHtml = `
         <div class="prod-price-card ${priceThemeClass}">
           <div class="price-card-header">
@@ -358,17 +360,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           ` : ''}
 
-          ${product.pricing.policyNote ? `
-            <div class="price-policy-subnote">${product.pricing.policyNote}</div>
-          ` : ''}
-
-          ${product.pricing.usageRate ? `
-            <div class="price-usage-badge">
-              <span class="usage-icon">🚜</span>
-              <span><strong>Định mức:</strong> ${product.pricing.usageRate}</span>
-            </div>
-          ` : ''}
-
           <div class="price-guarantee-footer">
             <div class="guarantee-item"><span>✓</span> Freeship toàn quốc</div>
             <div class="guarantee-item"><span>✓</span> Khui thùng kiểm tra trước khi nhận</div>
@@ -380,71 +371,89 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     productCardContainer.innerHTML = `
-      <article class="product-card ${product.theme}">
-        <!-- Hero Split: Cột Trái (Ảnh + Giá) Tự Cân Đối Tự Nhiên Cùng Cột Phải -->
-        <div class="prod-hero-split">
-          <!-- Cột Trái: Ảnh Sản Phẩm (Không Nhãn Nổi) & Bảng Giá Cân Đối -->
-          <div class="prod-visual-col">
-            <div class="prod-image-frame">
-              ${product.image ? `
-                <img src="${product.image}" alt="${product.fullName}" class="prod-real-img" loading="lazy">
-              ` : `
-                <div class="prod-no-img">
-                  <span class="prod-fallback-icon">${product.badgeIcon}</span>
-                  <span class="prod-fallback-label">${product.tabName}</span>
+      <div class="product-cards-container ${product.theme}">
+        <!-- CARD 1: HERO & 6 THÔNG SỐ (PHẦN GIỚI THIỆU + ĐỊNH MỨC NGOÀI RUỘNG) -->
+        <article class="product-card prod-hero-card ${product.theme}">
+          <div class="prod-hero-split">
+            <!-- Cột Trái: Ảnh Sản Phẩm & Bảng Giá Cân Đối -->
+            <div class="prod-visual-col">
+              <div class="prod-image-frame">
+                ${product.image ? `
+                  <img src="${product.image}" alt="${product.fullName}" class="prod-real-img" loading="lazy">
+                ` : `
+                  <div class="prod-no-img">
+                    <span class="prod-fallback-icon">${product.badgeIcon}</span>
+                    <span class="prod-fallback-label">${product.tabName}</span>
+                  </div>
+                `}
+              </div>
+
+              ${pricingHtml}
+            </div>
+
+            <!-- Cột Phải: Thông Tin Chi Tiết, 6 Chỉ Tiêu & ĐƯA ĐỊNH MỨC/CHÍNH SÁCH VÀO KHOẢNG TRẮNG CÂN ĐỐI -->
+            <div class="prod-info-col">
+              <div class="prod-meta-tags">
+                <span class="tag-badge ${tagThemeClass}">${product.badgeIcon} ${product.tag}</span>
+                <span class="tag-badge tag-secondary">Mã: ${product.code}</span>
+                <span class="tag-badge tag-secondary">Quy cách: ${product.packaging}</span>
+                <span class="tag-badge tag-gold">Hồ sơ Cục BVTV: ${product.registeredName}</span>
+              </div>
+
+              <h2 class="prod-title">${product.fullName}</h2>
+              <p class="prod-desc">${product.shortDesc}</p>
+              
+              <div class="prod-origin-bar">
+                <div><strong>Nguồn gốc:</strong> ${product.origin}</div>
+                <div><strong>Phân phối:</strong> ${product.distributor}</div>
+              </div>
+
+              <!-- 6 Chỉ Tiêu & Thành Phần Hoạt Chất (2 Cột x 3 Hàng Chuẩn Đẹp) -->
+              <div class="specs-full-section">
+                <h3 class="block-title ${titleColorClass}">
+                  <span>🔬</span>
+                  <span>Chỉ Tiêu & Thành Phần Hoạt Chất</span>
+                </h3>
+                <div class="specs-grid">
+                  ${specsHtml}
                 </div>
-              `}
-            </div>
+              </div>
 
-            ${pricingHtml}
-          </div>
-
-          <!-- Cột Phải: Thông Tin Chi Tiết & Thành Phần Hoạt Chất Đối Xứng -->
-          <div class="prod-info-col">
-            <div class="prod-meta-tags">
-              <span class="tag-badge ${product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : (product.id === 'mix-combi' ? 'tag-blue' : (product.id === 'sieu-loang-trai' ? 'tag-teal' : 'tag-primary')))}">${product.badgeIcon} ${product.tag}</span>
-              <span class="tag-badge tag-secondary">Mã: ${product.code}</span>
-              <span class="tag-badge tag-secondary">Quy cách: ${product.packaging}</span>
-              <span class="tag-badge tag-gold">Hồ sơ Cục BVTV: ${product.registeredName}</span>
-            </div>
-
-            <h2 class="prod-title">${product.fullName}</h2>
-            <p class="prod-desc">${product.shortDesc}</p>
-            
-            <div class="prod-origin-bar">
-              <div><strong>Nguồn gốc:</strong> ${product.origin}</div>
-              <div><strong>Phân phối:</strong> ${product.distributor}</div>
-            </div>
-
-            <!-- Block 1: Chỉ Tiêu & Thành Phần Hoạt Chất (2 Cột x 3 Hàng Chuẩn Đẹp) -->
-            <div class="specs-full-section">
-              <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))}">
-                <span>🔬</span>
-                <span>Chỉ Tiêu & Thành Phần Hoạt Chất</span>
-              </h3>
-              <div class="specs-grid">
-                ${specsHtml}
+              <!-- ĐƯA THÔNG TIN ĐỊNH MỨC VÀ CHÍNH SÁCH VÀO KHOẢNG TRẮNG CỘT PHẢI ĐỂ GỌN VÀ CÂN ĐỐI -->
+              <div class="specs-usage-policy-row ${priceThemeClass}">
+                ${product.pricing && product.pricing.usageRate ? `
+                  <div class="info-usage-item">
+                    <span class="info-icon">🚜</span>
+                    <span><strong>Định mức:</strong> ${product.pricing.usageRate}</span>
+                  </div>
+                ` : ''}
+                ${product.pricing && product.pricing.policyNote ? `
+                  <div class="info-policy-item">
+                    <span class="info-icon">💡</span>
+                    <span>${product.pricing.policyNote}</span>
+                  </div>
+                ` : ''}
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Block 2: Cơ Chế Tác Động Ngoài Ruộng -->
-        <div class="mechanisms-full-section">
-          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))}">
+        <!-- CARD 2: CƠ CHẾ TÁC ĐỘNG NGOÀI RUỘNG (Card Riêng Biệt Như Ban Đầu) -->
+        <article class="product-card mechanisms-full-section ${product.theme}">
+          <h3 class="block-title ${titleColorClass}">
             <span>🌱</span>
-            <span>Cơ Chế Tác Động Ngoài Ruộng</span>
+            <span>2. Cơ Chế Tác Động Ngoài Ruộng</span>
           </h3>
           <div class="mechanisms-grid">
             ${mechanismsHtml}
           </div>
-        </div>
+        </article>
 
-        <!-- Block 3: Liều Lượng & Lịch Phun / Tưới Chuẩn -->
-        <div class="dosage-card">
-          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))}">
+        <!-- CARD 3: LIỀU LƯỢNG & LỊCH PHUN CHUẨN (Card Riêng Biệt Như Ban Đầu) -->
+        <article class="product-card dosage-card ${product.theme}">
+          <h3 class="block-title ${titleColorClass}">
             <span>🧪</span>
-            <span>Liều Lượng & Lịch Phun / Tưới Chuẩn</span>
+            <span>3. Hướng Dẫn & Liều Lượng Sử Dụng Chuẩn</span>
           </h3>
           ${dilutionRatesHtml}
           ${cropsHtml}
@@ -452,13 +461,13 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="mixing-protocol-box ${product.id === 'netto-plus' ? 'mixing-danger-alert' : ''}">
             <strong>⚠️ Nguyên tắc phối trộn & Phun Drone:</strong> ${product.dosage.mixingRule}
           </div>
-        </div>
+        </article>
 
-        <!-- Block 4: So Sánh Đối Thủ -->
-        <div class="battlecard-box">
-          <h3 class="block-title ${product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))}">
+        <!-- CARD 4: SO SÁNH ĐỐI THỦ (Card Riêng Biệt Như Ban Đầu) -->
+        <article class="product-card battlecard-box ${product.theme}">
+          <h3 class="block-title ${titleColorClass}">
             <span>⚖️</span>
-            <span>So Sánh Với Đối Thủ Ngoài Thị Trường</span>
+            <span>4. So Sánh Vượt Trội Với Sản Phẩm Cùng Loại</span>
           </h3>
           <div class="battlecard-grid">
             <div class="battle-col battle-competitor">
@@ -470,8 +479,87 @@ document.addEventListener('DOMContentLoaded', () => {
               <p>${product.battlecard.ourEdge}</p>
             </div>
           </div>
+        </article>
+      </div>
+    `;
+  };
+
+  // Render Table with Dynamic Rowspan Merging (Pages 2, 3 & 4)
+  const renderScriptTable = (container, scriptData, icon) => {
+    if (!container || !scriptData) return;
+    const notesHtml = scriptData.notes.map(n => `<li>${n}</li>`).join('');
+
+    // Pre-calculate Rowspan for consecutive identical Step rows
+    const processedRows = [];
+    let i = 0;
+    while (i < scriptData.rows.length) {
+      const currentStep = scriptData.rows[i].step;
+      let count = 1;
+      while (i + count < scriptData.rows.length && scriptData.rows[i + count].step === currentStep) {
+        count++;
+      }
+      for (let j = 0; j < count; j++) {
+        processedRows.push({
+          ...scriptData.rows[i + j],
+          isFirstOfGroup: j === 0,
+          rowSpan: count
+        });
+      }
+      i += count;
+    }
+
+    const rowsHtml = processedRows.map(r => `
+      <tr>
+        ${r.isFirstOfGroup ? `
+          <td class="col-step" rowspan="${r.rowSpan}">
+            <div class="script-step-badge">${r.step}</div>
+          </td>
+        ` : ''}
+        <td class="col-stage">
+          <div class="cell-content-block" style="font-weight: 700;">${r.stage.replace(/\n/g, '<br>')}</div>
+        </td>
+        <td class="col-guidance">
+          <div class="cell-content-block">${r.guidance.replace(/\n/g, '<br>')}</div>
+        </td>
+        <td class="col-handling">
+          <div class="cell-content-block">${r.handling.replace(/\n/g, '<br>')}</div>
+        </td>
+      </tr>
+    `).join('');
+
+    container.innerHTML = `
+      <div class="script-container">
+        <h2 class="script-header-title">
+          <span>${icon}</span>
+          <span>${scriptData.title}</span>
+        </h2>
+
+        <div class="script-notice-banner">
+          <div class="notice-heading">
+            <span>📌</span>
+            <span>3 Lưu Ý Bắt Buộc Dành Cho Tư Vấn Viên:</span>
+          </div>
+          <ul class="notice-list">
+            ${notesHtml}
+          </ul>
         </div>
-      </article>
+
+        <div class="script-table-wrapper">
+          <table class="script-master-table">
+            <thead>
+              <tr>
+                <th style="width: 110px; text-align: center;">Bước Kịch Bản</th>
+                <th style="width: 230px;">Tên Giai Đoạn & Tình Huống Ruộng</th>
+                <th style="width: 500px;">Chỉ Dẫn Tư Vấn</th>
+                <th style="width: 440px;">Hướng Dẫn Xử Lý Tình Huống</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rowsHtml}
+            </tbody>
+          </table>
+        </div>
+      </div>
     `;
   };
 
@@ -2882,15 +2970,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sidebar Nav Button Listeners
 
   document.querySelectorAll('.nav-item-btn[data-page]').forEach(btn => {
-
     btn.addEventListener('click', (e) => {
-
       const page = e.currentTarget.getAttribute('data-page');
-
-      if (page) switchPage(page);
-
+      if (page) {
+        switchPage(page);
+        if (appSidebar && appSidebar.classList.contains('open')) {
+          toggleMobileMenu();
+        }
+      }
     });
-
   });
 
   // Mobile Drawer Toggle
@@ -2914,9 +3002,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProductDetail(activeProductId);
 
   renderScriptVG();
-
   renderScriptPH();
-
+  renderScriptNetto();
   renderScheduleRice();
 
   renderAlkalineDeep();
