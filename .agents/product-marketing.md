@@ -70,7 +70,7 @@
 * **Định mức diện tích tiêu chuẩn:**
   * **1 Lon thiếc 1 Lít** pha được **20 – 35 bình máy 25 Lít** (tương đương **500 – 800 Lít nước** tùy cử phun), phun phủ cho **2 – 3 Hecta (20 – 30 công tầm cấy 1.000m²)**.
   * **Liều pha bình máy 25 Lít:** Pha `25ml – 50ml / bình 25L` (Trung bình `30ml - 50ml/bình 25L` cho diện tích 20 bình = 2 ha / 20 công; hoặc `25 - 35ml/bình` cho 30 công).
-  * **Liều pha riêng cho Hữu pH 14 tưới/phun đất:** Đất chua phèn nặng (pH 3.5-4.0) pha `1 lon 1L với 600 – 800L nước`; đất bình thường duy trì pha `1 lon 1L với 1.000 – 1.500L nước`.
+  * **Liều pha & Định mức riêng cho Hữu pH 14:** Đất chua phèn nặng xịt/tưới **10 – 20 công tầm cắt (1 – 2 Hecta/lon)** (pha 50 – 100ml / bình 25L, tương đương 500 – 800L nước/lon); đất bình thường duy trì pha `1 lon 1L với 1.000 – 1.500L nước`.
   * **Liều bay Máy bay không người lái (Drone):** **1 Lon 1L bay cho 2 – 3 Hecta (20 – 30 công lúa)**. Dung dịch chelate/nano lỏng sữa hòa tan 100%, **tuyệt đối không lắng cặn, không nghẹt béc bay Drone**.
 * **Bài toán Kinh tế Nông hộ (ROI Thực Tế trên 1 Công 1.000m²):**
   * **Chi phí đầu tư:** Chỉ khoảng **15.000đ – 60.000đ / công / cử phun** (rẻ hơn nhiều so với rải thêm nửa bao phân NPK).

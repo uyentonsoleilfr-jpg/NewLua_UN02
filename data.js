@@ -73,14 +73,14 @@ const AGRIZEN_DATA = {
       ],
       "dosage": {
         "dilutionRates": [
-          "Pha bình 25L: 35 – 50ml / bình 25L (1 Lon 1L xịt 20 – 30 công tầm cắt 1.000m²).",
-          "Phun Drone lúa: 1 Lon 1L bay 2 – 3 ha (20 – 30 công tầm cắt).",
+          "Pha bình 25L: 50 – 100ml / bình 25L (1 Lon 1L xịt 10 – 20 công tầm cắt 1.000m²).",
+          "Phun Drone lúa: 1 Lon 1L bay 1 – 2 ha (10 – 20 công tầm cắt).",
           "Tưới gốc / hệ thống tưới: Pha 1 Lon 1L vào 1.000 – 1.500 Lít nước dập phèn chua và cải tạo đất."
         ],
         "crops": [
           {
             "name": "Cây Lúa (3 Cữ Chuẩn Đón Đầu - Phun Kèm ZAKi)",
-            "rate": "35 – 50ml / bình 25L (1 Lon 1L xịt 20 – 30 công tầm cắt 1.000m² / bay Drone 2 – 3 ha)",
+            "rate": "50 – 100ml / bình 25L (1 Lon 1L xịt 10 – 20 công tầm cắt 1.000m² / bay Drone 1 – 2 ha)",
             "stages": [
               "Cữ 1 (15 – 25 NSS - Đẻ nhánh / Nở bụi): Nâng pH đất tức thì từ 4.0 lên > 6.0 sau 24h, dập phèn xì đỏ, giải độc rơm rạ mục (ngộ độc hữu cơ), kích rễ cám bung trắng phau bám đất. Phun chung với ZAKi Rước Đòng.",
               "Cữ 2 (40 – 50 NSS - Đón đòng / Tim đèn 1-2mm): Giữ ổn định pH vùng rễ ngọt đất 5.5 - 6.5, giải độc phèn nhôm sắt, mở khóa Lân bị cố định để nuôi tim đèn mập ú, tăng 35-40% số gié.",
@@ -116,7 +116,7 @@ const AGRIZEN_DATA = {
       },
       "image": "assets/images/sp_ph14.jpg",
       "pricing": {
-        "usageRate": "1 Lon 1L xịt 20 – 30 công tầm cắt (1.000m²) / Bay Drone 2 – 3 ha",
+        "usageRate": "1 Lon 1L xịt 10 – 20 công tầm cắt (1.000m²) / Bay Drone 1 – 2 ha",
         "listed": "460.000đ/lon",
         "sale": "322.000đ/lon",
         "discount": "-30%",
