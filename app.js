@@ -79,11 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     'script-netto': {
-
-      title: '4. KỊCH BẢN UPSELL NETTO PLUS (THUỐC TRỪ SÂU DẠNG SỮA 10EW)',
-
-      desc: 'Quy trình 5 bước tư vấn 4 cữ đón đầu ngoài ruộng, giải mã diện tích 20-30 công và chốt gói Mua 3 Tặng 1 Luke'
-
+      title: '4. CẨM NANG 4 CỮ PHUN THUỐC SÂU NETO PLUS 10EW & BÁN KÈM ZAKi',
+      desc: 'Bộ câu hỏi thời tiết 3 vùng miền, 4 cữ lúa, chính sách Mua 3 Tặng 1 giá 1tr5 và định mức diện tích 1 chai 1L'
     },
 
     'schedule-rice': {
@@ -104,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     'rice-dict': {
 
-      title: '7. TỪ ĐIỂN LÚA (50 THUẬT NGỮ NÔNG DÂN 3 MIỀN)',
+      title: '7. TỪ ĐIỂN LÚA & SÂU BỆNH HẠI',
 
-      desc: 'Cẩm nang tra cứu 50 từ ngữ tiếng lóng vùng miền, dấu hiệu nhận biết ngoài ruộng và mẫu câu tư vấn khéo léo'
+      desc: 'Cẩm nang tra cứu thuật ngữ đồng ruộng 3 miền, các giai đoạn sinh trưởng cây lúa và phác đồ đặc trị 24 sâu bệnh hại thực địa'
 
     },
 
@@ -128,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     'crop-types': {
 
-      title: '10. LOẠI CÂY TRỒNG',
+      title: '10. MỞ RỘNG',
 
       desc: 'Cẩm nang tra cứu vấn đề thổ nhưỡng, độ pH đất lý tưởng, liều tưới pH 14 và lịch chăm sóc cho các nhóm cây trồng chủ lực'
 
@@ -512,7 +509,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <tr>
         ${r.isFirstOfGroup ? `
           <td class="col-step" rowspan="${r.rowSpan}">
-            <div class="script-step-badge">${r.step}</div>
+            <div class="script-step-badge">${r.step.replace(/\n/g, "<br>")}</div>
           </td>
         ` : ''}
         <td class="col-stage">
@@ -596,1450 +593,1614 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeStageId = 'stage-1';
 
   const renderScheduleRice = () => {
-
     if (!pageScheduleRice || !AGRIZEN_DATA.seasonsAndStages) return;
-
     const data = AGRIZEN_DATA.seasonsAndStages;
 
-    // 1. Render Region Cards based on active filter
-
-    const filteredRegions = activeRegionFilter === 'all'
-
-      ? data.seasonsSection.regions
-
-      : data.seasonsSection.regions.filter(r => r.id === activeRegionFilter);
-
-    const regionsHtml = filteredRegions.map(reg => `
-
-      <div class="region-card">
-
-        <div class="region-header">
-
-          <div class="region-name">
-
-            <span>${reg.icon}</span>
-
-            <span>${reg.name}</span>
-
-          </div>
-
-          <span class="region-badge">${reg.badge}</span>
-
-        </div>
-
-        <div class="season-list">
-
-          ${reg.seasons.map(s => `
-
-            <div class="season-item">
-
-              <div class="season-title-row">
-
-                <span class="season-pill">${s.name}</span>
-
-                <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">${s.tag}</span>
-
-              </div>
-
-              <div class="season-climate"><strong>Thời tiết:</strong> ${s.climate}</div>
-
-              <div class="season-nutrient"><strong>🌾 Trọng tâm Dinh dưỡng:</strong> ${s.nutrientNeed}</div>
-
-            </div>
-
-          `).join('')}
-
-        </div>
-
-      </div>
-
-    `).join('');
-
-    // 2. Render Active Stage Detail
-
+    // 1. Render Active Stage Detail (ĐƯA LÊN ĐẦU TRANG THEO YÊU CẦU)
     const activeStage = data.stagesSection.stages.find(st => st.id === activeStageId) || data.stagesSection.stages[0];
-
     const stepperNavHtml = data.stagesSection.stages.map(st => `
-
       <button class="step-btn ${st.id === activeStageId ? 'active' : ''}" data-stage="${st.id}">
-
         <div class="step-btn-num">${st.stepNum}</div>
-
         <div class="step-btn-title">${st.tabName}</div>
-
         <div class="step-btn-age">${st.ageTag}</div>
-
       </button>
-
     `).join('');
 
     const stageDetailHtml = `
-
       <div class="stage-detail-grid">
-
         <!-- Left: Nutrition & Prescription -->
-
         <div class="stage-info-column">
-
           <div>
-
             <span class="stage-age-pill">⏱️ Tuổi lúa: ${activeStage.ageTag}</span>
-
             <h3 class="stage-main-title">${activeStage.title}</h3>
-
           </div>
 
           <div class="stage-block-box">
-
             <div class="stage-block-label">
-
               <span>🎯</span>
-
               <span>Mục Tiêu Năng Suất Thu Hoạch:</span>
-
             </div>
-
             <div class="stage-block-text">${activeStage.yieldGoal}</div>
-
           </div>
 
           <div class="stage-block-box">
-
             <div class="stage-block-label">
-
               <span>🌾</span>
-
               <span>Nhu Cầu Dinh Dưỡng Cần Thiết:</span>
-
             </div>
-
             <div class="stage-block-text">${activeStage.nutrientNeed}</div>
-
           </div>
 
           <div class="stage-block-box box-prescription">
-
             <div class="stage-block-label" style="color: var(--brand-900);">
-
               <span>🧰</span>
-
               <span>Liều Phun:</span>
-
             </div>
-
             <div class="stage-block-text" style="font-weight: 600;">${activeStage.prescription}</div>
-
           </div>
 
-          <div class="stage-block-box box-result">
-
-            <div class="stage-block-label" style="color: var(--amber-950);">
-
-              <span>★</span>
-
-              <span>Kết Quả Tăng Năng Suất Thu Về Ngoài Ruộng:</span>
-
+          <div class="stage-block-box box-pests" style="background: rgba(239, 68, 68, 0.05); border-left: 4px solid #ef4444;">
+            <div class="stage-block-label" style="color: #b91c1c;">
+              <span>🐛</span>
+              <span>Các Dịch Bệnh & Sâu Hại Hay Gặp Ở Giai Đoạn Này:</span>
             </div>
-
-            <div class="stage-block-text" style="font-weight: 700; color: var(--amber-950);">${activeStage.yieldResult}</div>
-
+            <div class="stage-block-text" style="color: #7f1d1d; font-weight: 600;">${activeStage.pestsDiseases ? activeStage.pestsDiseases.replace(/\n/g, '<br>') : ''}</div>
           </div>
-
         </div>
 
         <!-- Right: Photographic Image Asset -->
-
         <div class="stage-image-column">
-
           <img src="${activeStage.image}" alt="${activeStage.title}" loading="lazy" />
-
           <div class="stage-image-caption">🌱 Minh Họa: ${activeStage.title} - Ruộng Lúa Chuẩn Năng Suất</div>
-
         </div>
-
       </div>
-
     `;
 
-    // 3. Render Nutrition Classification & Feeding Steps
+    // 2. Render Region Cards based on active filter (KÈM SÂU BỆNH THEO MÙA VỤ)
+    const filteredRegions = activeRegionFilter === 'all'
+      ? data.seasonsSection.regions
+      : data.seasonsSection.regions.filter(r => r.id === activeRegionFilter);
 
-    const nutriCardsHtml = data.nutritionSection.classifications.map(c => `
-
-      <div class="nutri-box">
-
-        <div class="nutri-box-icon">${c.icon}</div>
-
-        <div class="nutri-box-title">${c.title}</div>
-
-        <div class="nutri-box-desc">${c.desc}</div>
-
+    const regionsHtml = filteredRegions.map(reg => `
+      <div class="region-card">
+        <div class="region-header">
+          <div class="region-name">
+            <span>${reg.icon}</span>
+            <span>${reg.name}</span>
+          </div>
+          <span class="region-badge">${reg.badge}</span>
+        </div>
+        <div class="season-list">
+          ${reg.seasons.map(s => `
+            <div class="season-item">
+              <div class="season-title-row">
+                <span class="season-pill">${s.name}</span>
+                <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">${s.tag}</span>
+              </div>
+              <div class="season-climate"><strong>Thời tiết:</strong> ${s.climate}</div>
+              <div class="season-nutrient"><strong>🌾 Trọng tâm Dinh dưỡng:</strong> ${s.nutrientNeed}</div>
+              ${s.pests ? `
+                <div class="season-pests" style="margin-top: 7px; font-size: 13px; line-height: 1.45; color: #991b1b; background: rgba(239, 68, 68, 0.05); padding: 7px 10px; border-radius: 6px; border: 1px dashed rgba(239, 68, 68, 0.25);">
+                  <strong>🐛 Sâu bệnh & Dịch hại hay gặp:</strong> ${s.pests}
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
       </div>
+    `).join('');
 
+    // 3. Render Nutrition Classification & Feeding Steps
+    const nutriCardsHtml = data.nutritionSection.classifications.map(c => `
+      <div class="nutri-box">
+        <div class="nutri-box-icon">${c.icon}</div>
+        <div class="nutri-box-title">${c.title}</div>
+        <div class="nutri-box-desc">${c.desc}</div>
+      </div>
     `).join('');
 
     const feedingStepsHtml = data.nutritionSection.feedingSteps.map(f => `
-
       <div class="feeding-step-row">
-
         <div class="step-tag-dark">${f.step}</div>
-
         <div class="step-info-text">
-
           <strong>${f.title}</strong>
-
           <p>${f.desc}</p>
-
         </div>
-
       </div>
-
     `).join('');
 
     pageScheduleRice.innerHTML = `
-
       <div class="page4-container">
-
-        <!-- SECTION 1: LỊCH VỤ MÙA LÚA 3 MIỀN TRONG NĂM -->
-
+        <!-- SECTION 1 (LÊN ĐẦU TRANG): 5 GIAI ĐOẠN SINH TRƯỞNG & QUY TRÌNH DINH DƯỠNG -->
         <section class="stages-stepper-container">
-
           <div class="section-hero-header">
-
-            <h2>${data.seasonsSection.title}</h2>
-
-            <p>${data.seasonsSection.subtitle}</p>
-
-          </div>
-
-          <div class="region-filter-bar">
-
-            <button class="filter-btn ${activeRegionFilter === 'all' ? 'active' : ''}" data-region="all">Tất Cả Các Miền</button>
-
-            <button class="filter-btn ${activeRegionFilter === 'bac' ? 'active' : ''}" data-region="bac">Miền Bắc</button>
-
-            <button class="filter-btn ${activeRegionFilter === 'trung' ? 'active' : ''}" data-region="trung">Miền Trung</button>
-
-            <button class="filter-btn ${activeRegionFilter === 'nam' ? 'active' : ''}" data-region="nam">Miền Nam</button>
-
-          </div>
-
-          <div class="regions-grid">
-
-            ${regionsHtml}
-
-          </div>
-
-        </section>
-
-        <!-- SECTION 2: 5 GIAI ĐOẠN SINH TRƯỞNG & QUY TRÌNH DINH DƯỠNG -->
-
-        <section class="stages-stepper-container">
-
-          <div class="section-hero-header">
-
             <h2>${data.stagesSection.title}</h2>
-
             <p>${data.stagesSection.subtitle}</p>
-
           </div>
 
           <!-- Stepper Navigation -->
-
           <div class="stepper-nav">
-
             ${stepperNavHtml}
-
           </div>
 
           <!-- Stage Detail View -->
-
           <div id="stage-detail-container">
-
             ${stageDetailHtml}
+          </div>
+        </section>
 
+        <!-- SECTION 2: LỊCH VỤ MÙA LÚA 3 MIỀN TRONG NĂM -->
+        <section class="stages-stepper-container">
+          <div class="section-hero-header">
+            <h2>${data.seasonsSection.title}</h2>
+            <p>${data.seasonsSection.subtitle}</p>
           </div>
 
+          <div class="region-filter-bar">
+            <button class="filter-btn ${activeRegionFilter === 'all' ? 'active' : ''}" data-region="all">Tất Cả Các Miền</button>
+            <button class="filter-btn ${activeRegionFilter === 'bac' ? 'active' : ''}" data-region="bac">Miền Bắc</button>
+            <button class="filter-btn ${activeRegionFilter === 'trung' ? 'active' : ''}" data-region="trung">Miền Trung</button>
+            <button class="filter-btn ${activeRegionFilter === 'nam' ? 'active' : ''}" data-region="nam">Miền Nam</button>
+          </div>
+
+          <div class="regions-grid">
+            ${regionsHtml}
+          </div>
         </section>
 
         <!-- SECTION 3: QUY TRÌNH DINH DƯỠNG & 5 ĐỢT BÓN PHÂN -->
-
         <section class="nutrition-grid-wrapper">
-
           <div class="nutrition-card-panel">
-
             <h3 class="panel-header-title">Phân Loại Dinh Dưỡng Lúa</h3>
-
             <div class="nutrition-class-cards">
-
               ${nutriCardsHtml}
-
             </div>
-
           </div>
-
           <div class="nutrition-card-panel">
-
             <h3 class="panel-header-title">5 Đợt Bón Phân & Dưỡng Lúa Chuẩn</h3>
-
             <div class="feeding-steps-list">
-
               ${feedingStepsHtml}
-
             </div>
-
           </div>
-
         </section>
-
       </div>
-
     `;
 
     // Bind Region Filter Buttons
-
     pageScheduleRice.querySelectorAll('.filter-btn').forEach(btn => {
-
       btn.addEventListener('click', (e) => {
-
         const region = e.currentTarget.getAttribute('data-region');
-
         if (region) {
-
           activeRegionFilter = region;
-
           renderScheduleRice();
-
         }
-
       });
-
     });
 
     // Bind Stepper Buttons
-
     pageScheduleRice.querySelectorAll('.step-btn').forEach(btn => {
-
       btn.addEventListener('click', (e) => {
-
         const stId = e.currentTarget.getAttribute('data-stage');
-
         if (stId) {
-
           activeStageId = stId;
-
           renderScheduleRice();
-
         }
-
       });
-
     });
-
   };
 
   // Render Page 5: Alkaline Deep Dive & 4 Crops Dosage Schedule
+// Render Page 5: Alkaline Deep Dive & 4 Crops Dosage Schedule
 
   let activeAlkalineSubTab = 'all';
 
   const renderAlkalineDeep = () => {
-
     if (!pageAlkalineDeep || !AGRIZEN_DATA.alkalineDeep) return;
 
     const data = AGRIZEN_DATA.alkalineDeep;
 
     // 0. Part II: 6 Cơ Chế Hoạt Động
-
     const p2 = data.part2_mechanisms;
-
     const p2MechanismsHtml = p2.mechanisms.map(m => `
-
       <div class="mech-item">
-
         <h4>${m.title}</h4>
-
         <p>${m.desc}</p>
-
       </div>
-
     `).join('');
 
     // 1. Part III: Các Điểm Mạnh Vượt Trội
-
     const p3 = data.part3_strengths;
-
     const p3RowsHtml = p3.rows.map(r => `
-
       <tr>
-
         <td class="col-indicator">${r.indicator}</td>
-
         <td class="col-content">${r.content}</td>
-
         <td class="col-action">${r.action}</td>
-
       </tr>
-
     `).join('');
 
     // 2. Part IV: Giải Thích Chuyên Sâu Bản Chất Kiềm Sinh Học
-
     const p4 = data.part4_deep_dive;
-
     const p4RowsHtml = p4.rows.map(r => `
-
       <tr>
-
         <td class="col-indicator">${r.concept}</td>
-
         <td class="col-content">${r.content}</td>
-
         <td class="col-action">${r.action}</td>
-
       </tr>
-
     `).join('');
 
-    // 3. Part V: Liều Lượng & Lịch Phun 4 Nhóm Cây Trồng
-
-    const p5 = data.part5_crops;
-
-    const cropsHtml = p5.crops.map(c => `
-
-      <div class="crop-card">
-
-        <div class="crop-title">
-
-          <span>🌿</span>
-
-          <span>${c.name}</span>
-
-        </div>
-
-        <div class="crop-rate-badge"><strong>Liều lượng:</strong> ${c.rate}</div>
-
-        ${c.stages && c.stages.length > 0 ? `
-
-          <ul class="crop-stage-list">
-
-            ${c.stages.map(st => `<li>${st}</li>`).join('')}
-
-          </ul>
-
-        ` : ''}
-
-      </div>
-
+    // 3. Part V: Bảng So Sánh Cách Làm Cũ Dùng Vôi Đá Với Cách Làm Mới Biochar Mỹ (Hữu Cơ pH 14)
+    const p5 = data.part5_comparisons;
+    const comparisonsRowsHtml = (p5 && p5.rows ? p5.rows : []).map(c => `
+      <tr>
+        <td class="col-crop-group" style="vertical-align: top; padding: 14px 16px;">
+          <div style="font-weight: 800; font-size: 15px; color: var(--brand-950); margin-bottom: 6px;">${c.group}</div>
+          <div style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5;">${c.detail.replace(/\n/g, '<br>')}</div>
+        </td>
+        <td class="col-old-way" style="vertical-align: top; padding: 14px 16px; background-color: #fffaf0;">
+          <div style="font-size: 13.5px; color: #78350f; font-weight: 600; line-height: 1.55; margin-bottom: 8px;">${c.oldWay.replace(/\n/g, '<br>')}</div>
+          <div style="background: #fee2e2; border-left: 3px solid #dc2626; padding: 8px 12px; border-radius: 4px; font-size: 12.5px; color: #991b1b; line-height: 1.5;">
+            <strong>⚠️ Hệ lụy thực tế:</strong><br>${c.oldHarm.replace(/\n/g, '<br>')}
+          </div>
+        </td>
+        <td class="col-new-way" style="vertical-align: top; padding: 14px 16px; background-color: #f0fdf4;">
+          <div style="font-size: 13.5px; color: #14532d; font-weight: 600; line-height: 1.55; margin-bottom: 8px;">${c.newWay.replace(/\n/g, '<br>')}</div>
+          <div style="background: #dcfce7; border-left: 3px solid #16a34a; padding: 8px 12px; border-radius: 4px; font-size: 12.5px; color: #166534; line-height: 1.5;">
+            <strong>🌾 Kết quả thu về:</strong><br>${c.newResult.replace(/\n/g, '<br>')}
+          </div>
+        </td>
+      </tr>
     `).join('');
 
     pageAlkalineDeep.innerHTML = `
-
       <div class="deep-dive-container">
-
         <!-- SUB-TABS NAVIGATION BAR -->
-
         <div class="region-filter-bar" style="margin-bottom: 8px;">
-
           <button class="filter-btn ${activeAlkalineSubTab === 'all' ? 'active' : ''}" data-subtab="all">Tất Cả Các Mục</button>
-
           <button class="filter-btn ${activeAlkalineSubTab === 'mechanisms' ? 'active' : ''}" data-subtab="mechanisms">⚡ Cơ Chế Hoạt Động</button>
-
           <button class="filter-btn ${activeAlkalineSubTab === 'strengths' ? 'active' : ''}" data-subtab="strengths">🔬 Điểm Mạnh & Biochar Mỹ</button>
-
           <button class="filter-btn ${activeAlkalineSubTab === 'deepdive' ? 'active' : ''}" data-subtab="deepdive">🧪 Bản Chất Kiềm Sinh Học</button>
-
-          <button class="filter-btn ${activeAlkalineSubTab === 'crops' ? 'active' : ''}" data-subtab="crops">📅 Liều Phun & Lịch Tưới 4 Cây Trồng</button>
-
+          <button class="filter-btn ${activeAlkalineSubTab === 'comparisons' ? 'active' : ''}" data-subtab="comparisons">⚖️ So Sánh Vôi Đá vs Biochar Mỹ</button>
         </div>
 
         <!-- BLOCK 0: II. CƠ CHẾ HOẠT ĐỘNG CỦA KIỀM SINH HỌC BIOCHAR -->
-
         <section class="deep-panel" id="sec-mechanisms" style="display: ${activeAlkalineSubTab === 'all' || activeAlkalineSubTab === 'mechanisms' ? 'block' : 'none'};">
-
-          <div class="deep-panel-header">
-
-            <h3>
-
-              <span>⚡</span>
-
-              <span>${p2.title}</span>
-
-            </h3>
-
+          <div class="panel-header">
+            <h3 class="panel-title">${p2.title}</h3>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 4px;">${p2.desc}</p>
           </div>
-
           <div class="mechanisms-grid">
-
             ${p2MechanismsHtml}
-
           </div>
-
         </section>
 
-        <!-- BLOCK 1: III. CÁC ĐIỂM MẠNH VƯỢT TRỘI VÀ CÔNG NGHỆ BIOCHAR HOẠT HÓA MỸ -->
-
+        <!-- BLOCK 1: III. CÁC ĐIỂM MẠNH VƯỢT TRỘI -->
         <section class="deep-panel" id="sec-strengths" style="display: ${activeAlkalineSubTab === 'all' || activeAlkalineSubTab === 'strengths' ? 'block' : 'none'};">
-
-          <div class="deep-panel-header">
-
-            <h3>
-
-              <span>🔬</span>
-
-              <span>${p3.title}</span>
-
-            </h3>
-
+          <div class="panel-header">
+            <h3 class="panel-title">${p3.title}</h3>
           </div>
-
           <div class="deep-table-wrapper">
-
             <table class="deep-master-table">
-
               <thead>
-
                 <tr>
-
-                  <th style="width: 220px;">${p3.headers[0]}</th>
-
-                  <th style="width: 240px;">${p3.headers[1]}</th>
-
-                  <th>${p3.headers[2]}</th>
-
+                  <th style="width: 280px;">Tiêu Chí & Chỉ Số</th>
+                  <th style="width: 520px;">Nội Dung Kỹ Thuật Đã Kiểm Chứng</th>
+                  <th style="width: 400px;">Hành Động Khuyên Dùng</th>
                 </tr>
-
               </thead>
-
               <tbody>
-
                 ${p3RowsHtml}
-
               </tbody>
-
             </table>
-
           </div>
-
         </section>
 
-        <!-- BLOCK 2: IV. GIẢI THÍCH CHUYÊN SÂU VỀ BẢN CHẤT KIỀM SINH HỌC & TÍNH AN TOÀN CẢI TẠO ĐẤT -->
-
+        <!-- BLOCK 2: IV. GIẢI THÍCH CHUYÊN SÂU BẢN CHẤT KIỀM SINH HỌC -->
         <section class="deep-panel" id="sec-deepdive" style="display: ${activeAlkalineSubTab === 'all' || activeAlkalineSubTab === 'deepdive' ? 'block' : 'none'};">
-
-          <div class="deep-panel-header">
-
-            <h3>
-
-              <span>🧪</span>
-
-              <span>${p4.title}</span>
-
-            </h3>
-
+          <div class="panel-header">
+            <h3 class="panel-title">${p4.title}</h3>
           </div>
-
           <div class="deep-table-wrapper">
-
             <table class="deep-master-table">
-
               <thead>
-
                 <tr>
-
-                  <th style="width: 220px;">${p4.headers[0]}</th>
-
-                  <th style="width: 240px;">${p4.headers[1]}</th>
-
-                  <th>${p4.headers[2]}</th>
-
+                  <th style="width: 280px;">Khái Niệm Khoa Học</th>
+                  <th style="width: 520px;">Giải Thích Thực Địa</th>
+                  <th style="width: 400px;">Khuyến Cáo Nông Nghiệp</th>
                 </tr>
-
               </thead>
-
               <tbody>
-
                 ${p4RowsHtml}
-
               </tbody>
-
             </table>
-
           </div>
-
         </section>
 
-        <!-- BLOCK 3: V. LIỀU LƯỢNG & LỊCH PHUN / TƯỚI CHUẨN CHO 4 NHÓM CÂY TRỒNG -->
-
-        <section class="dosage-card" id="sec-crops" style="background-color: #ffffff; display: ${activeAlkalineSubTab === 'all' || activeAlkalineSubTab === 'crops' ? 'block' : 'none'};">
-
-          <h3 class="block-title">
-
-            <span>📅</span>
-
-            <span>${p5.title}</span>
-
-          </h3>
-
-          <div style="background: #f0f7ec; border: 1px solid var(--brand-200); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 20px;">
-
-            <div style="font-size: 14px; font-weight: 800; color: var(--brand-900); margin-bottom: 6px; white-space: pre-line;">${p5.dilutionNote}</div>
-
-          </div>
-
-          <div class="crops-grid">
-
-            ${cropsHtml}
-
-          </div>
-
-          <div class="mixing-protocol-box">
-
-            <strong>⚠️ Nguyên tắc phối trộn & Phun Drone:</strong> ${p5.mixingRule}
-
-          </div>
-
-        </section>
-
+        <!-- BLOCK 3: V. BẢNG SO SÁNH CÁCH LÀM CŨ DÙNG VÔI ĐÁ VỚI CÁCH LÀM MỚI BIOCHAR MỸ -->
+        ${p5 ? `
+          <section class="deep-panel" id="sec-comparisons" style="display: ${activeAlkalineSubTab === 'all' || activeAlkalineSubTab === 'comparisons' ? 'block' : 'none'};">
+            <div class="panel-header">
+              <h3 class="panel-title">${p5.title}</h3>
+              <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 4px;">${p5.subtitle}</p>
+            </div>
+            <div class="deep-table-wrapper" style="overflow-x: auto;">
+              <table class="deep-master-table" style="min-width: 900px;">
+                <thead>
+                  <tr>
+                    <th style="width: 250px;">Nhóm Cây Trồng & Đặc Thù Vùng Đất</th>
+                    <th style="width: 440px;">Cách Làm Cũ (Vái Rải Vôi Nung) & Tác Hại</th>
+                    <th style="width: 480px;">Cách Làm Mới (Kiềm Biochar Mỹ pH 14) & Hiệu Quả</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${comparisonsRowsHtml}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ` : ''}
       </div>
-
     `;
 
     // Bind SubTab Filter Buttons
-
     pageAlkalineDeep.querySelectorAll('.filter-btn').forEach(btn => {
-
       btn.addEventListener('click', (e) => {
-
         const sub = e.currentTarget.getAttribute('data-subtab');
-
         if (sub) {
-
           activeAlkalineSubTab = sub;
-
           renderAlkalineDeep();
-
         }
-
       });
-
     });
-
   };
 
-  // Render Page 6: Rice Dictionary (50 Thuật Ngữ Nông Dân 3 Miền)
-
+  // Render Page 6: Rice Dictionary & Pest Library (Khám Phá Sâu Bệnh & Nấm Khuẩn)
+  let activeRiceDictTab = 'terms'; // 'terms' | 'stages' | 'pests'
   let activeRiceDictRegion = 'all';
-
   let riceDictSearchQuery = '';
 
-  const renderRiceDict = () => {
+  // Modal open/close handlers
+  window.openPestModal = function(pestId) {
+    openDetailModal('pest', pestId);
+  };
 
+  openDetailModal = function(type, id) {
+    const modalOverlay = document.getElementById('pest-modal-overlay');
+    const modalBody = document.getElementById('pest-modal-body');
+    if (!modalOverlay || !modalBody) return;
+
+    let title = '';
+    let subtitle = '';
+    let badgeText = '';
+    let image = 'assets/images/stage1.jpg';
+    let box1Title = '';
+    let box1Content = '';
+    let box2Title = '';
+    let box2Content = '';
+    let box3Title = '';
+    let box3Content = '';
+
+    // ==========================================
+    // TYPE 1: PESTS (SÂU BỆNH HẠI LÚA & CÂY TRỒNG)
+    // ==========================================
+    if (type === 'pest') {
+      let pest = null;
+      if (AGRIZEN_DATA.pestsData) {
+        pest = AGRIZEN_DATA.pestsData.find(p => p.id === id);
+      }
+      if (!pest && AGRIZEN_DATA.cropDictionary && AGRIZEN_DATA.cropDictionary.cropPests) {
+        pest = AGRIZEN_DATA.cropDictionary.cropPests.find(p => p.id === id);
+      }
+      if (!pest) return;
+
+      const symptomsBullets = Array.isArray(pest.symptoms) ? pest.symptoms.map(s => `
+        <li>
+          <i class="fa-solid fa-circle-minus"></i>
+          <div>${s}</div>
+        </li>
+      `).join('') : `<li><i class="fa-solid fa-circle-minus"></i><div>${pest.symptoms}</div></li>`;
+
+      const solutionText = pest.activeIngredients || pest.solution || '';
+      const stageOrCropText = pest.targetCrops ? 
+        `<div class="modal-alias" style="margin-bottom: 4px;"><i class="fa-solid fa-tree"></i> Cây hại: <strong>${pest.targetCrops}</strong></div><div class="modal-alias"><i class="fa-solid fa-clock"></i> Giai đoạn: ${pest.harmStage || ''}</div>` : 
+        `<div class="modal-alias"><i class="fa-solid fa-clock"></i> Gây hại: ${pest.stageTarget || ''}</div>`;
+
+      modalBody.innerHTML = `
+        <div class="modal-grid">
+          <div class="modal-info-side">
+            <h2>${pest.name}</h2>
+            ${pest.scientificName ? `<div style="font-style: italic; color: #64748b; font-size: 0.95rem; margin-top: -6px; margin-bottom: 10px;">${pest.scientificName}</div>` : ''}
+            ${stageOrCropText}
+            
+            <div class="modal-desc-box">
+              <h4 style="color: #ef4444;"><i class="fa-solid fa-circle-exclamation"></i> Triệu Chứng Điển Hình:</h4>
+              <ul class="modal-symptoms-list">${symptomsBullets}</ul>
+            </div>
+            
+            <div class="modal-desc-box">
+              <h4 style="color: #70ad47;"><i class="fa-solid fa-shield-halved"></i> Biện Pháp Phòng Ngừa Kỹ Thuật:</h4>
+              <p style="font-size: 0.95rem; line-height: 1.6; color: #374151; margin: 0;">${pest.prevention}</p>
+            </div>
+          </div>
+
+          <div class="modal-visual-side">
+            <div class="modal-visual-container">
+              <img class="modal-packshot" src="${pest.image}" alt="${pest.name}" onerror="this.src='assets/images/stage1.jpg';">
+            </div>
+            
+            <div class="modal-desc-box" style="width: 100%; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 1.2rem; margin-top: 0.5rem;">
+              <h4 style="color: #16a34a;"><i class="fa-solid fa-kit-medical"></i> Giải Pháp Hoạt Chất Đặc Trị Khoa Học:</h4>
+              <div class="modal-solution-box" style="background: #f0fdf4; border-left: 3px solid #16a34a; padding: 12px 14px; border-radius: 6px;">
+                <p style="margin: 0; line-height: 1.6; font-size: 0.92rem; color: #14532d;"><strong>${solutionText}</strong></p>
+              </div>
+              <button type="button" class="pest-card-btn" style="margin-top: 15px; width: 100%;" onclick="closePestModal()">
+                <i class="fa-solid fa-check"></i> Đã Hiểu Phác Đồ Kỹ Thuật
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      modalOverlay.style.display = 'flex';
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+
+    // ==========================================
+    // TYPE 2: TERMS (THUẬT NGỮ ĐỒNG RUỘNG 3 MIỀN)
+    // ==========================================
+    if (type === 'term') {
+      const t = (AGRIZEN_DATA.riceDictionary.terms || []).find(item => item.id == id);
+      if (!t) return;
+      title = `📖 ${t.id}. ${t.term}`;
+      subtitle = `Thuật ngữ đồng ruộng vùng: ${t.region}`;
+      badgeText = `<i class="fa-solid fa-location-dot"></i> Vùng: ${t.region}`;
+      image = t.image || (t.id % 6 === 1 ? 'assets/images/stage1.jpg' : t.id % 6 === 2 ? 'assets/images/stage2.jpg' : t.id % 6 === 3 ? 'assets/images/stage3.jpg' : t.id % 6 === 4 ? 'assets/images/stage4.jpg' : t.id % 6 === 5 ? 'assets/images/stage5.jpg' : 'assets/images/stage6.jpg');
+
+      box1Title = 'Ý Nghĩa Khoa Học & Cơ Chế Sinh Lý:';
+      box1Content = `<p style="margin: 0; line-height: 1.6; font-size: 0.95rem; color: #1e293b;">${t.meaning}</p>`;
+
+      box2Title = 'Dấu Hiệu Nhận Biết Ngoài Ruộng Thực Địa:';
+      box2Content = `<p style="margin: 0; line-height: 1.6; font-size: 0.95rem; color: #92400e;">${t.sign}</p>`;
+
+      box3Title = 'Mẫu Câu Kỹ Sư / Telesales Tư Vấn Chuẩn Nhà Nông:';
+      box3Content = `<div style="background: #fefce8; border-left: 3px solid #ca8a04; padding: 12px 14px; border-radius: 6px; font-style: italic; color: #713f12; line-height: 1.6;">"${t.sampleCall}"</div>`;
+    }
+
+    // ==========================================
+    // TYPE 3: STAGES (6 GIAI ĐOẠN LÚA)
+    // ==========================================
+    else if (type === 'stage') {
+      const st = (AGRIZEN_DATA.riceGrowthStages || []).find(item => item.id === id);
+      if (!st) return;
+      title = `🌾 ${st.name}`;
+      subtitle = `Tên gọi dân gian ĐBSCL: ${st.folkNames}`;
+      badgeText = `<i class="fa-solid fa-clock"></i> Thời gian: ${st.days}`;
+      image = st.image || 'assets/images/stage1.jpg';
+
+      box1Title = 'Dấu Hiệu Thực Địa Ngoài Ruộng:';
+      box1Content = `<p style="margin: 0; line-height: 1.6; font-size: 0.95rem; color: #1e293b;">${st.signs}</p>`;
+
+      box2Title = 'Trọng Tâm Dinh Dưỡng:';
+      box2Content = `<div style="background: #eff6ff; border-left: 3px solid #2563eb; padding: 12px 14px; border-radius: 6px; font-size: 0.92rem; color: #1e40af; line-height: 1.6;"><strong>${st.nutrient}</strong></div>`;
+
+      box3Title = 'Mẫu Câu Kỹ Sư Tư Vấn Ngoài Ruộng:';
+      box3Content = `<div style="background: #fcf8e3; border-left: 3px solid #ca8a04; padding: 12px 14px; border-radius: 6px; font-style: italic; color: #533f03; line-height: 1.6;">"${st.adviceCall}"</div>`;
+    }
+
+    // ==========================================
+    // TYPE 4: SOIL (BỆNH THỔ NHƯỠNG & RỄ CÂY TRỒNG)
+    // ==========================================
+    else if (type === 'soil') {
+      const t = (AGRIZEN_DATA.cropDictionary.soilDisorders || []).find(item => item.id === id);
+      if (!t) return;
+      title = `⚠️ ${t.stt}. ${t.name}`;
+      subtitle = `Ảnh hưởng trên cây: ${t.crops}`;
+      badgeText = `<i class="fa-solid fa-tree"></i> Cây hại: ${t.crops}`;
+      image = t.image || 'assets/images/stage1.jpg';
+
+      box1Title = 'Nguyên Nhân Sinh Lý:';
+      box1Content = `<p style="margin: 0; line-height: 1.6; font-size: 0.95rem; color: #1e293b;">${t.cause}</p>`;
+
+      box2Title = 'Triệu Chứng Thực Tế:';
+      box2Content = `<p style="margin: 0; line-height: 1.6; font-size: 0.95rem; color: #9a3412;">${t.symptoms}</p>`;
+
+      box3Title = 'Giải Pháp Kỹ Thuật (HỮU CƠ pH 14 & Vi Sinh):';
+      box3Content = `<div style="background: #f0fdf4; border-left: 3px solid #16a34a; padding: 12px 14px; border-radius: 6px; line-height: 1.6; font-size: 0.92rem; color: #14532d;"><strong>${t.solution}</strong></div>`;
+    }
+
+    // ==========================================
+    // TYPE 5: NUTRIENT (THIẾU HỤT DINH DƯỠNG)
+    // ==========================================
+    else if (type === 'nutrient') {
+      const n = (AGRIZEN_DATA.cropDictionary.nutrientDeficiencies || []).find(item => item.id === id);
+      if (!n) return;
+      title = `🧪 ${n.stt}. Thiếu Hụt ${n.name} (${n.symbol})`;
+      subtitle = `Vai trò sinh lý: ${n.role}`;
+      badgeText = `<i class="fa-solid fa-flask"></i> Nguyên tố: ${n.symbol}`;
+      image = n.image || 'assets/images/stage2.jpg';
+
+      box1Title = 'Vai Trò Sinh Lý Trong Cây:';
+      box1Content = `<p style="margin: 0; line-height: 1.6; font-size: 0.95rem; color: #1e293b;">${n.role}</p>`;
+
+      box2Title = 'Triệu Chứng Thiếu Hụt Điển Hình:';
+      box2Content = `<p style="margin: 0; line-height: 1.6; font-size: 0.95rem; color: #9a3412;">${n.symptoms}</p>`;
+
+      box3Title = 'Giải Pháp Kỹ Thuật Bổ Sung (Mix Combi / ZAKi):';
+      box3Content = `<div style="background: #f0fdf4; border-left: 3px solid #16a34a; padding: 12px 14px; border-radius: 6px; line-height: 1.6; font-size: 0.92rem; color: #14532d;"><strong>${n.solution}</strong></div>`;
+    }
+
+    // ==========================================
+    // TYPE 6: VARIETY (GIỐNG LÚA)
+    // ==========================================
+    else if (type === 'variety') {
+      const v = (AGRIZEN_DATA.riceVarieties.varieties || []).find(item => item.id === id);
+      if (!v) return;
+      title = `🌾 Giống Lúa ${v.name}`;
+      subtitle = `Phân nhóm: ${v.badge} | Khu vực: ${v.region}`;
+      badgeText = `<i class="fa-solid fa-clock"></i> Tổng ngày: ${v.duration}`;
+      image = 'assets/images/stage4.jpg';
+
+      box1Title = 'Thông Số Kinh Tế & Năng Suất:';
+      box1Content = `
+        <div class="dict-specs-grid" style="margin: 0;">
+          <div class="dict-spec-item"><strong>⏱️ Tổng ngày:</strong> ${v.duration}</div>
+          <div class="dict-spec-item"><strong>💰 Giá lúa tươi:</strong> ${v.price}</div>
+          <div class="dict-spec-item"><strong>🌾 Năng suất:</strong> ${v.yield}</div>
+          <div class="dict-spec-item"><strong>💵 Doanh thu:</strong> ${v.revenue}</div>
+        </div>
+      `;
+
+      box2Title = 'Chi Tiết 4 Giai Đoạn Sinh Trưởng:';
+      box2Content = `
+        <ul class="dict-stages-list" style="margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; font-size: 0.92rem; color: #334155;">
+          <li>• <strong>Đẻ nhánh:</strong> ${v.stages.tillering}</li>
+          <li>• <strong>Làm đòng:</strong> ${v.stages.panicle}</li>
+          <li>• <strong>Trổ - Cong me:</strong> ${v.stages.heading}</li>
+          <li>• <strong>Chín - Gặt:</strong> ${v.stages.ripening}</li>
+        </ul>
+      `;
+
+      const pestsList = (v.pestsAndDiseases || []).map(p => `<li style="display: flex; gap: 6px;"><span style="color: #ea580c;">●</span><span>${p}</span></li>`).join('');
+      box3Title = 'Sâu Bệnh Đặc Trưng & Phác Đồ ZAKi Khuyến Nghị:';
+      box3Content = `
+        <div style="background: #fff7ed; border-left: 3px solid #ea580c; padding: 10px 12px; border-radius: 6px; font-size: 0.92rem; color: #7c2d12; margin-bottom: 8px;">
+          <strong style="display: block; margin-bottom: 4px;">Điểm yếu cần phòng ngừa:</strong>
+          <ul style="margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 4px;">${pestsList}</ul>
+        </div>
+        <div style="background: #f0fdf4; border-left: 3px solid #16a34a; padding: 10px 12px; border-radius: 6px; font-size: 0.92rem; color: #14532d;">
+          <strong>Phác đồ ZAKi:</strong> Cữ làm đòng phun ZAKi Rước Đòng + Mix Combi; Cữ cong trái me phun Siêu Vô Gạo ZAKi + Luke để hạt sáng mẩy, nặng ký, chắc tới cậy.
+        </div>
+      `;
+    }
+
+    // Modal HTML layout
+    modalBody.innerHTML = `
+      <div class="modal-grid">
+        <div class="modal-info-side">
+          <h2>${title}</h2>
+          <div style="font-size: 0.92rem; color: #64748b; margin-top: -6px; margin-bottom: 10px;">${subtitle}</div>
+          <div class="modal-alias" style="margin-bottom: 12px;">${badgeText}</div>
+
+          <div class="modal-desc-box">
+            <h4 style="color: var(--brand-800);"><i class="fa-solid fa-circle-info"></i> ${box1Title}</h4>
+            ${box1Content}
+          </div>
+
+          <div class="modal-desc-box">
+            <h4 style="color: #ea580c;"><i class="fa-solid fa-triangle-exclamation"></i> ${box2Title}</h4>
+            ${box2Content}
+          </div>
+        </div>
+
+        <div class="modal-visual-side">
+          <div class="modal-visual-container">
+            <img class="modal-packshot" src="${image}" alt="${title}" onerror="this.src='assets/images/stage1.jpg';">
+          </div>
+
+          <div class="modal-desc-box" style="width: 100%; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 1.2rem; margin-top: 0.5rem;">
+            <h4 style="color: #16a34a;"><i class="fa-solid fa-kit-medical"></i> ${box3Title}</h4>
+            ${box3Content}
+            <button type="button" class="pest-card-btn" style="margin-top: 15px; width: 100%;" onclick="closePestModal()">
+              <i class="fa-solid fa-check"></i> Đã Hiểu Thông Tin Kỹ Thuật
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    modalOverlay.style.display = 'flex';
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closePestModal = function() {
+    const modalOverlay = document.getElementById('pest-modal-overlay');
+    if (modalOverlay) {
+      modalOverlay.classList.remove('active');
+      modalOverlay.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  };
+  window.closePestModal = closePestModal;
+
+  // Bind modal closing listeners
+  const modalOverlayElem = document.getElementById('pest-modal-overlay');
+  const btnCloseModalElem = document.getElementById('btn-close-pest-modal');
+  if (modalOverlayElem) {
+    modalOverlayElem.addEventListener('click', (e) => {
+      if (e.target === modalOverlayElem) closePestModal();
+    });
+  }
+  if (btnCloseModalElem) {
+    btnCloseModalElem.addEventListener('click', closePestModal);
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePestModal();
+  });
+
+  const renderRiceDict = () => {
     if (!pageRiceDict || !AGRIZEN_DATA.riceDictionary) return;
 
     const data = AGRIZEN_DATA.riceDictionary;
+    const stagesList = AGRIZEN_DATA.riceGrowthStages || [];
+    const pestsList = AGRIZEN_DATA.pestsData || [];
+    const q = riceDictSearchQuery.toLowerCase().trim();
 
-    const filteredTerms = data.terms.filter(t => {
-
-      const matchRegion = activeRiceDictRegion === 'all' || t.region.includes(activeRiceDictRegion);
-
-      const q = riceDictSearchQuery.toLowerCase().trim();
-
-      const matchQuery = !q ||
-
-        t.term.toLowerCase().includes(q) ||
-
-        t.meaning.toLowerCase().includes(q) ||
-
-        t.sign.toLowerCase().includes(q) ||
-
-        t.sampleCall.toLowerCase().includes(q) ||
-
-        t.region.toLowerCase().includes(q);
-
-      return matchRegion && matchQuery;
-
-    });
-
-    const categoryBtnsHtml = data.categories.map(cat => `
-
-      <button class="filter-btn ${cat.id === activeRiceDictRegion ? 'active' : ''}" data-rice-region="${cat.id}">
-
-        ${cat.name}
-
-      </button>
-
-    `).join('');
-
-    const termsHtml = filteredTerms.map(t => `
-
-      <div class="dict-card">
-
-        <div class="dict-card-header">
-
-          <div>
-
-            <h4 class="dict-card-title">📖 ${t.id}. ${t.term}</h4>
-
-            <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">📍 Vùng: ${t.region}</div>
-
-          </div>
-
-          <span class="dict-badge">${t.region}</span>
-
-        </div>
-
-        <div style="font-size: 13.5px; line-height: 1.55; color: var(--text-main);">
-
-          <strong>🧠 Ý nghĩa khoa học / Sinh lý:</strong><br>
-
-          ${t.meaning}
-
-        </div>
-
-        <div class="dict-stages-box">
-
-          <h5>🌾 Dấu Hiệu Nhận Biết Ngoài Ruộng:</h5>
-
-          <div style="font-size: 13px; color: var(--text-main); line-height: 1.5;">${t.sign}</div>
-
-        </div>
-
-        <div class="dict-spray-box" style="background-color: #fcf8e3; border-left-color: #856404;">
-
-          <h5 style="color: #856404;">💬 Mẫu Câu Tư Vấn Khéo Léo (Telesales):</h5>
-
-          <div style="font-size: 13.5px; font-weight: 600; color: #533f03; font-style: italic; line-height: 1.5;">
-
-            ${t.sampleCall}
-
-          </div>
-
-        </div>
-
+    // Top 3 Main Sub-Tabs Navigation
+    const topTabsHtml = `
+      <div class="dict-main-tabs">
+        <button type="button" class="dict-main-tab-btn ${activeRiceDictTab === 'terms' ? 'active' : ''}" data-dict-tab="terms">
+          📖 Thuật Ngữ 3 Miền (${data.terms.length})
+        </button>
+        <button type="button" class="dict-main-tab-btn ${activeRiceDictTab === 'stages' ? 'active' : ''}" data-dict-tab="stages">
+          🌾 6 Giai Đoạn Lúa (${stagesList.length})
+        </button>
+        <button type="button" class="dict-main-tab-btn ${activeRiceDictTab === 'pests' ? 'active' : ''}" data-dict-tab="pests">
+          🔬 24 Sâu Bệnh Hại (${pestsList.length})
+        </button>
       </div>
-
-    `).join('');
-
-    pageRiceDict.innerHTML = `
-
-      <div class="dict-container">
-
-        <div class="dict-controls-bar">
-
-          <div class="search-input-box">
-
-            <span class="search-icon">🔍</span>
-
-            <input type="text" id="rice-dict-search-input" placeholder="Tìm nhanh 50 thuật ngữ tiếng lóng lúa (tim đèn, ôm bắp, nghẹt rễ, lúa sụm mặt, chắc cậy, gió Lào...)" value="${riceDictSearchQuery}" />
-
-          </div>
-
-          <div class="region-filter-bar" style="margin-bottom: 0; justify-content: flex-start;">
-
-            ${categoryBtnsHtml}
-
-          </div>
-
-        </div>
-
-        <div class="dict-grid">
-
-          ${filteredTerms.length > 0 ? termsHtml : `
-
-            <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: #ffffff; border-radius: var(--radius-md); color: var(--text-muted);">
-
-              Không tìm thấy thuật ngữ phù hợp với từ khóa "${riceDictSearchQuery}".
-
-            </div>
-
-          `}
-
-        </div>
-
-      </div>
-
     `;
 
-    pageRiceDict.querySelectorAll('[data-rice-region]').forEach(btn => {
+    let subControlsHtml = '';
+    let mainContentHtml = '';
 
-      btn.addEventListener('click', (e) => {
+    // ==========================================
+    // TAB 1: THUẬT NGỮ ĐỒNG RUỘNG 3 MIỀN
+    // ==========================================
+    if (activeRiceDictTab === 'terms') {
+      const categoryBtnsHtml = data.categories.map(cat => `
+        <button class="filter-btn ${cat.id === activeRiceDictRegion ? 'active' : ''}" data-rice-region="${cat.id}">
+          ${cat.name}
+        </button>
+      `).join('');
 
-        const r = e.currentTarget.getAttribute('data-rice-region');
+      subControlsHtml = `
+        <div class="dict-controls-bar">
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="rice-dict-search-input" placeholder="Tìm nhanh thuật ngữ, tiếng lóng, đơn vị đo 3 miền..." value="${riceDictSearchQuery}" />
+          </div>
+          <div class="region-filter-bar" style="margin-bottom: 0; justify-content: flex-start;">
+            ${categoryBtnsHtml}
+          </div>
+        </div>
+      `;
 
-        if (r) {
+      const filteredTerms = data.terms.filter(t => {
+        const matchRegion = activeRiceDictRegion === 'all' ||
+          (t.category && t.category === activeRiceDictRegion) ||
+          (activeRiceDictRegion === 'nam' && t.region.includes('Nam')) ||
+          (activeRiceDictRegion === 'bac' && t.region.includes('Bắc')) ||
+          (activeRiceDictRegion === 'trung' && t.region.includes('Trung'));
 
-          activeRiceDictRegion = r;
+        const matchQuery = !q ||
+          t.term.toLowerCase().includes(q) ||
+          t.meaning.toLowerCase().includes(q) ||
+          t.sign.toLowerCase().includes(q) ||
+          t.sampleCall.toLowerCase().includes(q) ||
+          t.region.toLowerCase().includes(q);
 
-          renderRiceDict();
-
-        }
-
+        return matchRegion && matchQuery;
       });
 
-    });
+      if (filteredTerms.length > 0) {
+        mainContentHtml = `
+          <div class="pests-grid">
+            ${filteredTerms.map(t => {
+              const img = t.image || (t.id % 6 === 1 ? 'assets/images/stage1.jpg' : t.id % 6 === 2 ? 'assets/images/stage2.jpg' : t.id % 6 === 3 ? 'assets/images/stage3.jpg' : t.id % 6 === 4 ? 'assets/images/stage4.jpg' : t.id % 6 === 5 ? 'assets/images/stage5.jpg' : 'assets/images/stage6.jpg');
+              return `
+                <div class="pest-card">
+                  <div class="pest-image-container">
+                    <img src="${img}" alt="${t.term}" class="pest-card-img" onerror="this.src='assets/images/stage1.jpg';">
+                  </div>
+                  <div class="pest-header">
+                    <span class="pest-icon-tag">📖</span>
+                    <div>
+                      <h3>${t.id}. ${t.term}</h3>
+                      <span class="pest-badge-target"><i class="fa-solid fa-location-dot"></i> Vùng: ${t.region}</span>
+                    </div>
+                  </div>
+                  <div class="pest-body">
+                    <div class="pest-symptoms">
+                      <strong>Ý nghĩa & Nhận dạng:</strong>
+                      <ul class="pest-symptoms-list">
+                        <li>
+                          <i class="fa-solid fa-circle-minus"></i>
+                          <div><strong>Ý nghĩa:</strong> ${t.meaning.length > 95 ? t.meaning.substring(0, 90) + '...' : t.meaning}</div>
+                        </li>
+                        <li>
+                          <i class="fa-solid fa-circle-minus"></i>
+                          <div><strong>Dấu hiệu:</strong> ${t.sign.length > 95 ? t.sign.substring(0, 90) + '...' : t.sign}</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="pest-card-bottom">
+                      <div class="pest-solution-badge">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>Tư vấn: <strong>${t.sampleCall.substring(0, 45)}...</strong></div>
+                      </div>
+                      <button type="button" class="pest-card-btn" onclick="openDetailModal('term', ${t.id})">
+                        <i class="fa-solid fa-magnifying-glass"></i> Khám Phá Chi Tiết
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+      } else {
+        mainContentHtml = `
+          <div style="text-align: center; padding: 40px; background: #ffffff; border-radius: var(--radius-md); color: var(--text-muted);">
+            Không tìm thấy thuật ngữ phù hợp với từ khóa "${riceDictSearchQuery}".
+          </div>
+        `;
+      }
 
-    const searchInput = document.getElementById('rice-dict-search-input');
+    // ==========================================
+    // TAB 2: 6 GIAI ĐOẠN SINH TRƯỞNG CỦA CÂY LÚA
+    // ==========================================
+    } else if (activeRiceDictTab === 'stages') {
+      subControlsHtml = `
+        <div class="dict-controls-bar">
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="rice-dict-search-input" placeholder="Tìm kiếm giai đoạn lúa (Mạ, Đẻ nhánh, Tim đèn, Trổ bông, Vô gạo, Chín vàng)..." value="${riceDictSearchQuery}" />
+          </div>
+        </div>
+      `;
 
-    if (searchInput) {
-
-      searchInput.addEventListener('input', (e) => {
-
-        riceDictSearchQuery = e.target.value;
-
-        renderRiceDict();
-
-        const reInput = document.getElementById('rice-dict-search-input');
-
-        if (reInput) {
-
-          reInput.focus();
-
-          reInput.setSelectionRange(reInput.value.length, reInput.value.length);
-
-        }
-
+      const filteredStages = stagesList.filter(st => {
+        if (!q) return true;
+        return st.name.toLowerCase().includes(q) ||
+          st.folkNames.toLowerCase().includes(q) ||
+          st.days.toLowerCase().includes(q) ||
+          st.signs.toLowerCase().includes(q) ||
+          st.nutrient.toLowerCase().includes(q) ||
+          st.adviceCall.toLowerCase().includes(q);
       });
 
+      if (filteredStages.length > 0) {
+        mainContentHtml = `
+          <div class="pests-grid">
+            ${filteredStages.map(st => `
+              <div class="pest-card">
+                <div class="pest-image-container">
+                  <img src="${st.image}" alt="${st.name}" class="pest-card-img" onerror="this.src='assets/images/stage1.jpg';">
+                </div>
+                <div class="pest-header">
+                  <span class="pest-icon-tag">🌾</span>
+                  <div>
+                    <h3>${st.name}</h3>
+                    <span class="pest-badge-target"><i class="fa-solid fa-clock"></i> Thời gian: ${st.days}</span>
+                  </div>
+                </div>
+                <div class="pest-body">
+                  <div class="pest-symptoms">
+                    <strong>Đặc điểm sinh lý & Dân gian:</strong>
+                    <ul class="pest-symptoms-list">
+                      <li>
+                        <i class="fa-solid fa-circle-minus"></i>
+                        <div><strong>Dân gian:</strong> ${st.folkNames}</div>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-circle-minus"></i>
+                        <div><strong>Dấu hiệu:</strong> ${st.signs.length > 95 ? st.signs.substring(0, 90) + '...' : st.signs}</div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="pest-card-bottom">
+                    <div class="pest-solution-badge">
+                      <i class="fa-solid fa-flask"></i>
+                      <div>Dinh dưỡng: <strong>${st.nutrient.substring(0, 45)}...</strong></div>
+                    </div>
+                    <button type="button" class="pest-card-btn" onclick="openDetailModal('stage', '${st.id}')">
+                      <i class="fa-solid fa-magnifying-glass"></i> Khám Phá Chi Tiết
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      } else {
+        mainContentHtml = `
+          <div style="text-align: center; padding: 40px; background: #ffffff; border-radius: var(--radius-md); color: var(--text-muted);">
+            Không tìm thấy giai đoạn lúa phù hợp với từ khóa "${riceDictSearchQuery}".
+          </div>
+        `;
+      }
+
+    // ==========================================
+    // TAB 3: 24 SÂU BỆNH HẠI & RỐI LOẠN SINH LÝ
+    // ==========================================
+    } else if (activeRiceDictTab === 'pests') {
+      subControlsHtml = `
+        <div class="dict-controls-bar">
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="rice-dict-search-input" placeholder="Tìm kiếm sâu bệnh hại lúa (Sâu cuốn lá, Đạo ôn, Rầy nâu, Lem lép hạt...)" value="${riceDictSearchQuery}" />
+          </div>
+        </div>
+      `;
+
+      const filteredPests = pestsList.filter(p => {
+        if (!q) return true;
+        return p.name.toLowerCase().includes(q) ||
+          p.scientificName.toLowerCase().includes(q) ||
+          p.stageTarget.toLowerCase().includes(q) ||
+          p.symptoms.some(s => s.toLowerCase().includes(q)) ||
+          p.prevention.toLowerCase().includes(q) ||
+          p.activeGroupShort.toLowerCase().includes(q);
+      });
+
+      if (filteredPests.length > 0) {
+        mainContentHtml = `
+          <div class="pests-grid">
+            ${filteredPests.map(p => `
+              <div class="pest-card">
+                <div class="pest-image-container">
+                  <img src="${p.image}" alt="${p.name}" class="pest-card-img" onerror="this.src='assets/images/stage1.jpg';">
+                </div>
+                <div class="pest-header">
+                  <span class="pest-icon-tag">${p.icon}</span>
+                  <div>
+                    <h3>${p.stt}. ${p.name}</h3>
+                    <span class="pest-badge-target"><i class="fa-solid fa-clock"></i> Gây hại: ${p.stageTarget}</span>
+                  </div>
+                </div>
+                <div class="pest-body">
+                  <div class="pest-symptoms">
+                    <strong>Triệu chứng nhận dạng:</strong>
+                    <ul class="pest-symptoms-list">
+                      ${p.symptoms.map(s => `
+                        <li>
+                          <i class="fa-solid fa-circle-minus"></i>
+                          <div>${s}</div>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+                  <div class="pest-card-bottom">
+                    <div class="pest-solution-badge">
+                      <i class="fa-solid fa-prescription-bottle-medical"></i>
+                      <div>Nhóm hoạt chất: <strong>${p.activeGroupShort}</strong></div>
+                    </div>
+                    <button type="button" class="pest-card-btn" onclick="openDetailModal('pest', '${p.id}')">
+                      <i class="fa-solid fa-magnifying-glass"></i> Khám Phá Chi Tiết
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      } else {
+        mainContentHtml = `
+          <div style="text-align: center; padding: 40px; background: #ffffff; border-radius: var(--radius-md); color: var(--text-muted);">
+            Không tìm thấy sâu bệnh hại phù hợp với từ khóa "${riceDictSearchQuery}".
+          </div>
+        `;
+      }
     }
 
+    pageRiceDict.innerHTML = `
+      <div class="dict-container">
+        ${topTabsHtml}
+        ${subControlsHtml}
+        ${mainContentHtml}
+      </div>
+    `;
+
+    // Bind Main Sub-Tabs
+    pageRiceDict.querySelectorAll('[data-dict-tab]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const tab = e.currentTarget.getAttribute('data-dict-tab');
+        if (tab && tab !== activeRiceDictTab) {
+          activeRiceDictTab = tab;
+          renderRiceDict();
+        }
+      });
+    });
+
+    // Bind Region Filters (Tab Terms)
+    pageRiceDict.querySelectorAll('[data-rice-region]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const reg = e.currentTarget.getAttribute('data-rice-region');
+        if (reg) {
+          activeRiceDictRegion = reg;
+          renderRiceDict();
+        }
+      });
+    });
+
+    // Bind Search Input
+    const searchInput = document.getElementById('rice-dict-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        riceDictSearchQuery = e.target.value;
+        renderRiceDict();
+        const reInput = document.getElementById('rice-dict-search-input');
+        if (reInput) {
+          reInput.focus();
+          reInput.setSelectionRange(reInput.value.length, reInput.value.length);
+        }
+      });
+    }
   };
 
-  // Render Page 7: Crop Dictionary (Bệnh Đất & So Sánh Cách Làm)
-
-  let activeCropDictTab = 'all';
-
+  // ==========================================
+  // RENDER PAGE 8: TỪ ĐIỂN CÂY TRỒNG
+  // ==========================================
+  let activeCropDictSubTab = 'soil';
   let cropDictSearchQuery = '';
 
   const renderCropDict = () => {
-
     if (!pageCropDict || !AGRIZEN_DATA.cropDictionary) return;
 
     const data = AGRIZEN_DATA.cropDictionary;
+    const q = cropDictSearchQuery.toLowerCase().trim();
 
-    const filteredTerms = data.terms.filter(t => {
+    // 1. Sub-tabs bar HTML
+    const subtabs = data.subtabs || [
+      { id: 'soil', name: '🌿 1. Bệnh Thổ Nhưỡng & Rễ' },
+      { id: 'nutrients', name: '🧪 2. Chẩn Đoán Thiếu Dinh Dưỡng' },
+      { id: 'pests', name: '🐛 3. Thư Viện Sâu Bệnh Cây Trồng' }
+    ];
 
-      const q = cropDictSearchQuery.toLowerCase().trim();
-
-      return !q ||
-
-        t.term.toLowerCase().includes(q) ||
-
-        t.cause.toLowerCase().includes(q) ||
-
-        t.crops.toLowerCase().includes(q) ||
-
-        t.symptom.toLowerCase().includes(q) ||
-
-        t.solution.toLowerCase().includes(q);
-
-    });
-
-    const categoryBtnsHtml = data.categories.map(cat => `
-
-      <button class="filter-btn ${cat.id === activeCropDictTab ? 'active' : ''}" data-crop-tab="${cat.id}">
-
-        ${cat.name}
-
+    const subTabsHtml = subtabs.map(st => `
+      <button class="filter-btn ${st.id === activeCropDictSubTab ? 'active' : ''}" data-crop-subtab="${st.id}">
+        ${st.name}
       </button>
-
     `).join('');
 
-    const termsCardsHtml = filteredTerms.map(t => `
+    let cardsHtml = '';
+    let sectionTitle = '';
+    let resultCount = 0;
 
-      <div class="dict-card">
+    // SECTION 1: SOIL DISORDERS (8 Mục)
+    if (activeCropDictSubTab === 'soil') {
+      const items = (data.soilDisorders || []).filter(t => {
+        if (!q) return true;
+        return t.name.toLowerCase().includes(q) ||
+          t.crops.toLowerCase().includes(q) ||
+          t.symptoms.toLowerCase().includes(q) ||
+          t.cause.toLowerCase().includes(q) ||
+          t.solution.toLowerCase().includes(q);
+      });
+      resultCount = items.length;
+      sectionTitle = `⚠️ 8 Bệnh Lý Thổ Nhưỡng & Sức Khỏe Rễ (${resultCount} kết quả)`;
 
-        <div class="dict-card-header">
-
-          <div>
-
-            <h4 class="dict-card-title">⚠️ ${t.stt}. ${t.term}</h4>
-
-            <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">🌿 Đối tượng: ${t.crops}</div>
-
+      cardsHtml = items.map(t => `
+        <div class="pest-card">
+          <div class="pest-image-container">
+            <img src="${t.image}" alt="${t.name}" class="pest-card-img" onerror="this.src='assets/images/stage1.jpg';">
           </div>
-
-          <span class="dict-badge" style="background-color: var(--red-50); color: var(--red-800); border-color: var(--red-100);">Bệnh Thổ Nhưỡng</span>
-
-        </div>
-
-        <div style="font-size: 13.5px; line-height: 1.55; color: var(--text-main);">
-
-          <strong>🔬 Nguyên nhân sinh học:</strong><br>
-
-          ${t.cause}
-
-        </div>
-
-        <div class="crop-issue-box">
-
-          <strong>⚠️ Triệu chứng thực tế ngoài vườn/ruộng:</strong><br>
-
-          ${t.symptom}
-
-        </div>
-
-        <div class="crop-benefit-box">
-
-          <strong>🧪 Giải pháp Kiềm Sinh Học Biochar Mỹ:</strong><br>
-
-          ${t.solution}
-
-        </div>
-
-      </div>
-
-    `).join('');
-
-    const comparisonsRowsHtml = data.comparisons.map(c => `
-
-      <tr>
-
-        <td class="col-indicator" style="width: 180px;">${c.group}</td>
-
-        <td class="col-content" style="width: 200px;">${c.detail}</td>
-
-        <td style="width: 260px; background-color: var(--red-50); color: var(--red-800); font-size: 13.5px; line-height: 1.5;">
-
-          <strong>❌ Cách làm cũ:</strong><br>${c.oldWay}<br><br>
-
-          <strong>⚠️ Tác hại:</strong><br>${c.oldHarm}
-
-        </td>
-
-        <td style="width: 320px; background-color: #f4faf2; color: var(--brand-950); font-size: 13.5px; line-height: 1.5;">
-
-          <strong>✅ Cách làm mới Biochar:</strong><br>${c.newWay}<br><br>
-
-          <strong>★ Kết quả thu về:</strong><br>${c.newResult}
-
-        </td>
-
-      </tr>
-
-    `).join('');
-
-    pageCropDict.innerHTML = `
-
-      <div class="dict-container">
-
-        <div class="dict-controls-bar">
-
-          <div class="search-input-box">
-
-            <span class="search-icon">🔍</span>
-
-            <input type="text" id="crop-dict-search-input" placeholder="Tìm kiếm bệnh rễ, hiện tượng đất chua, thối rễ mùa mưa, mở khóa Lân, rửa mặn..." value="${cropDictSearchQuery}" />
-
+          <div class="pest-header">
+            <span class="pest-icon-tag">⚠️</span>
+            <div>
+              <h3>${t.stt}. ${t.name}</h3>
+              <span class="pest-badge-target"><i class="fa-solid fa-tree"></i> Cây hại: ${t.crops}</span>
+            </div>
           </div>
-
-          <div class="region-filter-bar" style="margin-bottom: 0; justify-content: flex-start;">
-
-            ${categoryBtnsHtml}
-
-          </div>
-
-        </div>
-
-        <!-- SECTION 1: 9 BỆNH RỄ & THỔ NHƯỠNG -->
-
-        <div id="sec-crop-terms" style="display: ${activeCropDictTab === 'all' || activeCropDictTab === 'terms' ? 'block' : 'none'};">
-
-          <h3 class="panel-header-title" style="margin-bottom: 16px;">⚠️ 9 Hiện Tượng Bệnh Thổ Nhưỡng & Rễ Nông Dân Thường Gặp</h3>
-
-          <div class="dict-grid">
-
-            ${filteredTerms.length > 0 ? termsCardsHtml : `
-
-              <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: #ffffff; border-radius: var(--radius-md); color: var(--text-muted);">
-
-                Không tìm thấy thuật ngữ phù hợp với từ khóa "${cropDictSearchQuery}".
-
+          <div class="pest-body">
+            <div class="pest-symptoms">
+              <strong>Triệu chứng & Nguyên nhân:</strong>
+              <ul class="pest-symptoms-list">
+                <li>
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <div><strong>Nguyên nhân:</strong> ${t.cause.length > 90 ? t.cause.substring(0, 85) + '...' : t.cause}</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <div><strong>Triệu chứng:</strong> ${t.symptoms.length > 95 ? t.symptoms.substring(0, 90) + '...' : t.symptoms}</div>
+                </li>
+              </ul>
+            </div>
+            <div class="pest-card-bottom">
+              <div class="pest-solution-badge">
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                <div>Giải pháp: <strong>${t.solution.substring(0, 45)}...</strong></div>
               </div>
-
-            `}
-
+              <button type="button" class="pest-card-btn" onclick="openDetailModal('soil', '${t.id}')">
+                <i class="fa-solid fa-magnifying-glass"></i> Khám Phá Chi Tiết
+              </button>
+            </div>
           </div>
-
         </div>
-
-        <!-- SECTION 2: BẢNG SO SÁNH CÁCH LÀM CŨ VS BIOCHAR MỸ -->
-
-        <div class="deep-panel" id="sec-crop-comparison" style="margin-top: 10px; display: ${activeCropDictTab === 'all' || activeCropDictTab === 'comparison' ? 'block' : 'none'};">
-
-          <div class="deep-panel-header">
-
-            <h3>
-
-              <span>⚖️</span>
-
-              <span>BẢNG SO SÁNH CÁCH LÀM CŨ DÙNG VÔI ĐÁ VỚI CÁCH LÀM MỚI BIOCHAR MỸ (HỮU pH 14)</span>
-
-            </h3>
-
-          </div>
-
-          <div class="deep-table-wrapper">
-
-            <table class="deep-master-table">
-
-              <thead>
-
-                <tr>
-
-                  <th style="width: 180px;">Nhóm Cây Trồng</th>
-
-                  <th style="width: 200px;">Loại Cây Chi Tiết & Vùng</th>
-
-                  <th style="width: 260px;">Cách Làm Cũ & Tác Hại Chai Đất</th>
-
-                  <th style="width: 320px;">Cách Làm Mới Với Hữu pH 14 & Kết Quả</th>
-
-                </tr>
-
-              </thead>
-
-              <tbody>
-
-                ${comparisonsRowsHtml}
-
-              </tbody>
-
-            </table>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    `;
-
-    pageCropDict.querySelectorAll('[data-crop-tab]').forEach(btn => {
-
-      btn.addEventListener('click', (e) => {
-
-        const tab = e.currentTarget.getAttribute('data-crop-tab');
-
-        if (tab) {
-
-          activeCropDictTab = tab;
-
-          renderCropDict();
-
-        }
-
-      });
-
-    });
-
-    const searchInput = document.getElementById('crop-dict-search-input');
-
-    if (searchInput) {
-
-      searchInput.addEventListener('input', (e) => {
-
-        cropDictSearchQuery = e.target.value;
-
-        renderCropDict();
-
-        const reInput = document.getElementById('crop-dict-search-input');
-
-        if (reInput) {
-
-          reInput.focus();
-
-          reInput.setSelectionRange(reInput.value.length, reInput.value.length);
-
-        }
-
-      });
-
+      `).join('');
     }
 
+    // SECTION 2: NUTRIENT DEFICIENCIES (10 Mục)
+    else if (activeCropDictSubTab === 'nutrients') {
+      const items = (data.nutrientDeficiencies || []).filter(n => {
+        if (!q) return true;
+        return n.name.toLowerCase().includes(q) ||
+          n.symbol.toLowerCase().includes(q) ||
+          n.role.toLowerCase().includes(q) ||
+          n.symptoms.toLowerCase().includes(q) ||
+          n.solution.toLowerCase().includes(q);
+      });
+      resultCount = items.length;
+      sectionTitle = `🧪 10 Hội Chứng Thiếu Hụt Dinh Dưỡng & Trung Vi Lượng (${resultCount} kết quả)`;
+
+      cardsHtml = items.map(n => `
+        <div class="pest-card">
+          <div class="pest-image-container" style="position: relative;">
+            <img src="${n.image}" alt="${n.name}" class="pest-card-img" onerror="this.src='assets/images/stage2.jpg';">
+            <span style="position: absolute; top: 10px; left: 10px; background: rgba(14, 165, 233, 0.95); color: #ffffff; font-weight: 800; font-size: 13px; padding: 3px 8px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">${n.symbol}</span>
+          </div>
+          <div class="pest-header">
+            <span class="pest-icon-tag">🧪</span>
+            <div>
+              <h3>${n.stt}. Thiếu ${n.name}</h3>
+              <span class="pest-badge-target"><i class="fa-solid fa-flask"></i> Ký hiệu: ${n.symbol}</span>
+            </div>
+          </div>
+          <div class="pest-body">
+            <div class="pest-symptoms">
+              <strong>Vai trò & Triệu chứng thiếu:</strong>
+              <ul class="pest-symptoms-list">
+                <li>
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <div><strong>Vai trò:</strong> ${n.role.length > 90 ? n.role.substring(0, 85) + '...' : n.role}</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <div><strong>Triệu chứng:</strong> ${n.symptoms.length > 95 ? n.symptoms.substring(0, 90) + '...' : n.symptoms}</div>
+                </li>
+              </ul>
+            </div>
+            <div class="pest-card-bottom">
+              <div class="pest-solution-badge">
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                <div>Bổ sung: <strong>${n.solution.substring(0, 45)}...</strong></div>
+              </div>
+              <button type="button" class="pest-card-btn" onclick="openDetailModal('nutrient', '${n.id}')">
+                <i class="fa-solid fa-magnifying-glass"></i> Khám Phá Chi Tiết
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // SECTION 3: CROP PESTS (12 Mục)
+    else if (activeCropDictSubTab === 'pests') {
+      const items = (data.cropPests || []).filter(p => {
+        if (!q) return true;
+        return p.name.toLowerCase().includes(q) ||
+          p.scientificName.toLowerCase().includes(q) ||
+          p.targetCrops.toLowerCase().includes(q) ||
+          p.harmStage.toLowerCase().includes(q) ||
+          p.symptoms.some(s => s.toLowerCase().includes(q)) ||
+          p.prevention.toLowerCase().includes(q) ||
+          p.activeIngredients.toLowerCase().includes(q);
+      });
+      resultCount = items.length;
+      sectionTitle = `🐛 12 Sâu Bệnh Hại Cây Trồng Phổ Biến (${resultCount} kết quả)`;
+
+      cardsHtml = items.map(p => `
+        <div class="pest-card">
+          <div class="pest-image-container">
+            <img src="${p.image}" alt="${p.name}" class="pest-card-img" onerror="this.src='assets/images/stage1.jpg';">
+          </div>
+          <div class="pest-header">
+            <span class="pest-icon-tag">${p.icon}</span>
+            <div>
+              <h3>${p.stt}. ${p.name}</h3>
+              <span class="pest-badge-target"><i class="fa-solid fa-tree"></i> ${p.targetCrops}</span>
+            </div>
+          </div>
+          <div class="pest-body">
+            <div class="pest-symptoms">
+              <strong>Triệu chứng nhận dạng:</strong>
+              <ul class="pest-symptoms-list">
+                ${p.symptoms.map(s => `
+                  <li>
+                    <i class="fa-solid fa-circle-minus"></i>
+                    <div>${s}</div>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+            <div class="pest-card-bottom">
+              <div class="pest-solution-badge">
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                <div>Nhóm hoạt chất: <strong>${p.activeIngredients.substring(0, 45)}...</strong></div>
+              </div>
+              <button type="button" class="pest-card-btn" onclick="openDetailModal('pest', '${p.id}')">
+                <i class="fa-solid fa-magnifying-glass"></i> Khám Phá Chi Tiết
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 2. Render Page DOM
+    pageCropDict.innerHTML = `
+      <div class="dict-container">
+        <!-- HEADER CONTROL BAR: TÌM KIẾM & CHUYỂN SUBTABS -->
+        <div class="dict-controls-bar">
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="crop-dict-search-input" placeholder="Tìm nhanh cây trồng, bệnh rễ, thiếu dinh dưỡng hoặc sâu hại..." value="${cropDictSearchQuery}" />
+          </div>
+          <div class="region-filter-bar" style="margin-bottom: 0; justify-content: flex-start;">
+            ${subTabsHtml}
+          </div>
+        </div>
+
+        <!-- TIÊU ĐỀ PHÂN MỤC -->
+        <div style="margin: 4px 0 16px 0; font-size: 14px; font-weight: 700; color: var(--brand-950);">
+          ${sectionTitle}
+        </div>
+
+        <!-- CARDS GRID THEO ĐỊNH DẠNG SÂU BỆNH -->
+        <div class="pests-grid">
+          ${cardsHtml || '<div style="text-align: center; padding: 40px; background: #ffffff; border-radius: 12px; color: var(--text-muted); grid-column: 1 / -1;">Không tìm thấy nội dung phù hợp với từ khóa tìm kiếm.</div>'}
+        </div>
+      </div>
+    `;
+
+    // 3. Bind subtabs click
+    pageCropDict.querySelectorAll('[data-crop-subtab]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const sub = e.currentTarget.getAttribute('data-crop-subtab');
+        if (sub && sub !== activeCropDictSubTab) {
+          activeCropDictSubTab = sub;
+          renderCropDict();
+        }
+      });
+    });
+
+    // 4. Bind search input
+    const searchInput = document.getElementById('crop-dict-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        cropDictSearchQuery = e.target.value;
+        renderCropDict();
+        const reInput = document.getElementById('crop-dict-search-input');
+        if (reInput) {
+          reInput.focus();
+          reInput.setSelectionRange(reInput.value.length, reInput.value.length);
+        }
+      });
+    }
   };
 
-  // Render Page 8: Rice Varieties (10 Giống Lúa Chủ Lực)
-
+  // ==========================================
+  // RENDER PAGE 9: GIỐNG LÚA
+  // ==========================================
   let activeRiceVarietyCategory = 'all';
-
   let riceVarietySearchQuery = '';
 
   const renderRiceVarieties = () => {
-
     if (!pageRiceVarieties || !AGRIZEN_DATA.riceVarieties) return;
-
     const data = AGRIZEN_DATA.riceVarieties;
 
     const filteredVarieties = data.varieties.filter(v => {
-
       const matchCat = activeRiceVarietyCategory === 'all' || v.category === activeRiceVarietyCategory;
-
       const query = riceVarietySearchQuery.toLowerCase().trim();
-
       const matchQuery = !query ||
-
         v.name.toLowerCase().includes(query) ||
-
         v.region.toLowerCase().includes(query) ||
-
         v.badge.toLowerCase().includes(query);
-
       return matchCat && matchQuery;
-
     });
 
     const categoryBtnsHtml = data.categories.map(cat => `
-
       <button class="filter-btn ${cat.id === activeRiceVarietyCategory ? 'active' : ''}" data-variety-cat="${cat.id}">
-
         ${cat.name}
-
       </button>
-
     `).join('');
 
-    const cardsHtml = filteredVarieties.map(v => `
+    const cardsHtml = filteredVarieties.map((v, idx) => {
+      const varietyImg = v.image || (idx % 3 === 0 ? 'assets/images/stage4.jpg' : idx % 3 === 1 ? 'assets/images/stage5.jpg' : 'assets/images/stage6.jpg');
+      const pestNote = (v.pestsAndDiseases && v.pestsAndDiseases[0]) ? v.pestsAndDiseases[0] : 'Cần chú ý đạo ôn và rầy nâu';
 
-      <div class="dict-card">
-
-        <div class="dict-card-header">
-
-          <div>
-
-            <h4 class="dict-card-title">🌾 ${v.name}</h4>
-
-            <div style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">📍 ${v.region}</div>
-
+      return `
+        <div class="pest-card">
+          <div class="pest-image-container">
+            <img src="${varietyImg}" alt="${v.name}" class="pest-card-img" onerror="this.src='assets/images/stage4.jpg';">
           </div>
-
-          <span class="dict-badge">${v.badge}</span>
-
+          <div class="pest-header">
+            <span class="pest-icon-tag">🌾</span>
+            <div>
+              <h3>${v.name}</h3>
+              <span class="pest-badge-target"><i class="fa-solid fa-clock"></i> ${v.duration} | 📍 ${v.region}</span>
+            </div>
+          </div>
+          <div class="pest-body">
+            <div class="pest-symptoms">
+              <strong>Kinh tế & Điểm yếu của giống:</strong>
+              <ul class="pest-symptoms-list">
+                <li>
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <div><strong>Giá & Năng suất:</strong> ${v.price} | ${v.yield}</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <div><strong>Doanh thu:</strong> ${v.revenue}</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <div><strong>Sâu bệnh:</strong> ${pestNote.length > 85 ? pestNote.substring(0, 80) + '...' : pestNote}</div>
+                </li>
+              </ul>
+            </div>
+            <div class="pest-card-bottom">
+              <div class="pest-solution-badge">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>Phòng trị: <strong>ZAKi Rước Đòng + Vô Gạo</strong></div>
+              </div>
+              <button type="button" class="pest-card-btn" onclick="openDetailModal('variety', '${v.id}')">
+                <i class="fa-solid fa-magnifying-glass"></i> Khám Phá Chi Tiết
+              </button>
+            </div>
+          </div>
         </div>
-
-        <div class="dict-specs-grid">
-
-          <div class="dict-spec-item"><strong>⏱️ Tổng ngày:</strong> ${v.duration}</div>
-
-          <div class="dict-spec-item"><strong>💰 Giá lúa tươi:</strong> ${v.price}</div>
-
-          <div class="dict-spec-item"><strong>🌾 Năng suất:</strong> ${v.yield}</div>
-
-          <div class="dict-spec-item"><strong>💵 Doanh thu:</strong> ${v.revenue}</div>
-
-        </div>
-
-        <div class="dict-stages-box">
-
-          <h5>⏱️ Chi Tiết 4 Giai Đoạn Sinh Trưởng:</h5>
-
-          <ul class="dict-stages-list">
-
-            <li>• <strong>Đẻ nhánh:</strong> ${v.stages.tillering}</li>
-
-            <li>• <strong>Làm đòng:</strong> ${v.stages.panicle}</li>
-
-            <li>• <strong>Trổ - Cong me:</strong> ${v.stages.heading}</li>
-
-            <li>• <strong>Chín - Gặt:</strong> ${v.stages.ripening}</li>
-
-          </ul>
-
-        </div>
-
-        <div class="dict-spray-box">
-
-          <h5>🧰 Lịch Phun ZAKi Chuẩn Theo Ngày Tuổi:</h5>
-
-          <ul class="dict-spray-list">
-
-            ${v.spraySchedule.map(s => `<li>• ${s}</li>`).join('')}
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    `).join('');
+      `;
+    }).join('');
 
     pageRiceVarieties.innerHTML = `
-
       <div class="dict-container">
-
         <div class="dict-controls-bar">
-
           <div class="search-input-box">
-
             <span class="search-icon">🔍</span>
-
             <input type="text" id="variety-search-input" placeholder="Tìm nhanh tên giống lúa (OM18, ST25, Đài Thơm 8...), khu vực canh tác..." value="${riceVarietySearchQuery}" />
-
           </div>
-
           <div class="region-filter-bar" style="margin-bottom: 0; justify-content: flex-start;">
-
             ${categoryBtnsHtml}
-
           </div>
-
         </div>
 
-        <div class="dict-sales-tip">
-
-          ${data.salesTip}
-
+        <div class="pests-grid">
+          ${cardsHtml}
         </div>
-
-        <div class="dict-grid">
-
-          ${filteredVarieties.length > 0 ? cardsHtml : `
-
-            <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: #ffffff; border-radius: var(--radius-md); color: var(--text-muted);">
-
-              Không tìm thấy giống lúa phù hợp với từ khóa "${riceVarietySearchQuery}".
-
-            </div>
-
-          `}
-
-        </div>
-
       </div>
-
     `;
 
+    // Bind category buttons
     pageRiceVarieties.querySelectorAll('[data-variety-cat]').forEach(btn => {
-
       btn.addEventListener('click', (e) => {
-
         const cat = e.currentTarget.getAttribute('data-variety-cat');
-
         if (cat) {
-
           activeRiceVarietyCategory = cat;
-
           renderRiceVarieties();
-
         }
-
       });
-
     });
 
+    // Bind search input
     const searchInput = document.getElementById('variety-search-input');
-
     if (searchInput) {
-
       searchInput.addEventListener('input', (e) => {
-
         riceVarietySearchQuery = e.target.value;
-
         renderRiceVarieties();
-
         const reInput = document.getElementById('variety-search-input');
-
         if (reInput) {
-
           reInput.focus();
-
           reInput.setSelectionRange(reInput.value.length, reInput.value.length);
-
         }
-
       });
-
     }
-
   };
 
-  // Render Page 9: Crop Types (Hệ Đa Cây Trồng)
-
-  let activeCropTypeCategory = 'all';
-
-  let cropTypeSearchQuery = '';
+  let activeExpandedProdTab = 'all';
+  let expandedSearchQuery = '';
 
   const renderCropTypes = () => {
+    if (!pageCropTypes) return;
+    const items = AGRIZEN_DATA.expandedProducts || [];
+    const q = expandedSearchQuery.toLowerCase().trim();
 
-    if (!pageCropTypes || !AGRIZEN_DATA.cropTypes) return;
-
-    const data = AGRIZEN_DATA.cropTypes;
-
-    const filteredCrops = data.crops.filter(c => {
-
-      const matchCat = activeCropTypeCategory === 'all' || c.category === activeCropTypeCategory;
-
-      const query = cropTypeSearchQuery.toLowerCase().trim();
-
-      const matchQuery = !query ||
-
-        c.name.toLowerCase().includes(query) ||
-
-        c.issues.toLowerCase().includes(query) ||
-
-        c.benefits.toLowerCase().includes(query);
-
-      return matchCat && matchQuery;
-
+    const filtered = items.filter(p => {
+      const matchTab = activeExpandedProdTab === 'all' || p.id === activeExpandedProdTab;
+      const matchQ = !q ||
+        p.name.toLowerCase().includes(q) ||
+        p.crops.toLowerCase().includes(q) ||
+        p.compounds.toLowerCase().includes(q) ||
+        p.effects.some(e => e.toLowerCase().includes(q));
+      return matchTab && matchQ;
     });
 
-    const categoryBtnsHtml = data.categories.map(cat => `
-
-      <button class="filter-btn ${cat.id === activeCropTypeCategory ? 'active' : ''}" data-crop-type-cat="${cat.id}">
-
-        ${cat.name}
-
+    const tabsNavHtml = [
+      { id: 'all', name: 'Toàn Bộ (6 Sản Phẩm & Bảng Phối Trộn)' },
+      { id: 'huu_co_ph14', name: '🌿 1. Hữu Cơ pH 14' },
+      { id: 'zaki_ruoc_dong', name: '🌱 2. ZAKi Rước Đòng' },
+      { id: 'sieu_vo_gao_zaki', name: '🌾 3. Siêu Vô Gạo ZAKi' },
+      { id: 'netto_plus_10ew', name: '🛡️ 4. Netto Plus 10EW' },
+      { id: 'mix_combi', name: '⚡ 5. Mix Combi' },
+      { id: 'sieu_loang_trai_luke', name: '💧 6. Siêu Loang Trải Luke' },
+      { id: 'matrix', name: '📊 7. Bảng Tương Thích Phối Trộn' }
+    ].map(t => `
+      <button class="filter-btn ${t.id === activeExpandedProdTab ? 'active' : ''}" data-exp-tab="${t.id}">
+        ${t.name}
       </button>
-
     `).join('');
 
-    const cardsHtml = filteredCrops.map(c => `
-
-      <div class="dict-card">
-
-        <div class="dict-card-header">
-
-          <div>
-
-            <h4 class="dict-card-title">${c.icon} ${c.name}</h4>
-
-            <div style="margin-top: 6px;">
-
-              <span class="crop-ph-badge">🎯 pH Đất Lý Tưởng: <strong>${c.targetPh}</strong></span>
-
+    // RENDER PRODUCTS CARDS (IF NOT IN PURE MATRIX TAB)
+    let cardsHtml = '';
+    if (activeExpandedProdTab !== 'matrix') {
+      cardsHtml = filtered.map(p => `
+        <div class="exp-horizontal-card">
+          <!-- CỘT 1: THÔNG TIN SẢN PHẨM & CÂY TRỒNG -->
+          <div class="exp-col exp-col-brand">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+              <div>
+                <h3 style="margin: 0; font-size: 17.5px; font-weight: 800; color: var(--brand-950); line-height: 1.3;">${p.name}</h3>
+                <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 3px;">${p.subTitle}</div>
+              </div>
+              <span class="dict-badge" style="background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; white-space: nowrap; font-size: 11px; padding: 2px 7px;">Mở Rộng</span>
             </div>
 
-          </div>
-
-        </div>
-
-        <div class="crop-issue-box">
-
-          <strong>⚠️ Vấn đề thổ nhưỡng & Bệnh rễ:</strong><br>
-
-          ${c.issues}
-
-        </div>
-
-        <div class="dict-stages-box">
-
-          <h5>🧪 Liều Pha & Định Mức Tưới Chuẩn:</h5>
-
-          <div style="font-size: 13.5px; font-weight: 700; color: var(--brand-900); margin-bottom: 4px;">${c.dosage.rate}</div>
-
-          <ul class="dict-stages-list">
-
-            ${c.dosage.treeRates.map(r => `<li>• ${r}</li>`).join('')}
-
-          </ul>
-
-        </div>
-
-        <div class="dict-spray-box">
-
-          <h5>📅 Lịch Tưới 4 Cử Chuẩn Trong Năm:</h5>
-
-          <ul class="dict-spray-list">
-
-            ${c.stages.map(s => `<li>• ${s}</li>`).join('')}
-
-          </ul>
-
-        </div>
-
-        <div class="crop-benefit-box">
-
-          <strong>★ Hiệu quả phục hồi & Cải tạo rễ:</strong> ${c.benefits}
-
-        </div>
-
-      </div>
-
-    `).join('');
-
-    pageCropTypes.innerHTML = `
-
-      <div class="dict-container">
-
-        <div class="dict-controls-bar">
-
-          <div class="search-input-box">
-
-            <span class="search-icon">🔍</span>
-
-            <input type="text" id="crop-type-search-input" placeholder="Tìm kiếm cây trồng (Sầu riêng, Bưởi, Cà phê, Ớt...), triệu chứng bệnh đất..." value="${cropTypeSearchQuery}" />
-
-          </div>
-
-          <div class="region-filter-bar" style="margin-bottom: 0; justify-content: flex-start;">
-
-            ${categoryBtnsHtml}
-
-          </div>
-
-        </div>
-
-        <div class="dict-grid">
-
-          ${filteredCrops.length > 0 ? cardsHtml : `
-
-            <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: #ffffff; border-radius: var(--radius-md); color: var(--text-muted);">
-
-              Không tìm thấy cây trồng phù hợp với từ khóa "${cropTypeSearchQuery}".
-
+            <!-- HỢP CHẤT -->
+            <div style="background: #f8fafc; border-left: 3px solid #64748b; padding: 8px 11px; border-radius: 6px; font-size: 12.5px; color: #334155; line-height: 1.5; margin-top: 4px;">
+              <strong style="color: #1e293b;"><i class="fa-solid fa-flask"></i> Hợp chất:</strong> ${p.compounds}
             </div>
 
-          `}
+            <!-- CÂY TRỒNG -->
+            <div style="background: #f0fdfa; border: 1px solid #ccfbf1; padding: 8px 11px; border-radius: 6px; font-size: 12.5px; color: #0f766e; line-height: 1.45; margin-top: auto;">
+              <strong style="color: #0f766e;"><i class="fa-solid fa-tree"></i> Cây trồng phù hợp:</strong>
+              <div style="font-weight: 700; color: #115e59; margin-top: 2px;">${p.crops}</div>
+            </div>
+          </div>
 
+          <!-- CỘT 2: KỸ THUẬT, LIỀU LƯỢNG & TÁC DỤNG THỰC TẾ -->
+          <div class="exp-col exp-col-usage">
+            <!-- GIAI ĐOẠN -->
+            <div style="background: #fdfbf7; border: 1px solid #fde68a; padding: 9px 12px; border-radius: 6px;">
+              <div style="color: #92400e; font-size: 12.5px; font-weight: 800; margin-bottom: 5px;"><i class="fa-solid fa-calendar-check"></i> Giai đoạn sử dụng ngoài vườn:</div>
+              <ul style="margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; color: #451a03; line-height: 1.45;">
+                ${p.stages.map(st => `<li style="display: flex; gap: 6px;"><span style="color: #d97706; font-size: 10px; margin-top: 2px;">●</span><span>${st}</span></li>`).join('')}
+              </ul>
+            </div>
+
+            <!-- LIỀU LƯỢNG -->
+            <div style="background: #eff6ff; border-left: 3px solid #2563eb; padding: 9px 12px; border-radius: 6px; font-size: 12.5px; color: #1e40af; line-height: 1.5;">
+              <strong style="display: block; margin-bottom: 3px;"><i class="fa-solid fa-droplet"></i> Liều lượng & Định mức tưới / phun:</strong>
+              <div style="white-space: pre-line;">${p.dosage}</div>
+            </div>
+
+            <!-- TÁC DỤNG THỰC TẾ -->
+            <div style="background: #f0fdf4; border-left: 3px solid #16a34a; padding: 9px 12px; border-radius: 6px; font-size: 12.5px; color: #166534; line-height: 1.45;">
+              <strong style="color: #14532d; display: block; margin-bottom: 4px;"><i class="fa-solid fa-circle-check"></i> Tác dụng thực tế ngoài đất và cây:</strong>
+              <ul style="margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 3px;">
+                ${p.effects.map(e => `<li style="display: flex; gap: 6px;"><span style="font-weight: 700;">✓</span><span>${e}</span></li>`).join('')}
+              </ul>
+            </div>
+          </div>
+
+          <!-- CỘT 3: AN TOÀN & QUY TẮC PHỐI TRỘN THUỐC -->
+          <div class="exp-col exp-col-safety">
+            <!-- CHỐNG CHỈ ĐỊNH -->
+            <div style="background: #fff7ed; border-left: 3px solid #ea580c; padding: 9px 12px; border-radius: 6px; font-size: 12.5px; color: #9a3412; line-height: 1.45;">
+              <strong style="display: block; margin-bottom: 2px;"><i class="fa-solid fa-triangle-exclamation"></i> Chống chỉ định (Sai là hư cây):</strong>
+              ${p.warning}
+            </div>
+
+            <!-- QUY TẮC PHỐI TRỘN -->
+            <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 10px 12px; border-radius: 6px; font-size: 12.5px; color: #581c87; line-height: 1.5; margin-top: auto;">
+              <div style="font-weight: 800; color: #6b21a8; margin-bottom: 5px;"><i class="fa-solid fa-shuffle"></i> Quy tắc phối trộn thuốc:</div>
+              <div style="color: #b91c1c; margin-bottom: 4px;"><strong>🚫 Cấm pha:</strong> ${p.mixing.prohibited}</div>
+              <div style="color: #15803d; margin-bottom: 4px;"><strong>✅ Pha được:</strong> ${p.mixing.allowed}</div>
+              <div style="color: #4c1d95;"><strong>💧 Thứ tự pha:</strong> ${p.mixing.order}</div>
+            </div>
+          </div>
         </div>
-
-      </div>
-
-    `;
-
-    pageCropTypes.querySelectorAll('[data-crop-type-cat]').forEach(btn => {
-
-      btn.addEventListener('click', (e) => {
-
-        const cat = e.currentTarget.getAttribute('data-crop-type-cat');
-
-        if (cat) {
-
-          activeCropTypeCategory = cat;
-
-          renderCropTypes();
-
-        }
-
-      });
-
-    });
-
-    const searchInput = document.getElementById('crop-type-search-input');
-
-    if (searchInput) {
-
-      searchInput.addEventListener('input', (e) => {
-
-        cropTypeSearchQuery = e.target.value;
-
-        renderCropTypes();
-
-        const reInput = document.getElementById('crop-type-search-input');
-
-        if (reInput) {
-
-          reInput.focus();
-
-          reInput.setSelectionRange(reInput.value.length, reInput.value.length);
-
-        }
-
-      });
-
+      `).join('');
     }
 
-  };
+    // RENDER SECTION 7: MATRIX COMPATIBILITY TABLE
+    let matrixHtml = '';
+    const matrix = AGRIZEN_DATA.mixingMatrix;
+    if (matrix && (activeExpandedProdTab === 'all' || activeExpandedProdTab === 'matrix')) {
+      const items = matrix.items;
+      const pairSet = new Set(matrix.allowedPairs.map(p => p[0] + '_' + p[1]));
+      matrix.allowedPairs.forEach(p => pairSet.add(p[1] + '_' + p[0]));
 
-  // =========================================================================
+      const theadCols = items.map(it => `
+        <th title="${it.name} (${it.category})" style="cursor: help;">
+          <div style="font-size: 10px; color: #94a3b8;">${it.code}</div>
+          <div style="font-weight: 700; font-size: 11px;">${it.short.replace(/^\d+\.\s*/, '')}</div>
+        </th>
+      `).join('');
+
+      const tbodyRows = items.map((rowItem, rIdx) => {
+        const cells = items.map((colItem, cIdx) => {
+          if (rIdx === cIdx) {
+            return '<td class="compat-self" title="Cùng loại">—</td>';
+          }
+          const isAllowed = pairSet.has(rIdx + '_' + cIdx);
+          if (isAllowed) {
+            return '<td class="compat-check" title="' + rowItem.name + ' + ' + colItem.name + ': PHỐI TRỘN ĐƯỢC AN TOÀN">✓</td>';
+          } else {
+            return '<td class="compat-empty" title="' + rowItem.name + ' + ' + colItem.name + ': KHÔNG NÊN TRỘN (ĐỂ TRỐNG)"></td>';
+          }
+        }).join('');
+
+        return `
+          <tr>
+            <th class="row-header" title="${rowItem.category}">
+              <span style="display: inline-block; width: 18px; color: var(--brand-700); font-weight: 800;">${rowItem.code}.</span>
+              <span>${rowItem.name.replace(/^\d+\.\s*/, '')}</span>
+            </th>
+            ${cells}
+          </tr>
+        `;
+      }).join('');
+
+      const rulesHtml = matrix.rulesNotes.map(r => `
+        <div style="background: #f8fafc; border-left: 3px solid #0f766e; padding: 8px 12px; border-radius: 6px; font-size: 12.5px; line-height: 1.5;">
+          <strong style="color: #0f766e;">${r.title}</strong> <span style="color: #334155;">${r.text}</span>
+        </div>
+      `).join('');
+
+      matrixHtml = `
+        <div class="matrix-container" id="section-mixing-matrix">
+          <div class="matrix-header-box">
+            <div>
+              <h3 style="margin: 0; font-size: 17.5px; font-weight: 800; color: var(--brand-950);">
+                📊 7. BẢNG TƯƠNG THÍCH PHỐI TRỘN THUỐC & PHÂN BÓN LÚA (14 HỢP CHẤT THÔNG DỤNG)
+              </h3>
+              <p style="margin: 4px 0 0 0; font-size: 12.8px; color: var(--text-muted);">
+                Quy tắc đối chiếu cột ngang x hàng dọc: Dấu tích [<span style="color: #15803d; font-weight: 900;"> ✓ </span>] là <strong>PHỐI TRỘN ĐƯỢC</strong>; <strong>Ô TRỐNG</strong> là <strong>KHÔNG TRỘN ĐƯỢC</strong> (tránh kết tủa, cháy đọt, mất hiệu lực thuốc).
+              </p>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center; font-size: 12.5px;">
+              <span style="display: inline-flex; align-items: center; gap: 5px; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 4px 10px; border-radius: 6px; color: #166534; font-weight: 700;">
+                <span style="font-size: 15px;">✓</span> Phối Trộn Được
+              </span>
+              <span style="display: inline-flex; align-items: center; gap: 5px; background: #ffffff; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 6px; color: #64748b; font-weight: 700;">
+                [ Ô Trống ] Không Trộn Được
+              </span>
+            </div>
+          </div>
+
+          <!-- TRA NHANH 2 LOẠI -->
+          <div class="matrix-checker-bar" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px;">
+            <div style="font-weight: 800; color: #1e293b; font-size: 13px;"><i class="fa-solid fa-bolt" style="color: #f59e0b;"></i> Tra nhanh 2 loại:</div>
+            <select id="matrix-select-1" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12.5px; font-weight: 600; color: #1e293b; max-width: 220px;">
+              ${items.map((it, idx) => `<option value="${idx}">${it.name}</option>`).join('')}
+            </select>
+            <span style="font-weight: 800; color: #64748b;">+</span>
+            <select id="matrix-select-2" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 12.5px; font-weight: 600; color: #1e293b; max-width: 220px;">
+              ${items.map((it, idx) => `<option value="${idx}" ${idx === 3 ? 'selected' : ''}>${it.name}</option>`).join('')}
+            </select>
+            <div id="matrix-check-result" style="font-size: 13px; font-weight: 800; margin-left: auto;"></div>
+          </div>
+
+          <!-- BẢNG CUỘN 2 CHIỀU -->
+          <div class="matrix-scroll-wrapper">
+            <table class="compat-table">
+              <thead>
+                <tr>
+                  <th class="sticky-corner">
+                    Hàng dọc x Cột ngang (14 loại)
+                  </th>
+                  ${theadCols}
+                </tr>
+              </thead>
+              <tbody>
+                ${tbodyRows}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- NGUYÊN TẮC VÀNG PHỐI TRỘN -->
+          <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 8px;">
+            <div style="font-weight: 800; color: var(--brand-950); font-size: 13px;"><i class="fa-solid fa-circle-info" style="color: #0f766e;"></i> Lưu ý kỹ thuật & Thứ tự pha chuẩn khi xịt lúa:</div>
+            ${rulesHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    pageCropTypes.innerHTML = `
+      <div class="dict-container">
+        <!-- HEADER CONTROL BAR (TÌM KIẾM & BỘ LỌC) -->
+        <div class="dict-controls-bar">
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="expanded-search-input" placeholder="Tìm nhanh cây trồng (sầu riêng, cam, cà phê...), giai đoạn hoặc cách pha..." value="${expandedSearchQuery}" />
+          </div>
+          <div class="region-filter-bar" style="margin-bottom: 0; justify-content: flex-start; gap: 8px;">
+            ${tabsNavHtml}
+          </div>
+        </div>
+
+        <!-- DANH SÁCH SẢN PHẨM DÁNG NGANG FULL WIDTH -->
+        <div class="expanded-horizontal-list">
+          ${cardsHtml}
+        </div>
+
+        <!-- PHẦN 7: BẢNG TƯƠNG THÍCH PHỐI TRỘN -->
+        ${matrixHtml}
+      </div>
+    `;
+
+    // Bind Tabs
+    pageCropTypes.querySelectorAll('[data-exp-tab]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const tab = e.currentTarget.getAttribute('data-exp-tab');
+        if (tab) {
+          activeExpandedProdTab = tab;
+          renderCropTypes();
+        }
+      });
+    });
+
+    // Bind Search Input
+    const searchInput = document.getElementById('expanded-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        expandedSearchQuery = e.target.value;
+        renderCropTypes();
+        const reInput = document.getElementById('expanded-search-input');
+        if (reInput) {
+          reInput.focus();
+          reInput.setSelectionRange(reInput.value.length, reInput.value.length);
+        }
+      });
+    }
+
+    // Bind Quick Matrix Checker Tool
+    const sel1 = document.getElementById('matrix-select-1');
+    const sel2 = document.getElementById('matrix-select-2');
+    const resBox = document.getElementById('matrix-check-result');
+
+    const updateCheckResult = () => {
+      if (!sel1 || !sel2 || !resBox || !matrix) return;
+      const idx1 = parseInt(sel1.value, 10);
+      const idx2 = parseInt(sel2.value, 10);
+      const item1 = matrix.items[idx1];
+      const item2 = matrix.items[idx2];
+
+      if (idx1 === idx2) {
+        resBox.innerHTML = '<span style="color: #64748b; background: #f1f5f9; padding: 4px 10px; border-radius: 6px;">Cùng một loại sản phẩm</span>';
+        return;
+      }
+
+      const pairSet = new Set(matrix.allowedPairs.map(p => p[0] + '_' + p[1]));
+      matrix.allowedPairs.forEach(p => pairSet.add(p[1] + '_' + p[0]));
+      const isOk = pairSet.has(idx1 + '_' + idx2);
+
+      if (isOk) {
+        resBox.innerHTML = '<span style="color: #15803d; background: #dcfce7; padding: 4px 10px; border-radius: 6px; border: 1px solid #86efac;">✅ PHỐI TRỘN ĐƯỢC AN TOÀN</span>';
+      } else {
+        resBox.innerHTML = '<span style="color: #b91c1c; background: #fee2e2; padding: 4px 10px; border-radius: 6px; border: 1px solid #fca5a5;">🚫 KHÔNG NÊN TRỘN (ĐỂ TRỐNG TRÊN BẢNG)</span>';
+      }
+    };
+
+    if (sel1 && sel2) {
+      sel1.addEventListener('change', updateCheckResult);
+      sel2.addEventListener('change', updateCheckResult);
+      updateCheckResult();
+    }
+  };
 
   // PAGE 10: VOUCHER GENERATOR (TẠO PHIẾU CAM KẾT & BẢO HÀNH ĐIỆN TỬ)
 
