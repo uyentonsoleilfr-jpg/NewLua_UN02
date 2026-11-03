@@ -120,26 +120,20 @@ body::before {
 /* ==========================================================================
    LEFT SIDEBAR (BÔNG LÚA VÀNG LẬT TRÁI & GRADIENT XANH SÂU TƯƠNG PHẢN CAO)
    ========================================================================== */
+/* ==========================================================================
+   LEFT SIDEBAR — GỢI Ý 1: KÍNH TRẮNG SƯƠNG MAI (LIGHT FROSTED GLASS APPLE/MACOS)
+   ========================================================================== */
 .sidebar {
   width: var(--sidebar-width);
-  background-color: #082313;
-  background-image: 
-    linear-gradient(90deg, 
-      rgba(0, 0, 0, 0) 0%, 
-      rgba(0, 0, 0, 0) 88%, 
-      rgba(0, 0, 0, 0.15) 100%
-    ),
-    linear-gradient(180deg, 
-      rgba(8, 30, 16, 0.72) 0%, 
-      rgba(10, 36, 18, 0.64) 40%, 
-      rgba(12, 40, 20, 0.66) 75%, 
-      rgba(6, 24, 12, 0.78) 100%
-    ),
-    url('assets/images/bg_sidebar_rice.jpg');
-  background-size: cover;
-  background-position: left center;
-  background-repeat: no-repeat;
-  border-right: none; /* Xóa hẳn đường viền cứng, chuyển sang đổ bóng mờ mềm mại */
+  background-color: rgba(255, 255, 255, 0.75);
+  background-image: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.85) 0%, 
+    rgba(246, 251, 247, 0.72) 40%, 
+    rgba(240, 248, 242, 0.78) 100%
+  );
+  backdrop-filter: blur(25px) saturate(160%);
+  -webkit-backdrop-filter: blur(25px) saturate(160%);
+  border-right: 1px solid rgba(14, 77, 45, 0.08);
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -148,12 +142,12 @@ body::before {
   z-index: 100;
   flex-shrink: 0;
   transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 8px 0 28px rgba(0, 0, 0, 0.08), 2px 0 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 4px 0 24px rgba(10, 40, 20, 0.04);
 }
 
 .sidebar-header {
   padding: 16px 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04); /* Siêu mờ */
+  border-bottom: 1px solid rgba(14, 77, 45, 0.08);
   display: flex;
   align-items: center;
   background: transparent;
@@ -169,24 +163,24 @@ body::before {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, rgba(22, 163, 74, 0.8) 0%, rgba(14, 77, 45, 0.9) 100%);
+  background: linear-gradient(135deg, #1c7430 0%, #0e4d2d 100%);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 19px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 2px 8px rgba(14, 77, 45, 0.2);
   flex-shrink: 0;
 }
 
 .brand-info h2 {
   font-size: 17.5px;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: 0.03em;
+  font-weight: 900;
+  color: #062410;
+  letter-spacing: 0.04em;
   line-height: 1.15;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
 }
 
 .nav-menu {
@@ -194,7 +188,7 @@ body::before {
   padding: 12px 10px;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
   overflow-y: auto;
   flex: 1;
 }
@@ -204,47 +198,45 @@ body::before {
   width: 4px;
 }
 .nav-menu::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(14, 77, 45, 0.15);
   border-radius: 4px;
 }
 
-/* Nav Item Button - Mềm mại, nhạt, không viền thô chọi mắt */
+/* Nav Item Button - Kính trắng thanh nhã, chữ xanh lá đậm tự nhiên */
 .nav-item-btn {
   display: flex;
   align-items: center;
   gap: 10px;
   width: 100%;
-  padding: 9.5px 12px;
-  border-radius: 8px;
+  padding: 9.5px 13px;
+  border-radius: 9px;
   border: 1px solid transparent;
   background: transparent;
-  color: #e2f0e6;
+  color: #1a4d29;
   font-family: var(--font-sans);
   font-size: 13.5px;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: none;
 }
 
 .nav-item-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(28, 116, 48, 0.08);
+  color: #072a12;
   transform: translateX(2px);
 }
 
-/* Active Item - Kính mờ xanh êm dịu, không viền vàng chói, không dải cam thô */
+/* Active Item - Ngọc Lục Bảo viền vàng kim tinh tế */
 .nav-item-btn.active {
-  background: linear-gradient(135deg, rgba(32, 126, 56, 0.65) 0%, rgba(15, 82, 45, 0.75) 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, #187a35 0%, #0d5026 100%);
   color: #ffffff;
   font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.06); /* Viền nút siêu mềm mờ */
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12), 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 4px 14px rgba(14, 77, 45, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  border-radius: 9px;
 }
 
 .nav-item-btn.active::before {
@@ -255,26 +247,25 @@ body::before {
   font-size: 15px;
   width: 20px;
   text-align: center;
-  opacity: 0.92;
+  opacity: 0.95;
   transition: transform 0.2s ease;
 }
 
 .nav-item-btn.active .nav-icon {
-  transform: scale(1.1);
+  transform: scale(1.12);
   opacity: 1;
 }
 
 .sidebar-footer {
   margin-top: auto;
   padding: 12px 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 12.5px;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(14, 77, 45, 0.08);
+  font-size: 12px;
+  color: #1a4d29;
+  background: rgba(255, 255, 255, 0.35);
   line-height: 1.35;
   text-align: center;
   font-weight: 700;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* ==========================================================================
