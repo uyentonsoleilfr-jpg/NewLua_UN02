@@ -10,7 +10,7 @@ Hệ thống tài liệu và ứng dụng tra cứu kỹ thuật nông học, l�
 ## 🚀 11 Mô-Đun Kỹ Thuật & Tác Nghiệp Chuẩn:
 
 1. **📦 1. Thông Tin Sản Phẩm:**
-   * Chi tiết 6 dòng sản phẩm chiến lược: **HỮU CƠ pH 14 (Kiềm sinh học Biochar Mỹ)**, **ZAKi Rước Đòng (Lon thiếc 1L)**, **Siêu Vô Gạo ZAKi (Lon thiếc 1L)**, **Netto Plus 10EW (Thuốc sâu dạng sữa mát cây 450ml)**, **Mix Combi Ba Lan**, **Siêu Loang Trải Luke**.
+   * Chi tiết 6 dòng sản phẩm chiến lược: **HỮU CƠ pH 14 (Kiềm sinh học Biochar Mỹ)**, **ZAKi Rước Đòng (Lon thiếc 1L)**, **Siêu Vô Gạo ZAKi (Lon thiếc 1L)**, **Netto Plus 10EW (Thuốc sâu dạng sữa mát cây Chai 1L)**, **Mix Combi Ba Lan**, **Siêu Loang Trải Luke**.
    * Bảng giá niêm yết, chính sách Mua 3 Tặng 1 theo diện tích ruộng và quy chuẩn phối trộn an toàn.
 
 2. **🌾 2. Kịch Bản ZAKi (VG):**

@@ -35,7 +35,7 @@ Toàn bộ nội dung truyền thông phải thống nhất **100% thông số k
 
 1. **Hữu pH 14 (Cải Tạo Đất Nâng pH — Kiềm Sinh Học Biochar Mỹ):**
    * **Tên đăng ký:** Phân bón hữu cơ cao cấp Glocell - L 45 Organic AA (Kamax) — Global Chem sản xuất theo **Công nghệ Biochar hoạt hóa của Mỹ (Activated Biochar Technology USA)**.
-   * **Quy cách & Giá lẻ:** Lon thiếc 1 Lít / Chai 500ml. Giá niêm yết `680.000đ` (Giá sau CK 30%: `476.000đ` | Bảng giá chiến dịch mới: `460.000đ/lon`, Mua 3 Tặng 1 = `938.000đ` hoặc `1.346.400đ` tùy gói).
+   * **Quy cách & Giá lẻ:** Lon thiếc 1 Lít (Lon 1L). Giá niêm yết `680.000đ` (Giá sau CK 30%: `476.000đ` | Bảng giá chiến dịch mới: `460.000đ/lon`, Mua 3 Tặng 1 = `938.000đ` hoặc `1.346.400đ` tùy gói).
    * **Thành phần:** Kiềm sinh học tự nhiên ($pH_{H2O} > 13.0$), Chất hữu cơ `50% - 60%`, Kali hữu hiệu ($K_2O_{hh}$) `7.5%`, Axit Fulvic `1.5%`, Than sinh học Biochar hoạt hóa vi lỗ micro-pore.
    * **Công dụng cốt lõi:** Nâng pH đất từ 3.5-4.5 lên `5.5 - 6.5` chỉ sau 24-48h; dập phèn nhôm ($Al^{3+}$) & phèn sắt ($Fe^{2+}$); cắt độc rơm rạ mục; khóa kim loại nặng Cadimi ($Cd$); mở khóa Lân giúp tiết kiệm 20-30% phân NPK rải gốc; thay thế hoàn toàn vôi nung.
 

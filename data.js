@@ -2685,7 +2685,7 @@ window.AGRIZEN_DATA = {
     {
       "id": "huu_co_ph14",
       "name": "1. HỮU CƠ pH 14",
-      "subTitle": "Kiềm Sinh Học Biochar Mỹ (Lon 1L / Chai 500ml)",
+      "subTitle": "Kiềm Sinh Học Biochar Mỹ (Lon Thiếc 1L)",
       "compounds": "Kiềm sinh học tự nhiên (pH > 13), Than hoạt hóa Biochar vi lỗ Mỹ, Axit Fulvic, Chất hữu cơ mùn 50-60%, Kali hữu hiệu (K2O) 7.5%.",
       "crops": "Sầu riêng, Cam sành, Bưởi da xanh, Cà phê, Hồ tiêu, Thanh long, Ớt, Dưa hấu, Rau màu.",
       "stages": [
@@ -2761,14 +2761,14 @@ window.AGRIZEN_DATA = {
     {
       "id": "netto_plus_10ew",
       "name": "4. NETTO PLUS 10EW",
-      "subTitle": "Thuốc Trừ Sâu Rầy Dạng Sữa (Chai 450ml)",
+      "subTitle": "Thuốc Trừ Sâu Rầy Dạng Sữa (Chai 1L)",
       "compounds": "Hoạt chất Bifenthrin 100g/L, công nghệ nhũ tương dầu trong nước dạng sữa (EW - Emulsion Water-based) không dùng dung môi nóng.",
       "crops": "Sầu riêng (Rầy nhảy, sâu đục trái); Cam bưởi (Sâu vẽ bùa, nhện đỏ); Cà phê/tiêu (Rệp sáp, bọ xít muỗi); Rau màu (Bọ trĩ, sâu tơ).",
       "stages": [
         "Cơi đọt non: Phun ngay khi cơi đọt vừa nhú mũi giáo để bảo vệ búp đọt trước rầy nhảy sầu riêng và sâu vẽ bùa cam bưởi.",
         "Nụ hoa & Nuôi trái non: Phun bảo vệ chùm bông và cuống trái non trước bọ trĩ, sâu đục trái, bọ xít muỗi."
       ],
-      "dosage": "• Pha 1 chai 450ml / 400 - 500L nước (2 - 2.5 phuy 200L).\n• Phun rau màu: Pha 20 - 25ml / bình 25L.",
+      "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 chai 1L / 800 - 1.000L nước (4 - 5 phuy 200L).\n• Lúa & Rau màu: Pha 30 - 50ml / bình 25L (1 chai 1L xịt 20 - 30 công tầm cắt 1.000m² / bay Drone 2 - 3 ha).",
       "effects": [
         "Dạng nước sữa EW mát bông mát đọt 100%, không làm teo mầm hoa hay cháy chóp lá non như các loại thuốc EC dầu nóng.",
         "Lực xông hơi và tiếp xúc cực mạnh, thấm sâu vào nách lá tiêu diệt rầy rệp ẩn nấp.",

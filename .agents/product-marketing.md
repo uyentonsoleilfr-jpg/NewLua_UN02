@@ -8,7 +8,7 @@
 ## 1. HỒ SƠ KỸ THUẬT & ĐỊNH VỊ 5 DÒNG SẢN PHẨM CHỦ LỰC
 
 ### 1.1. Hữu pH 14 — Cải Tạo Đất Nâng pH (Kiềm Sinh Học Biochar Mỹ)
-* **Mã SP:** `PH14-1L` | **Quy cách:** Lon thiếc cao cấp 1 Lít / Chai 500ml (Thùng 12 lon).
+* **Mã SP:** `PH14-1L` | **Quy cách:** Lon thiếc cao cấp 1 Lít (Lon 1L) (Thùng 12 lon).
 * **Tên đăng ký Cục BVTV:** Phân bón hữu cơ cao cấp Glocell - L 45 Organic AA (Kamax).
 * **Nguồn gốc & Công nghệ:** Global Chem (Tây Ninh) sản xuất theo **Công nghệ Biochar hoạt hóa của Mỹ (Activated Biochar Technology USA)**.
 * **Thành phần định lượng:**
