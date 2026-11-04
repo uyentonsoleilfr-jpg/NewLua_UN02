@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>New Lúa - Tài liệu Bán Hàng</title>
+  <meta name="description" content="Tài liệu kỹ thuật và kịch bản bán hàng - Team New Lúa By UyenNhi">
+
+  <!-- Favicon Logo Cay Lua -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261103">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=20261103">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=20261103">
+  <link rel="shortcut icon" href="favicon.ico?v=20261103">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=20261103">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261104-v1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Overlay for Mobile Sidebar Drawer -->
+  <div class="sidebar-overlay" id="mobile-overlay"></div>
+
+  <div class="app-container">
+    <!-- LEFT SIDEBAR NAVIGATION -->
+    <aside class="sidebar" id="app-sidebar">
+      <div class="sidebar-header">
+        <div class="brand-info">
+          <div class="brand-icon-emblem">🌾</div>
+          <h2>NEW LÚA</h2>
+        </div>
+      </div>
+
+      <ul class="nav-menu">
+        <li>
+          <button class="nav-item-btn active" data-page="products">
+            <span class="nav-icon">📦</span>
+            <span>1. Thông Tin Sản Phẩm</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="script-vg">
+            <span class="nav-icon">🌾</span>
+            <span>2. Kịch Bản ZAKi (VG)</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="script-ph">
+            <span class="nav-icon">🧪</span>
+            <span>3. Kịch bản Bộ 3 (PH14)</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="script-netto">
+            <span class="nav-icon">🛡️</span>
+            <span>4. Kịch Bản Netto Plus (4 Cữ)</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="schedule-rice">
+            <span class="nav-icon">📅</span>
+            <span>5. Mùa Vụ Lúa</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="alkaline-deep">
+            <span class="nav-icon">🧪</span>
+            <span>6. Kiềm Sinh Học Biochar</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="rice-dict">
+            <span class="nav-icon">📖</span>
+            <span>7. Từ Điển Lúa & Sâu Bệnh</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="crop-dict">
+            <span class="nav-icon">📚</span>
+            <span>8. Từ Điển Cây Trồng</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="rice-varieties">
+            <span class="nav-icon">🌾</span>
+            <span>9. Giống Lúa</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="crop-types">
+            <span class="nav-icon">🍊</span>
+            <span>10. Mở Rộng</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-item-btn" data-page="voucher-generator">
+            <span class="nav-icon">🎫</span>
+            <span>11. Tạo Phiếu Cam Kết</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div style="font-size: 12px; font-weight: 700; color: #8da37e; letter-spacing: 0.3px;">@ Tài liệu Team New Lúa By UyenNhi</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="main-wrapper">
+      <!-- TOP HEADER BAR -->
+      <header class="top-nav">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="mobile-menu-toggle" id="menu-toggle-btn" aria-label="Mở thanh điều hướng">☰ Menu</button>
+          <div class="top-title">
+            <h1 id="page-main-title">1. THÔNG TIN SẢN PHẨM CHI TIẾT & KỸ THUẬT</h1>
+            <p id="page-main-desc">Dữ liệu trích xuất chuẩn xác từ Hồ sơ Kỹ thuật Cục BVTV & Tài Liệu Bán Hàng</p>
+          </div>
+        </div>
+        <div class="company-badge">
+          <span>🏢</span>
+          <span>Phân Bón Miền Nam</span>
+        </div>
+      </header>
+
+      <!-- CONTENT BODY -->
+      <main class="content-container">
+        
+        <!-- PAGE 1: PRODUCTS DETAIL -->
+        <section id="page-products" class="page-view active">
+          <!-- Product Selector Pill Tabs -->
+          <div class="product-tabs-bar" id="product-tab-bar">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Product Details Card -->
+          <div id="product-card-container">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <!-- PAGE 2: SCRIPT VG (ZAKi RƯỚC ĐÒNG & VÔ GẠO) -->
+        <section id="page-script-vg" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 3: SCRIPT PH (CẢI TẠO ĐẤT NÂNG PH - PH14) -->
+        <section id="page-script-ph" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 4: SCRIPT NETTO (KỊCH BẢN UPSELL NETTO PLUS) -->
+        <section id="page-script-netto" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 4: SCHEDULE RICE (LỊCH VỤ MÙA LÚA 3 MIỀN) -->
+        <section id="page-schedule-rice" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 5: ALKALINE DEEP DIVE & 4 CROPS DOSAGE SCHEDULE -->
+        <section id="page-alkaline-deep" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 6: RICE DICTIONARY (50 THUẬT NGỮ 3 MIỀN) -->
+        <section id="page-rice-dict" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 7: CROPS DICTIONARY (BỆNH ĐẤT & SO SÁNH CÁCH LÀM) -->
+        <section id="page-crop-dict" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 8: RICE VARIETIES (10 GIỐNG LÚA CHỦ LỰC) -->
+        <section id="page-rice-varieties" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 9: CROP TYPES (HỆ ĐA CÂY TRỒNG) -->
+        <section id="page-crop-types" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+        <!-- PAGE 10: VOUCHER GENERATOR (TẠO PHIẾU CAM KẾT ZAKI) -->
+        <section id="page-voucher-generator" class="page-view" style="display: none;">
+          <!-- Rendered by JS -->
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="data.js?v=20261104-v1"></script>
+  <script src="app.js?v=20261104-v1"></script>
+
+  <!-- Modal Dialog: Khám Phá Sâu Bệnh & Nấm Khuẩn -->
+  <div class="modal-overlay" id="pest-modal-overlay" onclick="if(event.target === this) closePestModal()">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="btn-close-pest-modal" onclick="closePestModal()" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+      <div id="pest-modal-body"></div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -22,7 +22,9 @@ src/
 .antigravity_rules
 01-Contracts/
 02-Assets/
-03-Code/
+03-Code/*
+!03-Code/01_Web_NewLua_UN02_Chinh/
+!03-Code/0. 03-Code MOC.md
 04-Data/
 05-Du_Lieu_Thuc_Te/
 
