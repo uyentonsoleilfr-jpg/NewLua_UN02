@@ -2038,14 +2038,12 @@ body::before {
 }
 
 .col-indicator {
-  width: 220px;
   font-weight: 800;
   color: var(--brand-950);
   background-color: var(--bg-subtle);
 }
 
 .col-content {
-  width: 240px;
   font-weight: 700;
   color: var(--brand-900);
 }

@@ -879,12 +879,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 class="panel-title">${p3.title}</h3>
           </div>
           <div class="deep-table-wrapper">
-            <table class="deep-master-table">
+            <table class="deep-master-table" style="min-width: 800px;">
               <thead>
                 <tr>
-                  <th style="width: 280px;">Tiêu Chí & Chỉ Số</th>
-                  <th style="width: 520px;">Nội Dung Kỹ Thuật Đã Kiểm Chứng</th>
-                  <th style="width: 400px;">Hành Động Khuyên Dùng</th>
+                  <th style="width: 240px;">Tiêu Chí & Chỉ Số</th>
+                  <th style="width: 210px;">Nội Dung Kỹ Thuật Đã Kiểm Chứng</th>
+                  <th>Hành Động Khuyên Dùng</th>
                 </tr>
               </thead>
               <tbody>
@@ -900,12 +900,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 class="panel-title">${p4.title}</h3>
           </div>
           <div class="deep-table-wrapper">
-            <table class="deep-master-table">
+            <table class="deep-master-table" style="min-width: 820px;">
               <thead>
                 <tr>
-                  <th style="width: 280px;">Khái Niệm Khoa Học</th>
-                  <th style="width: 520px;">Giải Thích Thực Địa</th>
-                  <th style="width: 400px;">Khuyến Cáo Nông Nghiệp</th>
+                  <th style="width: 220px;">Khái Niệm Khoa Học</th>
+                  <th style="width: 270px;">Giải Thích Thực Địa</th>
+                  <th>Khuyến Cáo Nông Nghiệp</th>
                 </tr>
               </thead>
               <tbody>
