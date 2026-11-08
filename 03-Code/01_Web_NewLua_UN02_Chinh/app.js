@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const pageScriptPH = document.getElementById('page-script-ph');
 
-  const pageScriptNetto = document.getElementById('page-script-netto');
-
+  const pageScriptUpsell = document.getElementById('page-script-upsell');
+  
   const pageScheduleRice = document.getElementById('page-schedule-rice');
 
   const pageAlkalineDeep = document.getElementById('page-alkaline-deep');
@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     },
 
-    'script-netto': {
-      title: '4. CẨM NANG 4 CỮ PHUN THUỐC SÂU NETO PLUS 10EW & BÁN KÈM ZAKi',
-      desc: 'Bộ câu hỏi thời tiết 3 vùng miền, 4 cữ lúa, chính sách Mua 3 Tặng 1 giá 1tr5 và định mức diện tích 1 chai 1L'
+    'script-upsell': {
+      title: '4. CẨM NANG UPSELL SÂU + BỆNH (NETTO PLUS 10EW & BỘ ĐÔI UNIC 75)',
+      desc: 'Quy trình tư vấn 4 cữ phun trọn gói bảo vệ lúa toàn diện, xử lý tình huống và chính sách Combo Mua 3 Tặng 1 giá 1tr5'
     },
 
     'schedule-rice': {
@@ -187,16 +187,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    if (pageScriptNetto) {
-
-      pageScriptNetto.style.display = pageId === 'script-netto' ? 'block' : 'none';
-
-      if (pageId === 'script-netto') {
-
-        renderScriptNetto();
-
+    if (pageScriptUpsell) {
+      pageScriptUpsell.style.display = pageId === 'script-upsell' ? 'block' : 'none';
+      if (pageId === 'script-upsell') {
+        renderScriptUpsell();
       }
-
     }
 
     if (pageScheduleRice) pageScheduleRice.style.display = pageId === 'schedule-rice' ? 'block' : 'none';
@@ -330,21 +325,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Pricing Box (Cột Trái Cân Đối: Giá, Quy cách, Ưu đãi, Cam kết)
     let pricingHtml = '';
-    const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'vo-gao' ? 'price-gold' : (product.id === 'mix-combi' ? 'price-combi' : (product.id === 'sieu-loang-trai' ? 'price-luke' : '')));
-    const titleColorClass = product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')));
-    const tagThemeClass = product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : (product.id === 'mix-combi' ? 'tag-blue' : (product.id === 'sieu-loang-trai' ? 'tag-teal' : 'tag-primary')));
+    const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'unic-tim' ? 'price-unic-tim' : (product.id === 'unic-xanh' ? 'price-unic-xanh' : (product.id === 'vo-gao' ? 'price-gold' : (product.id === 'mix-combi' ? 'price-combi' : (product.id === 'sieu-loang-trai' ? 'price-luke' : '')))));
+    const titleColorClass = product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'unic-tim' ? 'unic-tim-title' : (product.id === 'unic-xanh' ? 'unic-xanh-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))));
+    const tagThemeClass = product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : (product.id === 'unic-tim' ? 'tag-unic-tim' : (product.id === 'unic-xanh' ? 'tag-unic-xanh' : (product.id === 'mix-combi' ? 'tag-blue' : (product.id === 'sieu-loang-trai' ? 'tag-teal' : 'tag-primary')))));
 
     if (product.pricing) {
       pricingHtml = `
         <div class="prod-price-card ${priceThemeClass}">
           <div class="price-card-header">
             <div class="price-val-group">
-              <div class="price-card-label">GIÁ BÁN ƯU ĐÃI:</div>
+              <div class="price-card-label">${product.pricing.discount === 'Giá cố định' ? 'GIÁ BÁN NIÊM YẾT:' : 'GIÁ BÁN ƯU ĐÃI:'}</div>
               <div class="price-val-row">
                 <span class="price-card-sale">${product.pricing.sale}</span>
                 ${product.pricing.discount ? `<span class="price-card-discount">${product.pricing.discount}</span>` : ''}
               </div>
-              <div class="price-card-listed">Giá gốc: <del>${product.pricing.listed}</del></div>
+              ${product.pricing.listed && product.pricing.listed !== product.pricing.sale ? `
+                <div class="price-card-listed">Giá gốc: <del>${product.pricing.listed}</del></div>
+              ` : `
+                <div class="price-card-listed">Chính sách: <strong>${product.pricing.discount === 'Giá cố định' ? 'Giá cố định không giảm' : 'Giá chuẩn chính hãng'}</strong></div>
+              `}
             </div>
           </div>
 
@@ -358,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ` : ''}
 
           <div class="price-guarantee-footer">
-            <div class="guarantee-item"><span>✓</span> Freeship toàn quốc</div>
+            <div class="guarantee-item"><span>✓</span> ${product.id === 'unic-xanh' ? 'Freeship khi mua từ 3 chai' : 'Freeship toàn quốc'}</div>
             <div class="guarantee-item"><span>✓</span> Khui thùng kiểm tra trước khi nhận</div>
             <div class="guarantee-item"><span>✓</span> Đổi trả 1-1 nếu móp méo / rách niêm phong</div>
             <div class="guarantee-item"><span>✓</span> Kỹ sư Nông nghiệp tư vấn 24/7 (039.899.2419)</div>
@@ -578,12 +577,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Render Page 4: Script Netto Plus (Master Table format exactly like Tab 2 & Tab 3)
 
-  const renderScriptNetto = () => {
-
-    if (!pageScriptNetto || !AGRIZEN_DATA.scriptNetto) return;
-
-    renderScriptTable(pageScriptNetto, AGRIZEN_DATA.scriptNetto, '🛡️');
-
+  const renderScriptUpsell = () => {
+    if (!pageScriptUpsell || !AGRIZEN_DATA.scriptUpsell) return;
+    renderScriptTable(pageScriptUpsell, AGRIZEN_DATA.scriptUpsell, '🛡️');
   };
 
   // Render Page 4: Interactive Seasons & Growth Stages
@@ -1308,17 +1304,16 @@ document.addEventListener('DOMContentLoaded', () => {
         mainContentHtml = `
           <div class="pests-grid">
             ${filteredTerms.map(t => {
-              const img = t.image || (t.id % 6 === 1 ? 'assets/images/stage1.jpg' : t.id % 6 === 2 ? 'assets/images/stage2.jpg' : t.id % 6 === 3 ? 'assets/images/stage3.jpg' : t.id % 6 === 4 ? 'assets/images/stage4.jpg' : t.id % 6 === 5 ? 'assets/images/stage5.jpg' : 'assets/images/stage6.jpg');
               return `
-                <div class="pest-card">
-                  <div class="pest-image-container">
-                    <img src="${img}" alt="${t.term}" class="pest-card-img" onerror="this.src='assets/images/stage1.jpg';">
-                  </div>
+                <div class="pest-card" style="display: flex; flex-direction: column;">
                   <div class="pest-header">
                     <span class="pest-icon-tag">📖</span>
-                    <div>
-                      <h3>${t.id}. ${t.term}</h3>
-                      <span class="pest-badge-target"><i class="fa-solid fa-location-dot"></i> Vùng: ${t.region}</span>
+                    <div style="flex: 1;">
+                      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                        <h3 style="margin: 0; font-size: 16px; font-weight: 800; color: var(--brand-950);">${t.id}. ${t.term}</h3>
+                        <span class="dict-badge" style="background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; font-size: 11px; white-space: nowrap; padding: 2px 7px;">${t.region}</span>
+                      </div>
+                      <span class="pest-badge-target" style="margin-top: 4px;"><i class="fa-solid fa-location-dot"></i> Thuật ngữ thực địa</span>
                     </div>
                   </div>
                   <div class="pest-body">
@@ -1818,19 +1813,18 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
 
     const cardsHtml = filteredVarieties.map((v, idx) => {
-      const varietyImg = v.image || (idx % 3 === 0 ? 'assets/images/stage4.jpg' : idx % 3 === 1 ? 'assets/images/stage5.jpg' : 'assets/images/stage6.jpg');
       const pestNote = (v.pestsAndDiseases && v.pestsAndDiseases[0]) ? v.pestsAndDiseases[0] : 'Cần chú ý đạo ôn và rầy nâu';
 
       return `
-        <div class="pest-card">
-          <div class="pest-image-container">
-            <img src="${varietyImg}" alt="${v.name}" class="pest-card-img" onerror="this.src='assets/images/stage4.jpg';">
-          </div>
+        <div class="pest-card" style="display: flex; flex-direction: column;">
           <div class="pest-header">
             <span class="pest-icon-tag">🌾</span>
-            <div>
-              <h3>${v.name}</h3>
-              <span class="pest-badge-target"><i class="fa-solid fa-clock"></i> ${v.duration} | 📍 ${v.region}</span>
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                <h3 style="margin: 0; font-size: 16.5px; font-weight: 800; color: var(--brand-950);">${v.name}</h3>
+                <span class="dict-badge" style="background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; font-size: 11px; white-space: nowrap; padding: 2px 7px;">${v.badge}</span>
+              </div>
+              <span class="pest-badge-target" style="margin-top: 4px;"><i class="fa-solid fa-clock"></i> ${v.duration} | 📍 ${v.region}</span>
             </div>
           </div>
           <div class="pest-body">
@@ -1928,14 +1922,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const tabsNavHtml = [
-      { id: 'all', name: 'Toàn Bộ (6 Sản Phẩm & Bảng Phối Trộn)' },
+      { id: 'all', name: 'Toàn Bộ (8 Sản Phẩm & Bảng Phối Trộn)' },
       { id: 'huu_co_ph14', name: '🌿 1. Hữu Cơ pH 14' },
       { id: 'zaki_ruoc_dong', name: '🌱 2. ZAKi Rước Đòng' },
       { id: 'sieu_vo_gao_zaki', name: '🌾 3. Siêu Vô Gạo ZAKi' },
       { id: 'netto_plus_10ew', name: '🛡️ 4. Netto Plus 10EW' },
       { id: 'mix_combi', name: '⚡ 5. Mix Combi' },
       { id: 'sieu_loang_trai_luke', name: '💧 6. Siêu Loang Trải Luke' },
-      { id: 'matrix', name: '📊 7. Bảng Tương Thích Phối Trộn' }
+      { id: 'unic_75_tim', name: '🍇 7. UniC 75 Tím' },
+      { id: 'unic_75_xanh', name: '🍃 8. UniC 75 Xanh' },
+      { id: 'matrix', name: '📊 9. Bảng Tương Thích Phối Trộn' }
     ].map(t => `
       <button class="filter-btn ${t.id === activeExpandedProdTab ? 'active' : ''}" data-exp-tab="${t.id}">
         ${t.name}
@@ -2064,7 +2060,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="matrix-header-box">
             <div>
               <h3 style="margin: 0; font-size: 17.5px; font-weight: 800; color: var(--brand-950);">
-                📊 7. BẢNG TƯƠNG THÍCH PHỐI TRỘN THUỐC & PHÂN BÓN LÚA (14 HỢP CHẤT THÔNG DỤNG)
+                ${matrix.title || '📊 9. BẢNG TƯƠNG THÍCH PHỐI TRỘN THUỐC BVTV & PHÂN BÓN LÚA (BAO GỒM BỘ ĐÔI UNIC 75 TÍM & XANH, NETTO PLUS VÀ BỘ 3 ZAKI)'}
               </h3>
               <p style="margin: 4px 0 0 0; font-size: 12.8px; color: var(--text-muted);">
                 Quy tắc đối chiếu cột ngang x hàng dọc: Dấu tích [<span style="color: #15803d; font-weight: 900;"> ✓ </span>] là <strong>PHỐI TRỘN ĐƯỢC</strong>; <strong>Ô TRỐNG</strong> là <strong>KHÔNG TRỘN ĐƯỢC</strong> (tránh kết tủa, cháy đọt, mất hiệu lực thuốc).
@@ -3164,7 +3160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderScriptVG();
   renderScriptPH();
-  renderScriptNetto();
+  renderScriptUpsell();
   renderScheduleRice();
 
   renderAlkalineDeep();

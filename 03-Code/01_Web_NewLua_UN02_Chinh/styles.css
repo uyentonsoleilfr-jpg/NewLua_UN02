@@ -404,29 +404,36 @@ body::before {
    ========================================================================== */
 .product-tabs-bar {
   display: flex;
-  gap: 10px;
-  margin-bottom: 24px;
-  overflow-x: auto;
-  padding-bottom: 6px;
-  scrollbar-width: thin;
+  flex-wrap: wrap; /* Cho phép tự dàn đều đẹp mắt trên màn hình rộng */
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 4px 2px 6px 2px;
+  scrollbar-width: none; /* Ẩn thanh cuộn xấu xí trên Firefox */
+  -ms-overflow-style: none; /* Ẩn trên IE/Edge */
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-tabs-bar::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn xám xấu xí trên Chrome/Safari */
 }
 
 .tab-pill {
-  padding: 11px 20px;
+  padding: 8px 15px;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-medium);
   background-color: #ffffff;
   color: var(--text-muted);
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
   transition: var(--transition);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
 }
 
 .tab-pill:hover {
@@ -488,6 +495,41 @@ body::before {
 .product-card.theme-combi::before { background-color: var(--blue-700); }
 .product-card.theme-luke::before { background-color: var(--teal-700); }
 .product-card.theme-netto::before { background-color: #7b1fa2; }
+.product-card.theme-unic-tim::before { background-color: #6b21a8; }
+.product-card.theme-unic-xanh::before { background-color: #047857; }
+
+.tab-pill.theme-unic-tim.active {
+  background: linear-gradient(135deg, #6b21a8 0%, #4a154b 100%);
+  color: #ffffff;
+  border-color: #d8b4fe;
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3);
+}
+
+.tab-pill.theme-unic-xanh.active {
+  background: linear-gradient(135deg, #047857 0%, #064e3b 100%);
+  color: #ffffff;
+  border-color: #6ee7b7;
+  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.3);
+}
+
+.prod-price-card.price-unic-tim {
+  background: rgba(107, 33, 168, 0.04);
+  border-color: rgba(107, 33, 168, 0.25);
+}
+.prod-price-card.price-unic-tim .price-card-label { color: #6b21a8; }
+.prod-price-card.price-unic-tim .price-card-sale { color: #6b21a8; }
+
+.prod-price-card.price-unic-xanh {
+  background: rgba(4, 120, 87, 0.04);
+  border-color: rgba(4, 120, 87, 0.25);
+}
+.prod-price-card.price-unic-xanh .price-card-label { color: #047857; }
+.prod-price-card.price-unic-xanh .price-card-sale { color: #047857; }
+
+.unic-tim-title { color: #6b21a8 !important; }
+.unic-xanh-title { color: #047857 !important; }
+.tag-unic-tim { background: rgba(107, 33, 168, 0.1); color: #6b21a8; border: 1px solid rgba(107, 33, 168, 0.3); }
+.tag-unic-xanh { background: rgba(4, 120, 87, 0.1); color: #047857; border: 1px solid rgba(4, 120, 87, 0.3); }
 
 /* Tab Pill Themes */
 .tab-pill.theme-netto.active {

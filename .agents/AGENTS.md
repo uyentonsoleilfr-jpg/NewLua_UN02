@@ -161,4 +161,23 @@ Mọi câu lệnh tạo ảnh/video AI (Midjourney, Flux.1, Ideogram 2.0, Kling/
 * **Layer 5 — Technical Quality & Negative Constraints (Thông số kỹ thuật & Khóa lỗi):** `8k resolution, photorealistic commercial photography, sharp Vietnamese typography, anti-slop --no wheat, barley, plastic bottle, blurry text`.
 
 ---
+
+## 8. QUY TRÌNH TÁC NGHIỆP HÀNG NGÀY — NHẬP BÁO CÁO CRM & VBOT
+
+Khi người dùng mở đoạn chat mới và gửi ảnh chụp màn hình báo cáo, AI lập tức áp dụng kỹ năng `zaki-daily-report`:
+* **Tuyệt đối KHÔNG sửa file nhân sự:** 10 nhân sự tự nhập file BCDT của mình.
+* **Tự động trích xuất và nhập vào 3 file quản lý tập trung:**
+  1. `BÁO CÁO NGÀY Leader` (`1-ogqHY8b1XZiOrphS9X9U9rZXnSobX_uqHxIag9sYao`): Cột Contact, Đơn chốt, Doanh thu (dòng ngày).
+  2. `LÚA - Bảng Thống Kê Chi Tiết Ngày` (`1Y2um2R0Iu2T6vOK0sV06XNZ3WHLSoNpO4jym2YS0m70`): Cột Data/Mess, Đơn chốt, Doanh thu của 10 nhân sự (khối ngày).
+  3. `HIỆU SUẤT NGÀY` (`1It5ldQsvgBf0loQfvuMVwTLLdHl1UWSeTKsyrl_kxDY`): Cột `TL gọi` (phút), `Bắt máy` (cuộc), `TN` (tác nghiệp), `CHAT` (%) của ngày.
+* **Quy tắc cộng gộp máy nhánh VBot:** Tự động hợp nhất các extension phụ (như Hạ Quyên `869115277`, Khánh Huyền `572393868`) và tách riêng số liệu của Lead Uyên Nhi.
+
+---
+
+## 9. QUY TẮC TỰ HÀNH TỐI ĐA (AUTONOMOUS BY DEFAULT — KHÔNG HỎI THỪA)
+
+1. **Chủ động đưa ra quyết định chuẩn xác nhất và thực thi trọn vẹn từ A đến Z:** Khi nhận yêu cầu xử lý file, dữ liệu, lọc data, làm sạch hay viết mã, Agent phải tự động phân tích phương án tối ưu nhất (ví dụ: bóc tách trùng lặp, giữ lại sheet chuẩn sạch sẽ, xóa file rác, căn chỉnh format) và **thực thi ngay lập tức**, không dừng lại hỏi xin ý kiến ở các bước trung gian khiến người dùng phải submit nhiều lần.
+2. **Không hỏi câu hỏi mở kiểu "Bạn có muốn... không?":** Thay vì hỏi xin phép hoặc đưa ra nhiều lựa chọn lưỡng lự, Agent mặc định chọn giải pháp đúng đắn nhất, triển khai dứt điểm và chỉ báo cáo kết quả tóm tắt sau khi đã hoàn thành.
+
+---
 🔗 **Liên kết điều hướng:** [[0. .agents MOC]] | [[product-marketing]] | [[0. Agrizen Lúa MOC 🌾]]
