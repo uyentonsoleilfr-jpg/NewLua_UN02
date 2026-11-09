@@ -496,20 +496,12 @@ body::before {
 .product-card.theme-luke::before { background-color: var(--teal-700); }
 .product-card.theme-netto::before { background-color: #7b1fa2; }
 .product-card.theme-unic-tim::before { background-color: #6b21a8; }
-.product-card.theme-unic-xanh::before { background-color: #047857; }
 
 .tab-pill.theme-unic-tim.active {
   background: linear-gradient(135deg, #6b21a8 0%, #4a154b 100%);
   color: #ffffff;
   border-color: #d8b4fe;
   box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3);
-}
-
-.tab-pill.theme-unic-xanh.active {
-  background: linear-gradient(135deg, #047857 0%, #064e3b 100%);
-  color: #ffffff;
-  border-color: #6ee7b7;
-  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.3);
 }
 
 .prod-price-card.price-unic-tim {
@@ -519,18 +511,8 @@ body::before {
 .prod-price-card.price-unic-tim .price-card-label { color: #6b21a8; }
 .prod-price-card.price-unic-tim .price-card-sale { color: #6b21a8; }
 
-.prod-price-card.price-unic-xanh {
-  background: rgba(4, 120, 87, 0.04);
-  border-color: rgba(4, 120, 87, 0.25);
-}
-.prod-price-card.price-unic-xanh .price-card-label { color: #047857; }
-.prod-price-card.price-unic-xanh .price-card-sale { color: #047857; }
-
 .unic-tim-title { color: #6b21a8 !important; }
-.unic-xanh-title { color: #047857 !important; }
 .tag-unic-tim { background: rgba(107, 33, 168, 0.1); color: #6b21a8; border: 1px solid rgba(107, 33, 168, 0.3); }
-.tag-unic-xanh { background: rgba(4, 120, 87, 0.1); color: #047857; border: 1px solid rgba(4, 120, 87, 0.3); }
-
 /* Tab Pill Themes */
 .tab-pill.theme-netto.active {
   background: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%);

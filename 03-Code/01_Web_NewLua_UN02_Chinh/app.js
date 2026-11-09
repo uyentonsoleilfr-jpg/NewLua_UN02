@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     'script-upsell': {
-      title: '4. CẨM NANG UPSELL SÂU + BỆNH (NETTO PLUS 10EW & BỘ ĐÔI UNIC 75)',
-      desc: 'Quy trình tư vấn 4 cữ phun trọn gói bảo vệ lúa toàn diện, xử lý tình huống và chính sách Combo Mua 3 Tặng 1 giá 1tr5'
+      title: '4. CẨM NANG UPSELL SÂU + BỆNH (NETTO PLUS 10EW & THUỐC BỆNH UNIC 75 ASMILTATOP SUPER 400SC)',
+      desc: 'Quy trình tư vấn 4 cữ phun bảo vệ lúa toàn diện, xử lý tình huống và chính sách Combo Sâu Bệnh 990k tặng Loang Trải Luke 120k'
     },
 
     'schedule-rice': {
@@ -325,9 +325,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Pricing Box (Cột Trái Cân Đối: Giá, Quy cách, Ưu đãi, Cam kết)
     let pricingHtml = '';
-    const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'unic-tim' ? 'price-unic-tim' : (product.id === 'unic-xanh' ? 'price-unic-xanh' : (product.id === 'vo-gao' ? 'price-gold' : (product.id === 'mix-combi' ? 'price-combi' : (product.id === 'sieu-loang-trai' ? 'price-luke' : '')))));
-    const titleColorClass = product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'unic-tim' ? 'unic-tim-title' : (product.id === 'unic-xanh' ? 'unic-xanh-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : '')))));
-    const tagThemeClass = product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : (product.id === 'unic-tim' ? 'tag-unic-tim' : (product.id === 'unic-xanh' ? 'tag-unic-xanh' : (product.id === 'mix-combi' ? 'tag-blue' : (product.id === 'sieu-loang-trai' ? 'tag-teal' : 'tag-primary')))));
+    const priceThemeClass = product.id === 'netto-plus' ? 'price-purple' : (product.id === 'unic-tim' || product.id === 'unic-75' ? 'price-unic-tim' : (product.id === 'vo-gao' ? 'price-gold' : (product.id === 'mix-combi' ? 'price-combi' : (product.id === 'sieu-loang-trai' ? 'price-luke' : ''))));
+    const titleColorClass = product.id === 'vo-gao' ? 'gold-title' : (product.id === 'netto-plus' ? 'purple-title' : (product.id === 'unic-tim' || product.id === 'unic-75' ? 'unic-tim-title' : (product.id === 'mix-combi' ? 'blue-title' : (product.id === 'sieu-loang-trai' ? 'teal-title' : ''))));
+    const tagThemeClass = product.id === 'vo-gao' ? 'tag-gold' : (product.id === 'netto-plus' ? 'tag-purple' : (product.id === 'unic-tim' || product.id === 'unic-75' ? 'tag-unic-tim' : (product.id === 'mix-combi' ? 'tag-blue' : (product.id === 'sieu-loang-trai' ? 'tag-teal' : 'tag-primary'))));
 
     if (product.pricing) {
       pricingHtml = `
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ` : ''}
 
           <div class="price-guarantee-footer">
-            <div class="guarantee-item"><span>✓</span> ${product.id === 'unic-xanh' ? 'Freeship khi mua từ 3 chai' : 'Freeship toàn quốc'}</div>
+            <div class="guarantee-item"><span>✓</span> Freeship toàn quốc</div>
             <div class="guarantee-item"><span>✓</span> Khui thùng kiểm tra trước khi nhận</div>
             <div class="guarantee-item"><span>✓</span> Đổi trả 1-1 nếu móp méo / rách niêm phong</div>
             <div class="guarantee-item"><span>✓</span> Kỹ sư Nông nghiệp tư vấn 24/7 (039.899.2419)</div>
@@ -1922,16 +1922,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const tabsNavHtml = [
-      { id: 'all', name: 'Toàn Bộ (8 Sản Phẩm & Bảng Phối Trộn)' },
+      { id: 'all', name: 'Toàn Bộ (7 Sản Phẩm & Bảng Phối Trộn)' },
       { id: 'huu_co_ph14', name: '🌿 1. Hữu Cơ pH 14' },
       { id: 'zaki_ruoc_dong', name: '🌱 2. ZAKi Rước Đòng' },
       { id: 'sieu_vo_gao_zaki', name: '🌾 3. Siêu Vô Gạo ZAKi' },
       { id: 'netto_plus_10ew', name: '🛡️ 4. Netto Plus 10EW' },
       { id: 'mix_combi', name: '⚡ 5. Mix Combi' },
       { id: 'sieu_loang_trai_luke', name: '💧 6. Siêu Loang Trải Luke' },
-      { id: 'unic_75_tim', name: '🍇 7. UniC 75 Tím' },
-      { id: 'unic_75_xanh', name: '🍃 8. UniC 75 Xanh' },
-      { id: 'matrix', name: '📊 9. Bảng Tương Thích Phối Trộn' }
+      { id: 'unic_75', name: '🍇 7. UniC 75 (Asmiltatop 400SC)' },
+      { id: 'matrix', name: '📊 8. Bảng Tương Thích Phối Trộn' }
     ].map(t => `
       <button class="filter-btn ${t.id === activeExpandedProdTab ? 'active' : ''}" data-exp-tab="${t.id}">
         ${t.name}
@@ -2060,7 +2059,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="matrix-header-box">
             <div>
               <h3 style="margin: 0; font-size: 17.5px; font-weight: 800; color: var(--brand-950);">
-                ${matrix.title || '📊 9. BẢNG TƯƠNG THÍCH PHỐI TRỘN THUỐC BVTV & PHÂN BÓN LÚA (BAO GỒM BỘ ĐÔI UNIC 75 TÍM & XANH, NETTO PLUS VÀ BỘ 3 ZAKI)'}
+                ${matrix.title || '📊 9. BẢNG TƯƠNG THÍCH PHỐI TRỘN THUỐC BVTV & PHÂN BÓN LÚA (BAO GỒM THUỐC TRỪ BỆNH UNIC 75 (ASMILTATOP SUPER 400SC), NETTO PLUS VÀ BỘ 3 ZAKI)'}
               </h3>
               <p style="margin: 4px 0 0 0; font-size: 12.8px; color: var(--text-muted);">
                 Quy tắc đối chiếu cột ngang x hàng dọc: Dấu tích [<span style="color: #15803d; font-weight: 900;"> ✓ </span>] là <strong>PHỐI TRỘN ĐƯỢC</strong>; <strong>Ô TRỐNG</strong> là <strong>KHÔNG TRỘN ĐƯỢC</strong> (tránh kết tủa, cháy đọt, mất hiệu lực thuốc).

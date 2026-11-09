@@ -420,182 +420,92 @@ window.AGRIZEN_DATA = {
       "code": "UNIC-TIM-500ML",
       "theme": "theme-unic-tim",
       "badgeIcon": "🍇",
-      "tabName": "UniC Tím",
-      "fullName": "Thuốc Trừ Bệnh UNIC 75 TÍM (Azoxystrobin 250g/L + Difenoconazole 150g/L)",
+      "tabName": "UniC 75",
+      "fullName": "Thuốc Trừ Bệnh UNIC 75 — ASMILTATOP SUPER 400SC (Chai 500ML)",
       "image": "assets/images/sp_unic_tim.jpg",
-      "shortDesc": "Đặc trị Đạo ôn cổ bông & Lem lép hạt lúa. Dạng SC huyền phù sữa nano mát bông 100%, bảo vệ nhụy hoa khi trổ xẹt phơi màu, hiệu ứng Greening Effect giữ 3 lá đòng xanh dày như lá tre đến ngày gặt.",
-      "tag": "Azoxy 250g + Difen 150g • 400g/L SC Mát Bông",
-      "packaging": "Chai 500ml (Thùng 20 chai)",
-      "registeredName": "Thuốc trừ bệnh UniC 75 (Đăng ký Lem Lép Hạt, Đạo Ôn trên lúa)",
-      "origin": "Hoạt chất Azoxystrobin & Difenoconazole cao cấp nhập khẩu",
-      "distributor": "CÔNG TY CỔ PHẦN PHÂN BÓN MIỀN NAM",
+      "shortDesc": "Đặc trị Đạo ôn (đạo ôn lá, thối cổ bông) & Lem lép hạt lúa. Hoạt chất Azoxystrobin 250g/L + Difenoconazole 150g/L (Tổng 400g/L SC) dạng huyền phù sữa nano mát bông 100%, nội hấp lưu dẫn cực mạnh, bảo vệ hạt phấn khi trổ xẹt, giữ 3 lá đòng xanh dày như lá tre tới ngày gặt.",
+      "tag": "Azoxystrobin 250g + Difenoconazole 150g • 400SC Sữa Nano • Đặc Trị Đạo Ôn & Lem Lép Hạt",
+      "packaging": "Chai 500ML (Thùng 20 chai)",
+      "registeredName": "Thuốc trừ bệnh ASMILTATOP SUPER 400SC (Nhãn hiệu UniC 75 - SĐK 3918/CNĐKT-BVTV)",
+      "origin": "Hoạt chất Azoxystrobin & Difenoconazole cao cấp nhập khẩu (Jiangsu Frey / Danyang Xingneng) - Đóng gói bởi Cty CP Hóa Chất Nông Nghiệp Hà Long",
+      "distributor": "Hợp tác phân phối độc quyền: CÔNG TY CỔ PHẦN PHÂN BÓN MN (Hotline: 039.899.2419)",
       "pricing": {
-        "usageRate": "1 Chai 500ml xịt 20 công tầm cắt (1.000m²) hoặc 15 – 16 công tầm lớn (1.296m²) cữ phòng ngừa | Khi điều trị: Tăng liều xịt 10 – 12 công",
+        "usageRate": "1 Chai 500ml xịt 1 - 1.25 Hecta (10 - 12.5 công tầm lớn 1.296m² hoặc 12 - 15 công 1.000m²)",
         "listed": "480.000đ/chai",
         "sale": "396.000đ/chai",
         "discount": "-18%",
-        "unit": "Chai 500ml (SC sữa nano)",
-        "offer": "Gói 1 Mẫu Hero Offer: Mua 2 lon ZAKi + 1 chai UniC Tím = 1.500.000đ TẶNG THÊM 1 LON ZAKi RƯỚC ĐÒNG (670k) | Mua Thùng 20 Chai: 6.600.000đ (chỉ 330k/chai)",
-        "policyNote": "Quy chuẩn: Phòng ngừa pha 25ml/bình 25L (1 chai 500ml xịt đủ 20 công 1.000m² - chỉ ~19.8k/công). Khi chớm xuất hiện vết bệnh điều trị tăng liều lên 40-50ml/bình xịt 10-12 công để dập dịch đứng liền. Khui thùng kiểm tra trước khi nhận."
+        "unit": "Chai 500ML (Dạng SC sữa nano)",
+        "offer": "Combo Sâu Bệnh Toàn Diện: 1 Sâu Netto Plus 1L + 1 Bệnh UniC 75 500ml = 990.000đ TẶNG THÊM 1 CHAI SIÊU LOANG TRẢI LUKE 100ML (120k) | Mua Thùng 20 Chai: 6.600.000đ (chỉ 330k/chai)",
+        "policyNote": "Quy chuẩn nhãn Cục BVTV: Lem lép hạt pha 14ml/bình 16L (20-22ml/bình 25L); Đạo ôn pha 20-25ml/bình 16L (30-40ml/bình 25L). Phun 2.5 bình 16L/1.000m² (400-500L nước/ha). Khui thùng kiểm tra trước khi nhận."
       },
       "specs": [
         {
           "name": "Azoxystrobin",
-          "value": "250 g/L (25% w/v - Nhóm Strobilurin - Khóa ty thể nấm)"
+          "value": "250 g/L (25% w/v - Nhóm Strobilurin - Nội hấp lưu dẫn cực mạnh, bẻ gãy nguồn năng lượng ATP ty thể nấm)"
         },
         {
           "name": "Difenoconazole",
-          "value": "150 g/L (15% w/v - Nhóm Triazole - Đục thủng vách tế bào nấm)"
+          "value": "150 g/L (15% w/v - Nhóm Triazole - Thấm sâu, đục thủng vách tế bào nấm, khô vết bệnh sau 24h)"
         },
         {
           "name": "Tổng hàm lượng hoạt chất",
-          "value": "400 g/L (Cao hơn 23% so với Amistar Top 325SC)"
+          "value": "400 g/L (Asmiltatop Super 400SC - Đậm đặc hơn 23% so với các dòng 325SC trên thị trường)"
         },
         {
           "name": "Dạng thuốc & Công nghệ",
-          "value": "SC (Huyền phù sữa nano gốc nước, cực mát bông 100%)"
+          "value": "SC (Huyền phù đậm đặc dạng sữa nano gốc nước, cực mát bông 100%, không nghẹt béc bay Drone)"
         },
         {
           "name": "Cơ chế tác động",
-          "value": "Nội hấp lưu dẫn 2 chiều + Thấm sâu + Greening Effect xanh lá"
+          "value": "Nội hấp lưu dẫn 2 chiều cực mạnh + Thấm sâu diệt nấm sau khi phun + Greening Effect xanh dày lá đòng"
         },
         {
           "name": "Thời gian cách ly (PHI)",
-          "value": "14 ngày trước khi thu hoạch"
+          "value": "10 ngày trước khi thu hoạch (Chuẩn công bố nhãn BVTV)"
         }
       ],
       "mechanisms": [
         {
-          "title": "1. Khóa chuỗi hô hấp ty thể tế bào nấm (Azoxystrobin 250g/L)",
-          "desc": "Ức chế phức hợp III (Cytochrome bc1), bẻ gãy nguồn cung cấp năng lượng ATP khiến bào tử nấm đạo ôn không thể nảy mầm và sợi nấm bị khô tóp tức thì."
+          "title": "1. Nội hấp & lưu dẫn 2 chiều cực mạnh (Azoxystrobin 250g/L + Difenoconazole 150g/L)",
+          "desc": "Xâm nhập nhanh vào mô cây sau 15-30 phút, vận chuyển hướng ngọn và rễ, diệt sạch sợi nấm và chặn đứng bào tử lây lan kể cả nấm đã xâm nhiễm bên trong mô lá."
         },
         {
-          "title": "2. Phá hủy màng tế bào Ergosterol & Khô vết bệnh sau 24h (Difenoconazole 150g/L)",
-          "desc": "Lưu dẫn nội hấp 2 chiều cực mạnh, làm thủng vách tế bào nấm bệnh, chặn đứng vòi hút, làm khô ráo vết bệnh mắt én đạo ôn và vết nám lem lép hạt chỉ sau 24-48 giờ."
+          "title": "2. Đặc trị đạo ôn lá, thối cổ bông và lem lép hạt lúa",
+          "desc": "Phối hợp 2 cơ chế vừa khóa năng lượng hô hấp ty thể (Azoxy) vừa phá hủy màng tế bào nấm (Difen), làm khô ráo vết sọc đạo ôn mắt én và vết nám lem lép vỏ trấu chỉ sau 24-48 giờ."
         },
         {
-          "title": "3. Hiệu ứng xanh cây (Greening Effect) nuôi bộ 3 lá đòng dày như lá tre",
-          "desc": "Ức chế sinh khí già hóa Ethylene, kích thích quang hợp mạnh mẽ, giữ bộ 3 lá đòng xanh dày đứng sững tới ngày gặt, dồn tinh bột vô hạt cậy sát cổ bông."
+          "title": "3. Hiệu ứng xanh lá (Greening Effect) nuôi bộ 3 lá đòng dày như lá tre",
+          "desc": "Giúp cây lúa tăng cường quang hợp, ức chế quá trình lão hóa sớm của lá đòng, giữ lá đòng đứng sững xanh bền đến ngày thu hoạch, dồn tinh bột nuôi no hạt cậy."
         },
         {
-          "title": "4. Mát bông tuyệt đối & Bôi trơn trổ thoát rộ đồng loạt",
-          "desc": "Dạng SC sữa nano gốc nước tinh khiết không chứa dung môi dầu khoáng, xịt êm ru lúc lúa đang trổ xẹt phơi màu thụ phấn, không lem vỏ trấu, chống nghẹn đòng."
+          "title": "4. Dạng sữa SC siêu mát bông, bôi trơn trổ thoát rộ đồng loạt",
+          "desc": "Không chứa dung môi dầu khoáng gây nóng rát, phun an toàn tuyệt đối ngay cả khi lúa đang trổ xẹt phơi màu nhụy, hạt phấn phát triển hoàn hảo, trổ thoát rộ đồng loạt."
         }
       ],
       "dosage": {
         "dilutionRates": [
-          "💧 Phun bình máy 25L: Phòng ngừa pha 25 ml / bình 25L (1 chai 500ml pha 20 bình xịt đủ 20 công 1.000m²). Khi điều trị dập dịch: Tăng liều lên 40 – 50 ml / bình 25L (xịt 10 – 12 công).",
-          "🛢️ Phun Phuy 200L: Phòng ngừa pha 1 Chai 500ml cho 2 Phuy (400L nước) xịt 20 công tầm cắt. Khi điều trị: Pha 1 Chai cho 1 – 1.5 Phuy xịt 10 – 12 công.",
-          "🚁 Phun bằng máy bay Drone: Phòng ngừa 1 Chai 500ml bay cho 20 công tầm cắt (2 ha). Khi điều trị nấm bệnh: 1 Chai bay cho 10 – 12 công."
+          "💧 Phun bình 16L (Chuẩn nhãn): Lem lép hạt pha 14 ml / bình 16L. Đạo ôn pha 20 – 25 ml / bình 16L. Phun 2.5 bình/1.000m² (400 – 500L nước/ha).",
+          "💧 Phun bình máy 25L: Lem lép hạt pha 20 – 22 ml / bình 25L. Đạo ôn pha 30 – 40 ml / bình 25L (1 chai 500ml pha 12 – 16 bình 25L xịt 1 – 1.25 Hecta).",
+          "🛢️ Phun Phuy 200L: Pha 1 Chai 500ml cho 2 Phuy (400L nước) phun phòng ngừa 1 Hecta. Khi dập dịch đạo ôn nặng: Pha 1 Chai cho 1 – 1.5 Phuy.",
+          "🚁 Phun máy bay Drone: 1 Chai 500ml bay cho 1 – 1.2 Hecta (10 – 12 công tầm lớn). Dạng sữa SC tan 100%, không cặn, cực chuẩn cho Drone."
         ],
         "crops": [
           {
-            "name": "Cây Lúa Nước (Đặc trị Đạo ôn cổ bông & Lem lép hạt)",
-            "rate": "1 Chai 500ml xịt 20 công 1.000m² phòng ngừa (hoặc 10-12 công điều trị tăng liều)",
+            "name": "Cây Lúa Nước (Đặc trị Lem Lép Hạt & Đạo Ôn)",
+            "rate": "Liều lượng 0.4 – 0.5 L/ha (1 Chai 500ml xịt 1 – 1.25 Ha)",
             "stages": [
-              "Cữ Đón đòng (40 - 45 NSS): Quét sạch nấm đạo ôn bẹ bao, bảo vệ tim đèn mập ú, trổ nhiều gié.",
-              "Cữ Trổ lẹt xẹt (60 - 65 NSS): CỰC KỲ QUAN TRỌNG. Mát bông, chống đạo ôn cổ bông, trổ thoát rộ 100%.",
-              "Cữ Cong trái me (70 - 75 NSS): Giữ xanh 3 lá đòng, dồn đường bột vô hạt cậy, vỏ trấu sáng mẩy."
+              "Cữ Chuẩn bị trổ (Đón đòng 45-50 NSS): Quét sạch mầm nấm bẹ lá bao đòng, bảo vệ tim đèn và cổ bông non.",
+              "Cữ Trổ đều (Trổ xẹt - trổ thoát 60-65 NSS): Cực kỳ quan trọng. Mát bông, chống đạo ôn cổ bông, bảo vệ hạt phấn trổ thoát rộ 100%.",
+              "Cữ Cong trái me (70-75 NSS): Phòng ngừa lem lép hạt, giữ xanh 3 lá đòng, dồn tinh bột vô hạt cậy sát cổ bông."
             ]
           }
         ],
-        "mixingRule": "⚠️ CẢNH BÁO KỸ THUẬT: Tương thích 100% với ZAKi Rước Đòng, ZAKi Vô Gạo, Thuốc sâu sữa Netto Plus 10EW, Mix Combi Ba Lan, Siêu Loang Trải Luke. TUYỆT ĐỐI CẤM PHA CHUNG VỚI HỮU pH 14 (pH > 13) VÀ THUỐC GỐC ĐỒNG VÔ CƠ (Boóc-đô, Kocide) gây kết tủa, phân hủy hoạt chất và nóng bông lúa."
+        "mixingRule": "⚠️ CẢNH BÁO KỸ THUẬT: Tương thích 100% với ZAKi Rước Đòng, ZAKi Vô Gạo, Thuốc sâu sữa Netto Plus 10EW, Mix Combi Ba Lan, Siêu Loang Trải Luke. TUYỆT ĐỐI CẤM PHA CHUNG VỚI HỮU pH 14 (pH > 13) VÀ THUỐC GỐC ĐỒNG VÔ CƠ (Boóc-đô, Oxyclorua đồng) vì kiềm cao và đồng làm phân hủy hoạt chất."
       },
       "battlecard": {
         "competitor": "Amistar Top 325SC & Tilt Super 300EC ngoài tiệm",
-        "weakness": "Amistar Top giá rất đắt (~350k/chai 250ml tốn gần 50k/công). Tilt Super dạng nhũ dầu EC rất nóng, dễ cháy cánh hoa và vàng chóp lá đòng khi nắng gắt.",
-        "ourEdge": "UniC 75 Tím có hàm lượng 400g/L (vượt trội 23% so với 325g/L), dạng SC sữa mát rượi bông lúa, chai 500ml giá 396k tính ra chỉ ~33k/công, tiết kiệm hơn 30% tiền thuốc."
-      }
-    },
-    {
-      "id": "unic-xanh",
-      "code": "UNIC-XANH-500ML",
-      "theme": "theme-unic-xanh",
-      "badgeIcon": "🌾",
-      "tabName": "UniC Xanh",
-      "fullName": "Thuốc Trừ Bệnh UNIC 75 XANH (Hexaconazole 100g/L Technology of Japan)",
-      "image": "assets/images/sp_unic_xanh.jpg",
-      "shortDesc": "Đặc trị Khô vằn (đốm vằn) chân bẹ & Đạo ôn lá đợt sớm. Hàm lượng 100g/L đậm đặc gấp 2 lần Anvil 5SC thông thường. Công nghệ Nhật Bản giúp cây lúa lùn lóng, dày bẹ, cứng cáp chống đổ ngã mùa mưa dông.",
-      "tag": "Hexaconazole 100g/L • Technology of Japan • Cứng Cây Lùn Lóng",
-      "packaging": "Chai 500ml (Thùng 20 chai)",
-      "registeredName": "Thuốc trừ bệnh UniC 75 (Đăng ký Lem Lép Hạt, Đạo Ôn trên lúa)",
-      "origin": "Technology of Japan (Công nghệ phụ gia Nhật Bản)",
-      "distributor": "CÔNG TY CỔ PHẦN PHÂN BÓN MIỀN NAM",
-      "pricing": {
-        "usageRate": "1 Chai 500ml xịt 20 công tầm cắt (1.000m²) hoặc 15 – 16 công tầm lớn (1.296m²) cữ phòng ngừa | Khi điều trị: Tăng liều xịt 10 – 12 công",
-        "listed": "165.000đ/chai",
-        "sale": "165.000đ/chai",
-        "discount": "Giá cố định",
-        "unit": "Chai 500ml (Công nghệ Nhật)",
-        "offer": "Giá cố định không giảm: 165.000đ/chai | MUA TỪ 3 CHAI TRỞ LÊN MIỄN PHÍ VẬN CHUYỂN (FREESHIP TOÀN QUỐC) | Gói 3 Chai = 495.000đ (Freeship)",
-        "policyNote": "Dòng kinh tế đẻ nhánh: Giá cố định 165.000đ/chai (không giảm), mua từ 3 chai FREESHIP toàn quốc. Phòng ngừa pha 25ml/bình 25L cho 20 công 1.000m² (chỉ ~8.250đ/công). Khi điều trị khô vằn / đạo ôn tăng liều lên 40-50ml/bình xịt 10-12 công."
-      },
-      "specs": [
-        {
-          "name": "Hexaconazole",
-          "value": "100 g/L (10% w/v - Đậm đặc gấp đôi Anvil 50g/L)"
-        },
-        {
-          "name": "Công nghệ phụ gia",
-          "value": "Technology of Japan (Quy chuẩn Nhật Bản)"
-        },
-        {
-          "name": "Dạng thuốc",
-          "value": "SC (Huyền phù sữa trắng mịn, tan hoàn toàn, không cặn)"
-        },
-        {
-          "name": "Đặc tính sinh học",
-          "value": "Lưu dẫn nội hấp toàn thân, chuyển vị nhanh theo mạch dẫn"
-        },
-        {
-          "name": "Hiệu ứng thực địa",
-          "value": "Lùn lóng gốc, dày bẹ lá, đứng sững chống đổ ngã, teo hạch khô vằn"
-        },
-        {
-          "name": "Thời gian cách ly (PHI)",
-          "value": "14 ngày trước khi thu hoạch"
-        }
-      ],
-      "mechanisms": [
-        {
-          "title": "1. Cô lập và làm teo hạch nấm khô vằn sau 24h",
-          "desc": "Nội hấp cực nhanh qua bẹ lá chân, ức chế Ergosterol làm tê liệt sợi nấm và teo tóp hạch nấm Rhizoctonia solani, gốc rạ thông thoáng."
-        },
-        {
-          "title": "2. Tác động cứng cây, lùn lóng, dày bẹ",
-          "desc": "Ức chế nhẹ sinh tổng hợp Gibberellin thực vật, làm các lóng gốc ngắn lại, thành tế bào bẹ dày cứng, giúp cây lúa đứng sững như lưỡi kiếm, chống đổ ngã mùa mưa dông."
-        },
-        {
-          "title": "3. Dập tắt đạo ôn lá đợt sớm (chấm kim, mắt én non)",
-          "desc": "Bảo vệ tầng lá non giai đoạn đẻ nhánh, chặn đứng mầm bệnh đạo ôn không cho lan rộng."
-        },
-        {
-          "title": "4. Dạng sữa SC mịn màng, an toàn tuyệt đối cho đọt non",
-          "desc": "Không dung môi dầu hôi cay nóng, không làm chùn đọt lúa non, tan 100% trong bồn bay Drone."
-        }
-      ],
-      "dosage": {
-        "dilutionRates": [
-          "💧 Phun bình máy 25L: Phòng ngừa pha 25 ml / bình 25L (1 chai 500ml pha 20 bình xịt đủ 20 công 1.000m²). Khi điều trị khô vằn / đạo ôn: Tăng liều lên 40 – 50 ml / bình 25L (xịt 10 – 12 công).",
-          "🛢️ Phun Phuy 200L: Phòng ngừa pha 1 Chai 500ml cho 2 Phuy xịt 20 công tầm cắt. Khi điều trị khô vằn: Pha 1 Chai cho 1 – 1.5 Phuy xịt 10 – 12 công.",
-          "🚁 Phun Drone: Phòng ngừa 1 Chai 500ml bay cho 20 công tầm cắt (2 ha). Khi điều trị nấm bệnh: 1 Chai bay cho 10 – 12 công."
-        ],
-        "crops": [
-          {
-            "name": "Cây Lúa Nước (Khô vằn, đạo ôn lá, cứng cây)",
-            "rate": "1 Chai 500ml xịt 20 công 1.000m² phòng ngừa (hoặc 10-12 công điều trị tăng liều)",
-            "stages": [
-              "Cữ Đẻ nhánh (20 - 30 NSS): Dọn sạch khô vằn chân bẹ, kích lóng ngắn, cứng cây, nở bụi mập.",
-              "Cữ Đón đòng (35 - 40 NSS): Quét hạch nấm trước khi ôm bắp, giữ gốc rạ thông thoáng."
-            ]
-          }
-        ],
-        "mixingRule": "⚠️ CẢNH BÁO QUAN TRỌNG: TUYỆT ĐỐI CẤM PHA CHUNG VỚI HỮU pH 14 (pH > 13) VÀ THUỐC GỐC ĐỒNG VÔ CƠ! Nồng độ kiềm cao của pH 14 sẽ thủy phân làm phân hủy hoạt chất Hexaconazole, làm mất hoàn toàn hiệu lực trừ nấm bệnh. UniC 75 Xanh TƯƠNG THÍCH 100% VỚI: ZAKi Rước Đòng, Thuốc sâu sữa Netto Plus 10EW, Vi lượng Mix Combi Ba Lan, Siêu Loang Trải Luke. Tan 100%, không nghẹt béc bay Drone."
-      },
-      "battlecard": {
-        "competitor": "Anvil 5SC (Syngenta 50g/L) & Validacin 5SL",
-        "weakness": "Anvil nồng độ chỉ có 50g/L (5%), phải xịt liều gấp đôi mới dẹp được hạch khô vằn già. Validacin chỉ tác dụng trên sợi nấm non, hạch già không chết và không có tác dụng cứng cây.",
-        "ourEdge": "UniC 75 Xanh có hàm lượng 100g/L đậm đặc gấp đôi Anvil, công nghệ Nhật Bản, vừa diệt sạch khô vằn vừa làm lúa lùn lóng cứng cây, giá chỉ 165k/chai 500ml rẻ hơn nhiều."
+        "weakness": "Amistar Top giá rất đắt (~350k/chai 250ml tốn gần 50k/công). Tilt Super dạng nhũ dầu EC rất nóng, dễ cháy nhụy hoa và vàng chóp lá đòng khi nắng gắt.",
+        "ourEdge": "UniC 75 Asmiltatop Super 400SC có hàm lượng 400g/L (đậm đặc hơn 23% so với 325g/L), dạng SC sữa mát rượi bông lúa, chai 500ml giá ưu đãi 396k tính ra chỉ ~31k - 33k/công, tiết kiệm hơn 30% tiền thuốc so với ngoài thị trường."
       }
     },
     {
@@ -1761,7 +1671,7 @@ window.AGRIZEN_DATA = {
         ],
         "conditions": "Bào tử nấm lây lan theo giọt bắn nước mưa và gió mạnh; bùng phát khi thời tiết sương mù dày, ẩm độ > 85%.",
         "prevention": "Tránh bón thừa đạm khi cây nhú đọt non; thu gom cành lá bệnh đem đốt tiêu hủy; giữ vườn thông thoáng đón nắng sớm.",
-        "activeIngredients": "Difenoconazole, Azoxystrobin, Hexaconazole, Mancozeb (phun ướt đều 2 mặt lá và chùm bông).",
+        "activeIngredients": "Difenoconazole, Azoxystrobin, Mancozeb (phun ướt đều 2 mặt lá và chùm bông).",
         "image": "assets/images/crop_pests/pest_saurieng_thanthu.jpg"
       },
       {
@@ -1873,7 +1783,7 @@ window.AGRIZEN_DATA = {
         ],
         "conditions": "Thời tiết mưa ẩm kéo dài, sương mù dày ban đêm, đặc biệt bùng phát dữ dội trong các vụ chong đèn nghịch vụ.",
         "prevention": "Vệ sinh cắt tỉa cành bệnh đem chôn hoặc ủ men vi sinh; tránh tưới nước trực tiếp lên tán cành vào buổi chiều tối.",
-        "activeIngredients": "Azoxystrobin + Difenoconazole, Propiconazole, Mancozeb, Hexaconazole.",
+        "activeIngredients": "Azoxystrobin + Difenoconazole, Propiconazole, Mancozeb.",
         "image": "assets/images/crop_pests/pest_thanhlong_tacke.jpg"
       },
       {
@@ -2315,655 +2225,574 @@ window.AGRIZEN_DATA = {
     ]
   },
   "scriptUpsell": {
-    "title": "4. CẨM NANG UPSELL SÂU + BỆNH (COMBO KÈM ZAKI 990K / 3 HA - SÂU LẺ 650K, BỆNH LẺ 550K)",
+    "title": "4. CẨM NANG UPSELL SÂU + BỆNH (NETTO PLUS 10EW & THUỐC BỆNH UNIC 75 ASMILTATOP SUPER 400SC)",
     "notes": [
-        "💰 CHÍNH SÁCH ĐÒN BẨY GIÁ MUA CÙNG ZAKI: Khi bà con đặt đơn Dinh Dưỡng ZAKi, được hưởng đặc quyền mua BỘ SÂU + BỆNH 3 HA GIÁ CHỈ 990.000đ (Tiết kiệm ngay 210.000đ so với giá mua lẻ ngoài thị trường: Sâu lẻ 650k/lon + Bệnh lẻ 550k/chai = 1.200.000đ).",
-        "🌾 ĐỊNH MỨC DIỆN TÍCH BỘ 990K: Đây là liều phòng bệnh chuẩn đi cho 3 HECTA (30 công tầm cắt 1.000m² hoặc ~23 công tầm lớn 1.296m²). Khi ruộng chớm xuất hiện vết bệnh hoặc áp lực dịch hại cao thì tăng liều gấp đôi (xịt 1.5 Ha = 15 công) để dập dịch đứng bệnh tức thì.",
-        "⚖️ QUY ĐỔI SẢN PHẨM & QUÀ TẶNG: 3 XANH = 1 TÍM ĐẠO ÔN. Khách có 2 lựa chọn: (1) Combo 1 Sâu Netto Plus 1L + 1 Bệnh UniC Tím 500ml (990k) -> 🎁 TẶNG THÊM 1 CHAI SIÊU LOANG TRẢI LUKE 100ML (Trị giá 120k); (2) Combo 1 Sâu Netto Plus 1L + 3 Bệnh UniC Xanh 500ml (990k) -> KHÔNG ĐƯỢC TẶNG Loang Trải Luke (vì UniC Xanh đã được trợ giá cố định chạm đáy).",
-        "🔬 PHÂN ĐỊNH RÕ VAI TRÒ DƯỢC LÝ: XANH (Hexaconazole 100g/L SC) là PHÒNG SỚM BỆNH lúc lúa non đẻ nhánh, làm lùn lóng, dày bẹ, teo hạch khô vằn; TÍM (Azoxystrobin 250 + Difen 150 SC 400g/L) là ĐIỀU TRỊ NẶNG dập tắt nấm đạo ôn lá, trị thối cổ bông và lem lép hạt, dưỡng xanh 3 lá đòng như lá tre.",
-        "⚠️ NGUYÊN TẮC PHỐI TRỘN AN TOÀN: Netto Plus 10EW và UniC 75 (Tím & Xanh) dạng sữa nano tương thích 100% khi pha chung với ZAKi Rước Đòng, Vô Gạo, Mix Combi, Luke. TUYỆT ĐỐI CẤM PHA CHUNG VỚI HỮU pH 14 (pH > 13) hoặc Thuốc gốc Đồng vô cơ."
+      "💰 CHÍNH SÁCH ĐÒN BẨY GIÁ MUA CÙNG ZAKI: Khi bà con đặt đơn Dinh Dưỡng ZAKi, được hưởng đặc quyền mua BỘ ĐÔI SÂU + BỆNH 3 HA GIÁ CHỈ 990.000đ (Tiết kiệm ngay 210.000đ so với giá mua lẻ ngoài thị trường: Sâu Netto Plus lẻ 650k/lon + Bệnh UniC 75 lẻ 550k/chai = 1.200.000đ).",
+      "🌾 ĐỊNH MỨC DIỆN TÍCH BỘ 990K: 1 Lon sâu Netto Plus 1L + 1 Chai bệnh UniC 75 500ml là liều phòng bệnh chuẩn đi cho 3 HECTA (30 công tầm cắt 1.000m² hoặc ~23 công tầm lớn 1.296m²). Khi ruộng chớm xuất hiện vết bệnh đạo ôn hoặc sâu gối lứa thì tăng liều gấp đôi (xịt 1.5 Ha = 15 công) để dập dịch đứng bệnh tức thì.",
+      "🎁 ĐẶC QUYỀN QUÀ TẶNG: Khách chốt Combo Sâu Bệnh 990k được TẶNG THÊM 1 CHAI SIÊU LOANG TRẢI LUKE 100ML (Trị giá 120.000đ) giúp dẫn thuốc thấm sâu sau 15-30 phút qua khí khổng, chống mưa rửa trôi cực chuẩn cho bình xịt và Drone.",
+      "🔬 BẢN CHẤT DƯỢC LÝ UNIC 75 (ASMILTATOP SUPER 400SC): Phối hợp 2 hoạt chất Azoxystrobin 250g/L + Difenoconazole 150g/L (400g/L SC sữa nano) nội hấp lưu dẫn 2 chiều cực mạnh, diệt nấm sau khi phun. Đặc trị Đạo ôn (cổ bông, lá) và Lem lép hạt, hiệu ứng Greening Effect giữ 3 lá đòng xanh dày như lá tre tới ngày gặt.",
+      "⚠️ NGUYÊN TẮC PHỐI TRỘN AN TOÀN: Netto Plus 10EW và UniC 75 dạng sữa nano tương thích 100% khi pha chung với ZAKi Rước Đòng, Vô Gạo, Mix Combi, Luke. TUYỆT ĐỐI CẤM PHA CHUNG VỚI HỮU pH 14 (pH > 13) hoặc Thuốc gốc Đồng vô cơ."
     ],
     "rows": [
-        {
-            "step": "Bước 1: Bắt Bệnh\n(Thời Tiết 3 Miền)",
-            "stage": "Thời tiết 1: Mưa dầm, ẩm ướt, trời âm u\n\nKhu vực: An Giang, Kiên Giang, Đồng Tháp mùa mưa dầm\n\nDịch hại bùng phát:\n• Sâu cuốn lá lứa gối, sâu đục thân đẻ trứng bẹ lá.\n• Đạo ôn lá, thối cổ bông, lem lép hạt.",
-            "guidance": "• CÂU HỎI BẮT BỆNH ĐỒNG RUỘNG:\n\"Chỗ chú mấy bữa nay có mưa dầm, chiều tối ra đồng có thấy bướm rộ bay ngoài bờ mẫu không chú? Lá lúa có bị chấm kim đạo ôn chưa?\"\n\n• NGUY HIỂM NGOÀI RUỘNG:\nMưa ẩm kéo dài là bướm đẻ trứng ồ ạt, bào tử đạo ôn phát tán theo giọt mưa. Sâu đục thân lẩn sâu nách bẹ lá, nếu không chặn sớm tới lúc trổ bông sẽ bị bạc trắng xác, gãy cổ bông mất trắng.",
-            "handling": "• LỜI NÓI DÂN DÃ CHO BÀ CON:\n\"Dạ chú Năm ơi, mưa dầm ẩm ướt là sâu bệnh nở rộ lẹ dữ lắm. Tiện đợt này chú lấy đơn dinh dưỡng ZAKi bên con, chú kẹp luôn BỘ SÂU + BỆNH 3 HA CÓ 990K này vô. Thuốc sâu sữa Neto Plus xông hơi 2X luồn nách bẹ diệt sạch sâu đục thân, kẹp thêm chai UniC Tím dạng sữa quét sạch nấm đạo ôn. Chú mua lẻ ở ngoài là 1 triệu 2 lận, đi kèm ZAKi trợ giá chỉ 990k mà con TẶNG THÊM cho chú chai Siêu Loang Trải Luke 120k xịt chống mưa rửa trôi cực chuẩn luôn chú!\""
-        },
-        {
-            "step": "Bước 1: Bắt Bệnh\n(Thời Tiết 3 Miền)",
-            "stage": "Thời tiết 2: Nắng hạn, sương mù sáng sớm\n\nKhu vực: Vụ Đông Xuân hoặc đầu mùa nắng ĐBSCL\n\nDịch hại bùng phát:\n• Bọ trĩ (bù lạch), rầy phấn trắng chích đọt.\n• Bệnh khô vằn ăn chân bẹ sát mặt nước.",
-            "guidance": "• CÂU HỎI BẮT BỆNH ĐỒNG RUỘNG:\n\"Mùa này chỗ chú ngày nắng gắt mà sáng sớm sương mù nhiều không chú? Chú vạch đọt non coi có quéo tóp đầu hay chân bẹ lúa có bị nám khô vằn ăn loang không?\"\n\n• NGUY HIỂM NGOÀI RUỘNG:\nTrời nắng sương mù là bọ trĩ chích nhựa đọt non làm nghẽn sinh trưởng, nấm khô vằn phát triển từ gốc rạ ăn loang lên làm rụi lá chân, lúa không nở bụi được.",
-            "handling": "• LỜI NÓI DÂN DÃ CHO BÀ CON:\n\"Bọ trĩ chui vô đọt non hút nhựa làm lúa sượng đọt chú à. Cữ này lúa đang đẻ nhánh, chú lấy gói COMBO KÈM ZAKI 990K loại 1 SÂU NETTO PLUS + 3 CHAI UNIC XANH xịt thoải mái cho 3 Hecta ruộng. Chai Xanh công nghệ Nhật Bản chuyên PHÒNG SỚM BỆNH khô vằn chân bẹ, kẹp thuốc sâu sữa Neto Plus quét sạch bọ trĩ mà lúa lùn lóng, bẹ dày đẻ chồi mập ú nghen chú!\""
-        },
-        {
-            "step": "Bước 1: Bắt Bệnh\n(Thời Tiết 3 Miền)",
-            "stage": "Thời tiết 3: Gió chướng, lúa trổ đón gió\n\nKhu vực: Giai đoạn trổ lẹt xẹt đến ngậm sữa\n\nDịch hại bùng phát:\n• Bọ xít hôi bay đàn chích thối dịch sữa.\n• Đạo ôn cổ bông làm gãy gục bông, lem lép hạt cậy.",
-            "guidance": "• CÂU HỎI BẮT BỆNH ĐỒNG RUỘNG:\n\"Lúa chú đang trổ xẹt ra đồng có thấy bọ xít hôi bay vô hay cổ bông bị chấm thối đen không chú Năm?\"\n\n• NGUY HIỂM NGOÀI RUỘNG:\nBọ xít hôi chích hút hạt sữa kết hợp nấm đạo ôn cổ bông làm thối hạt, lép lửng hạt cậy sát cổ bông. Lúa gặt về nhẹ ký, bán mất giá nghiêm trọng.",
-            "handling": "• LỜI NÓI DÂN DÃ CHO BÀ CON:\n\"Lúa trổ xẹt đón gió chướng là bọ xít với đạo ôn cổ bông cắn phá tàn bạo nhất. Cữ sinh tử này chú bắt buộc phải đưa BỘ 1 SÂU NETTO PLUS + 1 UNIC TÍM 400g/L dạng SC sữa nano siêu mát bông. Thuốc sâu xua sạch bọ xít, chai Tím ĐIỀU TRỊ CHỐNG THỐI CỔ BÔNG bảo vệ hạt phấn trổ thoát rộ đồng loạt. Đi cùng ZAKi có 990k/3ha lại được TẶNG chai Loang Trải Luke 120k quá hời chú nha!\""
-        },
-        {
-            "step": "Bước 2: Kỹ Thuật Cữ 1\n(20 – 25 NSS)\n🌱 ĐẺ NHÁNH RỘ",
-            "stage": "MỤC TIÊU CỰC KỲ RÕ RÀNG:\n• ĐI ĐỂ LÀM GÌ: Quét sạch bọ trĩ, sâu cuốn lá đợt 1 (Netto Plus); Dùng UNIC XANH PHÒNG SỚM BỆNH khô vằn ăn chân bẹ, tẩy hạch nấm gốc rạ.\n\n• PHỐI KÈM: ZAKi RƯỚC ĐÒNG 1L (TUYỆT ĐỐI CẤM PHA HỮU pH 14).",
-            "guidance": "• ĐƯỢC GÌ CHO BÀ CON:\n1. Bọ trĩ, sâu cuốn lá chết sạch sau 30 phút, đọt non bung xòe êm ru không lo nóng cháy lá.\n2. Hạch nấm khô vằn bị cô lập teo tóp, chân gốc rạ sạch bóng thông thoáng.\n3. Hoạt chất Hexaconazole làm lùn lóng lúa gốc, bẹ lá dày lên đứng sững như lưỡi kiếm chống đổ ngã mùa mưa dông.\n\n• HIỆU QUẢ THỰC ĐỊA:\nCây lúa nở chồi hữu hiệu mập ú, rễ tơ bung trắng phau bám chặt đất, nền tảng nuôi bông bự sau này.",
-            "handling": "• LỜI TƯ VẤN DÂN DÃ:\n\"Cữ đẻ nhánh này chú đi bộ 1 Sâu Netto Plus + UniC Xanh là chuẩn bài kinh tế nhất! Chai Xanh bản chất là PHÒNG SỚM BỆNH lúc lúa còn non, đậm đặc gấp đôi Anvil mà giá rẻ bèo. Xịt vô vừa dẹp sâu cuốn lá vừa làm gốc lúa lùn lóng cứng cáp, đẻ chồi nào mập chồi nấy nghen chú!\""
-        },
-        {
-            "step": "Bước 2: Kỹ Thuật Cữ 2\n(40 – 45 NSS)\n🌾 LÀM ĐÒNG TIM ĐÈN\n⭐ CỬ THEN CHỐT SỐ 1",
-            "stage": "MỤC TIÊU CỰC KỲ RÕ RÀNG:\n• ĐI ĐỂ LÀM GÌ: Netto Plus xông hơi 2X luồn nách bẹ diệt sâu đục thân cắn gãy tim đòng; Ruộng êm đi Xanh phòng bệnh, chớm chấm kim đưa ngay UNIC TÍM ĐỂ ĐIỀU TRỊ dập tắt đạo ôn lá.\n\n• PHỐI KÈM: ZAKi RƯỚC ĐÒNG 1L + Vi lượng Mix Combi Ba Lan.",
-            "guidance": "• ĐƯỢC GÌ CHO BÀ CON:\n1. Khí xông hơi 2X cực mạnh luồn tận nách bẹ ép sâu đục thân ngạt thở chết sạch, không lo bị đứt tim đòng hay bông bạc.\n2. Cặp hoạt chất Azoxy + Difen trong UniC Tím khóa chặt vết bệnh đạo ôn lá sau 24h, giữ bẹ lá đòng xanh dày như lá tre.\n3. Dinh dưỡng hữu cơ Mỹ và vi lượng Chelate nuôi tim đèn mập ú, tăng 35-40% số gié phụ.\n\n• HIỆU QUẢ THỰC ĐỊA:\nSố gié tăng từ 8-10 gié lên 12-16 gié/bông, số hạt tăng từ 130 lên 180-220 hạt/bông, đòng xé bao nang bung dài thượt.",
-            "handling": "• LỜI TƯ VẤN DÂN DÃ:\n\"Lúa có tim đèn 1-2 ly là quyết định số hạt trên bông lúa. Sâu đục thân mà cắn đứt tim đòng là coi như mất trắng bông đó chú. Cữ này chú lấy chai UniC Tím ĐIỀU TRỊ dập tắt đạo ôn kẹp lon sâu Netto Plus với lon Rước Đòng Mỹ. Tim đòng được bảo vệ mập ú, trổ ra bông nào bông nấy dài sọc trĩu hạt chú Năm nha!\""
-        },
-        {
-            "step": "Bước 2: Kỹ Thuật Cữ 3\n(60 – 65 NSS)\n🌸 TRỔ LẸT XẸT 3-5%\n⭐ CỬ MÁT BÔNG PHƠI MÀU",
-            "stage": "MỤC TIÊU CỰC KỲ RÕ RÀNG:\n• ĐI ĐỂ LÀM GÌ: Netto Plus quét sạch bọ xít hôi, bọ trĩ cắn đen mày trấu; BẮT BUỘC DÙNG UNIC TÍM 400g/L SC ĐIỀU TRỊ & CHỐNG THỐI CỔ BÔNG, SẠCH LEM LÉP HẠT.\n\n• PHỐI KÈM: ZAKi VÔ GẠO 1L (Gel sữa PK bôi trơn trổ rộ).",
-            "guidance": "• ĐƯỢC GÌ CHO BÀ CON:\n1. 100% dạng nước sữa nano mát rượi, bảo vệ tuyệt đối hạt phấn hoa lúa đang phơi màu, CẤM xài thuốc nhũ dầu nóng làm cháy hoa.\n2. Hoạt chất Azoxystrobin tạo màng nano bọc chặt cổ bông và vỏ trấu, diệt 10 loại nấm lem lép hạt.\n3. Lân hữu hiệu 32.5% và Kali sữa bôi trơn bẹ bao giúp lúa trổ thoát rộ đồng loạt 100% trong 3-5 ngày.\n\n• HIỆU QUẢ THỰC ĐỊA:\nLúa trổ thoát nhanh, cổ bông dai chắc không gãy gục, vỏ trấu vàng sáng óng, không một hạt lem lép mày trấu.",
-            "handling": "• LỜI TƯ VẤN DÂN DÃ:\n\"Lúa đang trổ xẹt phơi màu nhạy cảm vô cùng chú ơi, xịt thuốc nhũ dầu nóng ngoài tiệm là quéo nhụy lép bông liền. Cả thuốc sâu sữa Neto Plus lẫn UniC Tím bên con đều là DẠNG SỮA MÁT RƯỢI 100%, xịt êm ru bông lúa, bôi trơn trổ thoát rộ mà diệt sạch bọ xít hôi, cổ bông dai chắc không sợ gãy chú nghen!\""
-        },
-        {
-            "step": "Bước 2: Kỹ Thuật Cữ 4\n(70 – 75 NSS)\n🌾 CONG TRÁI ME\n⭐ CỬ CHẮC TỚI CẬY",
-            "stage": "MỤC TIÊU CỰC KỲ RÕ RÀNG:\n• ĐI ĐỂ LÀM GÌ: Netto Plus xua sạch bọ xít hôi chích hút sữa non; UNIC TÍM TÁI LẬP HÀNG RÀO BẢO VỆ VỎ TRẤU & GIỮ XANH 3 LÁ ĐÒNG (*Greening Effect*).\n\n• PHỐI KÈM: ZAKi VÔ GẠO 1L + Siêu Loang Trải Luke 100ml.",
-            "guidance": "• ĐƯỢC GÌ CHO BÀ CON:\n1. Hiệu ứng Greening Effect độc quyền của Azoxystrobin giữ bộ 3 lá đòng xanh dày như lá tre đến ngày gặt, tăng hiệu suất quang hợp dồn tinh bột.\n2. Vận chuyển đường bột dồn dập nén chặt hạt gạo từ ngoài mép bông vô tận hạt cậy sát cổ bông.\n3. Tăng 14% trọng lượng 1.000 hạt (TGW), tăng năng suất 30 - 50kg/công.\n\n• HIỆU QUẢ THỰC ĐỊA:\nHạt lúa no tròn chắc mẩy sát cậy, vỏ trấu sáng trưng, lúa gặt về cân nặng trĩu tay, phơi sấy không ngót ký nào.",
-            "handling": "• LỜI TƯ VẤN DÂN DÃ:\n\"Cữ cong trái me này xịt UniC Tím với lon Vô Gạo là giữ trọn 3 lá đòng xanh mướt như lá tre để dồn tinh bột vô tận hạt cậy sát cổ bông. Kẹp thuốc sâu xua sạch bọ xít thì hạt lúa chín vàng óng ả, gặt về cân nặng trĩu tay, thương lái tranh nhau mua giá cao nghen chú!\""
-        },
-        {
-            "step": "Bước 3: Dược Lý\n(Xanh Phòng vs Tím Trị)",
-            "stage": "PHÂN ĐỊNH RÕ RÀNG 2 DÒNG THUỐC BỆNH UNIC 75:\n\n• UNIC 75 XANH (100g/L SC): Là dòng PHÒNG SỚM BỆNH, làm lùn lóng, cứng cây, dày bẹ lá, teo hạch khô vằn cữ đẻ nhánh.\n\n• UNIC 75 TÍM (400g/L SC): Là dòng ĐIỀU TRỊ NẶNG dập dịch đạo ôn lá, trị thối cổ bông, lem lép hạt, giữ xanh 3 lá đòng đòng trổ vô gạo.\n\n• QUY ĐỔI CHUẨN: 3 XANH = 1 TÍM ĐẠO ÔN.",
-            "guidance": "• BẢN CHẤT KỸ THUẬT & PHÂN BỔ DIỆN TÍCH:\n1. UniC Xanh 165k chứa Hexaconazole công nghệ Nhật: Thích hợp phòng sớm đẻ nhánh 20-25 ngày, giúp hạ giá thành giáp vụ.\n2. UniC Tím chứa Azoxystrobin 250g + Difenoconazole 150g (tổng 400g/L SC): Đậm đặc gấp đôi thuốc thị trường, bắt buộc cho cữ nhạy cảm làm đòng, trổ xẹt và cong trái me.\n3. Quy đổi: Trong gói Combo 990k / 3 Ha, khách lấy 1 Sâu + 1 Tím (tặng Loang Trải Luke), HOẶC lấy 1 Sâu + 3 Xanh (không tặng Luke).",
-            "handling": "• LỜI NÓI DÂN DÃ GIẢI THÍCH CHO KHÁCH:\n\"Dạ chú Năm ơi, 2 chai này công năng chia rõ ràng: Chai Xanh là chuyên PHÒNG SỚM BỆNH lúc lúa non đẻ nhánh để vừa sạch khô vằn vừa lùn lóng cứng cây cho đỡ tốn tiền; còn chai Tím là thuốc xịn ĐIỀU TRỊ NẶNG lúc đòng trổ vô gạo để trị dứt thối cổ bông và giữ xanh lá đòng. Cứ 3 chai Xanh là tương đương 1 chai Tím, chú chọn bộ nào cũng đúng 990k cho 3ha hết chú nha!\""
-        },
-        {
-            "step": "Bước 4: Đòn Bẩy Giá\n(Combo 990k vs Mua Lẻ 1tr2)",
-            "stage": "SO SÁNH ĐỐI ĐẦU BẢNG GIÁ:\n\n• MUA LẺ ĐƠN ĐỘC NGOÀI ĐƠN:\n- Thuốc sâu Netto Plus 1L lẻ: 650.000đ/lon.\n- Thuốc bệnh UniC Tím 500ml lẻ: 550.000đ/chai.\n-> Tổng mua lẻ: 1.200.000đ (Không quà tặng).\n\n• MUA KÈM ĐƠN ZAKI (GÓI 3 HA LIỀU PHÒNG):\n-> TRỌN BỘ SÂU + BỆNH CHỈ: 990.000đ (Tiết kiệm ngay 210.000đ tiền mặt).\n-> Lấy Tím được TẶNG THÊM 1 Chai Loang Trải Luke 120k!",
-            "guidance": "• ĐÒN BẨY TÂM LÝ BÁN HÀNG:\n1. Tuyệt đối không để khách mua lẻ 1 chai sâu hay 1 chai bệnh, luôn neo giá lẻ cao (650k sâu, 550k bệnh = 1.200k).\n2. Đưa ra đặc quyền trợ giá chỉ dành riêng cho khách mua kèm ZAKi: Cả bộ chỉ 990k đi trọn vẹn 3 Hecta ruộng (30 công tầm cắt).\n3. Tặng thêm chai Siêu Loang Trải Luke 120k nếu lấy UniC Tím để chốt hạ ngay lập tức.",
-            "handling": "• LỜI NÓI CHỐT ĐƠN ĐÒN BẨY GIÁ:\n\"Chú Năm ơi, bình thường chú mua lẻ ngoài là lon sâu Netto Plus 650k, chai UniC Tím 550k, 2 chai cộng lại là 1 triệu 2 lận đó chú. Nhưng hôm nay chú đặt đơn ZAKi bên con, công ty trợ giá đặc quyền cho chú NGUYÊN BỘ SÂU + BỆNH 3 HA GIÁ CHỈ ĐÚNG 990.000đ thôi! Chú tiết kiệm ngay 210 ngàn tiền mặt, mà con lại TẶNG THÊM cho chú 1 chai Siêu Loang Trải Luke 120k xịt kèm nữa. Tổng chú lời tới 330 ngàn, chú lấy luôn bộ này về xịt cho êm ru ruộng lúa chú nha!\""
-        },
-        {
-            "step": "Bước 5: Xử Lý Từ Chối\n(Bẻ Gãy Phản Đối)",
-            "stage": "TÌNH HUỐNG 1: Khách nói \"Tao mua lẻ lon sâu thôi, thuốc bệnh tao có rồi\"\n\nTÌNH HUỐNG 2: Khách hỏi \"1 bộ sâu bệnh 990k xịt đủ 3ha không con, có bị loãng không?\"\n\nTÌNH HUỐNG 3: Khách đòi tặng Loang Trải Luke khi chọn gói 3 chai UniC Xanh",
-            "guidance": "• CHIẾN THUẬT XỬ LÝ:\n1. Nếu khách đòi mua lẻ sâu: Báo giá 650k, sau đó làm bài toán cộng thêm 340k nữa là được cả chai bệnh UniC Tím 550k + chai Luke 120k (quá hời).\n2. Nếu khách hỏi diện tích 3ha: Khẳng định đây là liều chuẩn phòng bệnh 3ha của Phân Bón MN (pha 30 bình 25L cho 30 công tầm cắt). Nếu ruộng có dịch thì tăng liều xịt 1.5ha.\n3. Nếu khách đòi tặng Luke khi lấy 3 Xanh: Giải thích chân thành là 3 chai Xanh giá đã được trợ giá chuẩn sàn cố định 165k chạm đáy nên công ty không tặng thêm được, chỉ gói UniC Tím cao cấp mới có suất tặng Luke.",
-            "handling": "• LỜI THOẠI XỬ LÝ MƯỢT MÀ:\n1. Khách mua lẻ sâu: \"Dạ chú ơi, lon sâu Netto Plus mua lẻ là 650k rồi chú. Chú thêm có 340 ngàn nữa là được trọn bộ cả chai bệnh UniC Tím 550k xịn sò, lại được TẶNG chai Loang Trải 120k nữa, tội gì mua lẻ chú Năm!\"\n2. Khách hỏi diện tích: \"Dạ chú an tâm 100%, đây là liều phòng chuẩn cho 3 Hecta ruộng (30 công tầm cắt). Thuốc sữa nano đậm đặc lan tỏa cực mạnh, ruộng bình thường chú xịt 3ha êm ru, còn nếu chớm bệnh nặng chú cứ tăng liều gấp đôi xịt 15 công là đứng bệnh liền chú!\"\n3. Khách đòi quà gói 3 Xanh: \"Dạ chú Năm thông cảm giùm con, 3 chai Xanh công ty để giá gốc 165k trợ giá sát sàn cho bà con rồi nên không kèm quà được. Chú muốn lấy chai Loang Trải Luke 120k thì lấy gói UniC Tím nghen chú!\""
-        }
+      {
+        "step": "Bước 1: Bắt Bệnh\n(Thời Tiết 3 Miền)",
+        "stage": "Thời tiết 1: Mưa dầm, ẩm ướt, trời âm u\n\nKhu vực: An Giang, Kiên Giang, Đồng Tháp mùa mưa dầm\n\nDịch hại bùng phát:\n• Sâu cuốn lá lứa gối, sâu đục thân đẻ trứng bẹ lá.\n• Đạo ôn lá, thối cổ bông, lem lép hạt.",
+        "guidance": "• CÂU HỎI BẮT BỆNH ĐỒNG RUỘNG:\n\"Chỗ chú mấy bữa nay có mưa dầm, chiều tối ra đồng có thấy bướm rộ bay ngoài bờ mẫu không chú? Lá lúa có bị chấm kim đạo ôn chưa?\"\n\n• NGUY HIỂM NGOÀI RUỘNG:\nMưa ẩm kéo dài là bướm đẻ trứng ồ ạt, bào tử đạo ôn phát tán theo giọt mưa. Sâu đục thân lẩn sâu nách bẹ lá, nếu không chặn sớm tới lúc trổ bông sẽ bị bạc trắng xác, gãy cổ bông mất trắng.",
+        "handling": "• LỜI NÓI DÂN DÃ CHO BÀ CON:\n\"Dạ chú Năm ơi, mưa dầm ẩm ướt là sâu bệnh nở rộ lẹ dữ lắm. Tiện đợt này chú lấy đơn dinh dưỡng ZAKi bên con, chú kẹp luôn BỘ SÂU + BỆNH 3 HA CÓ 990K này vô. Thuốc sâu sữa Neto Plus xông hơi 2X luồn nách bẹ diệt sạch sâu đục thân, kẹp thêm chai UniC 75 dạng sữa quét sạch nấm đạo ôn và lem lép hạt. Chú mua lẻ ở ngoài là 1 triệu 2 lận, đi kèm ZAKi trợ giá chỉ 990k mà con TẶNG THÊM cho chú chai Siêu Loang Trải Luke 120k xịt chống mưa rửa trôi cực chuẩn luôn chú!\""
+      },
+      {
+        "step": "Bước 1: Bắt Bệnh\n(Thời Tiết 3 Miền)",
+        "stage": "Thời tiết 2: Nắng hạn, sương mù sáng sớm\n\nKhu vực: Vụ Đông Xuân hoặc đầu mùa nắng ĐBSCL\n\nDịch hại bùng phát:\n• Bọ trĩ (bù lạch), rầy phấn trắng chích đọt non.\n• Bệnh đạo ôn chấm kim, đốm vằn chân bẹ.",
+        "guidance": "• CÂU HỎI BẮT BỆNH ĐỒNG RUỘNG:\n\"Mùa này chỗ chú ngày nắng gắt mà sáng sớm sương mù nhiều không chú? Chú vạch đọt non coi có quéo tóp đầu hay lá non có bị chấm kim đạo ôn chưa?\"\n\n• NGUY HIỂM NGOÀI RUỘNG:\nTrời nắng sương mù là bọ trĩ chích nhựa làm nghẽn sinh trưởng, nấm đạo ôn non xâm nhiễm âm thầm làm rụi đọt non, lúa không nở bụi được.",
+        "handling": "• LỜI NÓI DÂN DÃ CHO BÀ CON:\n\"Bọ trĩ chui vô đọt non hút nhựa làm lúa sượng đọt chú à. Cữ này lúa đang đẻ nhánh, chú kẹp luôn BỘ SÂU BỆNH 990K gồm 1 SÂU NETTO PLUS + 1 BỆNH UNIC 75 500ML. Thuốc sâu sữa xông hơi quét sạch bọ trĩ rầy non, kẹp UniC 75 sữa nano siêu mát quét sạch nấm bệnh mà đọt non bung xòe êm ru, nở chồi mập ú nghen chú!\""
+      },
+      {
+        "step": "Bước 1: Bắt Bệnh\n(Thời Tiết 3 Miền)",
+        "stage": "Thời tiết 3: Gió chướng, lúa trổ đón gió\n\nKhu vực: Giai đoạn trổ lẹt xẹt đến ngậm sữa\n\nDịch hại bùng phát:\n• Bọ xít hôi bay đàn chích thối dịch sữa.\n• Đạo ôn cổ bông làm gãy gục bông, lem lép hạt cậy.",
+        "guidance": "• CÂU HỎI BẮT BỆNH ĐỒNG RUỘNG:\n\"Lúa chú đang trổ xẹt ra đồng có thấy bọ xít hôi bay vô hay cổ bông bị chấm thối đen không chú Năm?\"\n\n• NGUY HIỂM NGOÀI RUỘNG:\nBọ xít hôi chích hút hạt sữa kết hợp nấm đạo ôn cổ bông làm thối hạt, lép lửng hạt cậy sát cổ bông. Lúa gặt về nhẹ ký, bán mất giá nghiêm trọng.",
+        "handling": "• LỜI NÓI DÂN DÃ CHO BÀ CON:\n\"Lúa trổ xẹt đón gió chướng là bọ xít với đạo ôn cổ bông cắn phá tàn bạo nhất. Cữ sinh tử này chú bắt buộc phải đưa BỘ 1 SÂU NETTO PLUS + 1 UNIC 75 400SC sữa nano siêu mát bông. Thuốc sâu xua sạch bọ xít, UniC 75 ĐẶC TRỊ CHỐNG THỐI CỔ BÔNG & LEM LÉP HẠT bảo vệ hạt phấn trổ thoát rộ đồng loạt. Đi cùng ZAKi có 990k/3ha lại được TẶNG chai Loang Trải Luke 120k quá hời chú nha!\""
+      },
+      {
+        "step": "Bước 2: Kỹ Thuật Cữ 1\n(20 – 25 NSS)\n🌱 ĐẺ NHÁNH RỘ",
+        "stage": "MỤC TIÊU CỰC KỲ RÕ RÀNG:\n• ĐI ĐỂ LÀM GÌ: Quét sạch bọ trĩ, sâu cuốn lá đợt 1 (Netto Plus); Nếu ruộng chớm xuất hiện nấm bệnh hoặc đạo ôn chấm kim thì kẹp ngay UniC 75 liều nhẹ phòng ngừa.\n\n• PHỐI KÈM: ZAKi RƯỚC ĐÒNG 1L (TUYỆT ĐỐI CẤM PHA HỮU pH 14).",
+        "guidance": "• ĐƯỢC GÌ CHO BÀ CON:\n1. Bọ trĩ, sâu cuốn lá chết sạch sau 30 phút, đọt non bung xòe êm ru không lo nóng cháy lá.\n2. Bào tử nấm bệnh bị tiêu diệt sớm, chân gốc rạ sạch sẽ thông thoáng.\n3. Hiệu ứng Greening Effect giữ lá lúa xanh mướt, rễ tơ bung trắng phau bám chặt đất.\n\n• HIỆU QUẢ THỰC ĐỊA:\nCây lúa nở chồi hữu hiệu mập ú, đẻ nhánh khỏe, tạo nền tảng nuôi bông bự sau này.",
+        "handling": "• LỜI TƯ VẤN DÂN DÃ:\n\"Cữ đẻ nhánh này chú đi bộ Sâu Netto Plus kẹp lon Rước Đòng Mỹ là chuẩn bài nhất! Ruộng nào ẩm ướt có mầm nấm thì chú đưa thêm chút UniC 75 vô quét sạch nấm bệnh cữ sớm. Xịt vô vừa dẹp sâu cuốn lá bọ trĩ vừa giúp lúa nở chồi hữu hiệu mập ú nghen chú!\""
+      },
+      {
+        "step": "Bước 2: Kỹ Thuật Cữ 2\n(40 – 45 NSS)\n🌾 LÀM ĐÒNG TIM ĐÈN\n⭐ CỬ THEN CHỐT SỐ 1",
+        "stage": "MỤC TIÊU CỰC KỲ RÕ RÀNG:\n• ĐI ĐỂ LÀM GÌ: Netto Plus xông hơi 2X luồn nách bẹ diệt sâu đục thân cắn gãy tim đòng; UNIC 75 (ASMILTATOP SUPER 400SC) ĐIỀU TRỊ dập tắt đạo ôn lá, giữ bẹ lá đòng xanh dày như lá tre.\n\n• PHỐI KÈM: ZAKi RƯỚC ĐÒNG 1L + Vi lượng Mix Combi Ba Lan.",
+        "guidance": "• ĐƯỢC GÌ CHO BÀ CON:\n1. Khí xông hơi 2X cực mạnh luồn tận nách bẹ ép sâu đục thân ngạt thở chết sạch, không lo bị đứt tim đòng hay bông bạc.\n2. Cặp hoạt chất Azoxy 250g + Difen 150g trong UniC 75 khóa chặt vết bệnh đạo ôn lá sau 24h, giữ bẹ lá đòng xanh dày như lá tre.\n3. Dinh dưỡng hữu cơ Mỹ và vi lượng Chelate nuôi tim đèn mập ú, tăng 35-40% số gié phụ.\n\n• HIỆU QUẢ THỰC ĐỊA:\nSố gié tăng từ 8-10 gié lên 12-16 gié/bông, số hạt tăng từ 130 lên 180-220 hạt/bông, đòng xé bao nang bung dài thượt.",
+        "handling": "• LỜI TƯ VẤN DÂN DÃ:\n\"Lúa có tim đèn 1-2 ly là quyết định số hạt trên bông lúa. Sâu đục thân mà cắn đứt tim đòng là coi như mất trắng bông đó chú. Cữ này chú lấy chai UniC 75 Asmiltatop 400SC dập tắt đạo ôn kẹp lon sâu Netto Plus với lon Rước Đòng Mỹ. Tim đòng được bảo vệ mập ú, trổ ra bông nào bông nấy dài sọc trĩu hạt chú Năm nha!\""
+      },
+      {
+        "step": "Bước 2: Kỹ Thuật Cữ 3\n(60 – 65 NSS)\n🌸 TRỔ LẸT XẸT 3-5%\n⭐ CỬ MÁT BÔNG PHƠI MÀU",
+        "stage": "MỤC TIÊU CỰC KỲ RÕ RÀNG:\n• ĐI ĐỂ LÀM GÌ: Netto Plus quét sạch bọ xít hôi, bọ trĩ cắn đen mày trấu; BẮT BUỘC DÙNG UNIC 75 400SC DẠNG SỮA MÁT BÔNG, ĐẶC TRỊ ĐẠO ÔN CỔ BÔNG & LEM LÉP HẠT.\n\n• PHỐI KÈM: ZAKi VÔ GẠO 1L (Gel sữa PK bôi trơn trổ rộ).",
+        "guidance": "• ĐƯỢC GÌ CHO BÀ CON:\n1. 100% dạng nước sữa nano mát rượi, bảo vệ tuyệt đối hạt phấn hoa lúa đang phơi màu, CẤM xài thuốc nhũ dầu nóng làm cháy hoa.\n2. Hoạt chất Azoxystrobin + Difenoconazole tạo màng nano bọc chặt cổ bông và vỏ trấu, diệt triệt để nấm đạo ôn cổ bông và lem lép hạt.\n3. Lân hữu hiệu 32.5% và Kali sữa bôi trơn bẹ bao giúp lúa trổ thoát rộ đồng loạt 100% trong 3-5 ngày.\n\n• HIỆU QUẢ THỰC ĐỊA:\nLúa trổ thoát nhanh, cổ bông dai chắc không gãy gục, vỏ trấu vàng sáng óng, không một hạt lem lép mày trấu.",
+        "handling": "• LỜI TƯ VẤN DÂN DÃ:\n\"Lúa đang trổ xẹt phơi màu nhạy cảm vô cùng chú ơi, xịt thuốc nhũ dầu nóng ngoài tiệm là quéo nhụy lép bông liền. Cả thuốc sâu sữa Neto Plus lẫn UniC 75 bên con đều là DẠNG SỮA MÁT RƯỢI 100%, xịt êm ru bông lúa, bôi trơn trổ thoát rộ mà diệt sạch bọ xít hôi, cổ bông dai chắc không sợ gãy chú nghen!\""
+      },
+      {
+        "step": "Bước 2: Kỹ Thuật Cữ 4\n(70 – 75 NSS)\n🌾 CONG TRÁI ME\n⭐ CỬ CHẮC TỚI CẬY",
+        "stage": "MỤC TIÊU CỰC KỲ RÕ RÀNG:\n• ĐI ĐỂ LÀM GÌ: Netto Plus xua sạch bọ xít hôi chích hút sữa non; UNIC 75 TÁI LẬP HÀNG RÀO BẢO VỆ VỎ TRẤU & GIỮ XANH 3 LÁ ĐÒNG (*Greening Effect*).\n\n• PHỐI KÈM: ZAKi VÔ GẠO 1L + Siêu Loang Trải Luke 100ml.",
+        "guidance": "• ĐƯỢC GÌ CHO BÀ CON:\n1. Hiệu ứng Greening Effect độc quyền của Azoxystrobin giữ bộ 3 lá đòng xanh dày như lá tre đến ngày gặt, tăng hiệu suất quang hợp dồn tinh bột.\n2. Vận chuyển đường bột dồn dập nén chặt hạt gạo từ ngoài mép bông vô tận hạt cậy sát cổ bông.\n3. Tăng 14% trọng lượng 1.000 hạt (TGW), tăng năng suất 30 - 50kg/công.\n\n• HIỆU QUẢ THỰC ĐỊA:\nHạt lúa no tròn chắc mẩy sát cậy, vỏ trấu sáng trưng, lúa gặt về cân nặng trĩu tay, phơi sấy không ngót ký nào.",
+        "handling": "• LỜI TƯ VẤN DÂN DÃ:\n\"Cữ cong trái me này xịt UniC 75 với lon Vô Gạo là giữ trọn 3 lá đòng xanh mướt như lá tre để dồn tinh bột vô tận hạt cậy sát cổ bông. Kẹp thuốc sâu xua sạch bọ xít thì hạt lúa chín vàng óng ả, gặt về cân nặng trĩu tay, thương lái tranh nhau mua giá cao nghen chú!\""
+      },
+      {
+        "step": "Bước 3: Dược Lý Vượt Trội\n(UniC 75 400SC)",
+        "stage": "BẢN CHẤT DƯỢC LÝ UNIC 75 — ASMILTATOP SUPER 400SC:\n\n• HOẠT CHẤT KÉP CAO CẤP: Azoxystrobin 250g/L + Difenoconazole 150g/L (Tổng hàm lượng 400g/L SC).\n\n• CÔNG NGHỆ HUYỀN PHÙ SỮA NANO: Gốc nước tinh khiết 100%, hạt thuốc mịn màng phân tán đều trong nước, không nóng bông, không gây lem lép trấu.\n\n• HIỆU QUẢ: 2 trong 1 — Đặc trị Đạo ôn (lá, cổ bông) & Lem lép hạt lúa.",
+        "guidance": "• SO SÁNH VƯỢT TRỘI:\n1. Hàm lượng 400g/L: Đậm đặc hơn 23% so với các dòng 325SC trên thị trường (như Amistar Top 325SC).\n2. Dạng SC sữa mát cây: Khác biệt hoàn toàn với các dòng nhũ dầu EC cay nóng dễ làm quéo nhụy hoa.\n3. Nội hấp & Lưu dẫn 2 chiều: Thấm sâu cực nhanh sau 15-30 phút, diệt nấm sau khi phun, không sợ mưa rửa trôi khi pha cùng Siêu Loang Trải Luke.",
+        "handling": "• LỜI NÓI DÂN DÃ CHO BÀ CON:\n\"Dạ chú Năm ơi, chai UniC 75 này mang tên đăng ký Asmiltatop Super 400SC. Hàm lượng của nó tới 400 gam hoạt chất trong 1 lít thuốc, đậm đặc hơn hẳn các dòng 325SC ngoài tiệm tới 23%. Thuốc dạng sữa SC mát rượi bông lúa, vừa dập tắt đạo ôn cổ bông vừa làm sáng mày trấu, giữ 3 lá đòng xanh dày như lá tre tới ngày gặt chú nha!\""
+      },
+      {
+        "step": "Bước 4: Đòn Bẩy Giá\n(Combo 990k vs Mua Lẻ 1tr2)",
+        "stage": "SO SÁNH ĐỐI ĐẦU BẢNG GIÁ:\n\n• MUA LẺ ĐƠN ĐỘC NGOÀI ĐƠN:\n- Thuốc sâu Netto Plus 1L lẻ: 650.000đ/lon.\n- Thuốc bệnh UniC 75 500ml lẻ: 550.000đ/chai.\n-> Tổng mua lẻ: 1.200.000đ (Không quà tặng).\n\n• MUA KÈM ĐƠN ZAKI (GÓI 3 HA LIỀU PHÒNG):\n-> TRỌN BỘ SÂU + BỆNH CHỈ: 990.000đ (Tiết kiệm ngay 210.000đ tiền mặt).\n-> TẶNG THÊM 1 Chai Siêu Loang Trải Luke 100ML trị giá 120.000đ!",
+        "guidance": "• ĐÒN BẨY TÂM LÝ BÁN HÀNG:\n1. Tuyệt đối không để khách mua lẻ 1 chai sâu hay 1 chai bệnh, luôn neo giá lẻ cao (650k sâu, 550k bệnh = 1.200k).\n2. Đưa ra đặc quyền trợ giá chỉ dành riêng cho khách mua kèm ZAKi: Cả bộ chỉ 990k đi trọn vẹn 3 Hecta ruộng (30 công tầm cắt).\n3. Tặng thêm chai Siêu Loang Trải Luke 120k để chốt hạ đơn hàng ngay lập tức.",
+        "handling": "• LỜI NÓI CHỐT ĐƠN ĐÒN BẨY GIÁ:\n\"Chú Năm ơi, bình thường chú mua lẻ ngoài là lon sâu Netto Plus 650k, chai UniC 75 là 550k, 2 chai cộng lại là 1 triệu 2 lận đó chú. Nhưng hôm nay chú đặt đơn ZAKi bên con, công ty trợ giá đặc quyền cho chú NGUYÊN BỘ SÂU + BỆNH 3 HA GIÁ CHỈ ĐÚNG 990.000đ thôi! Chú tiết kiệm ngay 210 ngàn tiền mặt, mà con lại TẶNG THÊM cho chú 1 chai Siêu Loang Trải Luke 120k xịt kèm nữa. Tổng chú lời tới 330 ngàn, chú lấy luôn bộ này về xịt cho êm ru ruộng lúa chú nha!\""
+      },
+      {
+        "step": "Bước 5: Xử Lý Từ Chối\n(Bẻ Gãy Phản Đối)",
+        "stage": "TÌNH HUỐNG 1: Khách nói \"Tao mua lẻ lon sâu thôi, thuốc bệnh tao có rồi\"\n\nTÌNH HUỐNG 2: Khách hỏi \"1 bộ sâu bệnh 990k xịt đủ 3ha không con, có bị loãng không?\"\n\nTÌNH HUỐNG 3: Khách hỏi \"UniC 75 xịt cữ trổ xẹt phơi màu có bị nóng bông, lép trấu không?\"",
+        "guidance": "• CHIẾN THUẬT XỬ LÝ:\n1. Nếu khách đòi mua lẻ sâu: Báo giá 650k, sau đó làm bài toán cộng thêm 340k nữa là được cả chai bệnh UniC 75 550k + chai Luke 120k (quá hời).\n2. Nếu khách hỏi diện tích 3ha: Khẳng định đây là liều chuẩn phòng bệnh 3ha của Phân Bón MN (pha 30 bình 25L cho 30 công tầm cắt). Nếu ruộng chớm dịch nặng thì tăng liều xịt 1.5ha.\n3. Nếu khách hỏi nóng bông: Khẳng định 100% dạng huyền phù SC sữa gốc nước tinh khiết không dung môi dầu nóng, bảo vệ hạt phấn tối đa.",
+        "handling": "• LỜI THOẠI XỬ LÝ MƯỢT MÀ:\n1. Khách mua lẻ sâu: \"Dạ chú ơi, lon sâu Netto Plus mua lẻ là 650k rồi chú. Chú thêm có 340 ngàn nữa là được trọn bộ cả chai bệnh UniC 75 550k xịn sò, lại được TẶNG chai Loang Trải 120k nữa, tội gì mua lẻ chú Năm!\"\n2. Khách hỏi diện tích: \"Dạ chú an tâm 100%, đây là liều phòng chuẩn cho 3 Hecta ruộng (30 công tầm cắt). Thuốc sữa nano đậm đặc lan tỏa cực mạnh, ruộng bình thường chú xịt 3ha êm ru, còn nếu chớm bệnh nặng chú cứ tăng liều gấp đôi xịt 15 công là đứng bệnh liền chú!\"\n3. Khách hỏi nóng bông: \"Dạ chú yên tâm tuyệt đối, UniC 75 là dạng sữa SC nano gốc nước, cực kỳ mát bông, không có tí dung môi dầu nóng nào hết. Chú xịt cữ trổ xẹt phơi màu êm ru, hạt phấn thụ phấn đều ran, bông lúa trổ thoát rộ không lo nghẹn đòng hay lép hạt nghen chú!\""
+      }
     ]
-},
+  },
   "expandedProducts": [
     {
-        "id": "huu_co_ph14",
-        "name": "1. HỮU CƠ pH 14",
-        "subTitle": "Kiềm Sinh Học Biochar Mỹ (Lon Thiếc 1L)",
-        "compounds": "Kiềm sinh học tự nhiên (pH > 13), Than hoạt hóa Biochar vi lỗ Mỹ, Axit Fulvic, Chất hữu cơ mùn 50-60%, Kali hữu hiệu (K2O) 7.5%.",
-        "crops": "Sầu riêng, Cam sành, Bưởi da xanh, Cà phê, Hồ tiêu, Thanh long, Ớt, Dưa hấu, Rau màu.",
-        "stages": [
-            "Phục hồi sau thu hoạch / Tỉa cành: Dập độc chất tồn dư, nâng pH đất để rễ phục hồi cấp tốc.",
-            "Trước khi nhú cơi đọt 7-10 ngày: Kích thích tầng rễ cám bung trắng phau đón cơi đọt mập.",
-            "Đầu và giữa mùa mưa: Dập toan tính do nước mưa, ngăn nấm thủy sinh Phytophthora thối rễ xì mủ.",
-            "Sau đậu trái non 15-20 ngày: Ổn định áp suất rễ, chống sốc nước làm rụng trái non."
-        ],
-        "dosage": "• Đất chua nặng (pH < 4.5): Pha 1 lon 1L / 600 - 800L nước.\n• Đất duy trì định kỳ: Pha 1 lon 1L / 1.000 - 1.500L nước (5 - 7 phuy 200L).\n• Định mức tưới: Cây con 5-8L/gốc; Cây lớn 12-15L/gốc. Rau màu tưới 1 công/lon.",
-        "effects": [
-            "Nâng pH đất lên 5.5 - 6.5 sau 24 - 48 giờ.",
-            "Dập phèn sắt, phèn nhôm, cắt độc rơm rạ mục và axit hữu cơ trong đất.",
-            "Mở khóa Lân bị keo đất giữ chặt, giúp cây hút phân tốt, tiết kiệm 20-30% phân NPK rải gốc.",
-            "Than Biochar giữ ẩm tơi xốp đất bền vững, thay thế hoàn toàn vôi nung không gây chai đất."
-        ],
-        "warning": "Không đổ nước thuốc đậm đặc chưa pha loãng vào sát cổ rễ. Không phun trúng hoa đang nở nhụy dưới nắng gắt.",
-        "mixing": {
-            "prohibited": "CẤM PHA CHUNG với thuốc trừ sâu Netto Plus 10EW (Bifenthrin) và các thuốc nấm gốc Đồng vô cơ, gốc nhũ dầu nóng (EC). Kiềm cao pH > 13 sẽ phá hủy hoạt chất thuốc trừ sâu bệnh.",
-            "allowed": "Pha chung được với nấm đối kháng Trichoderma, Bacillus, Axit Humic khi tưới gốc.",
-            "order": "Đổ 50-70% nước sạch vào bồn -> Rót Hữu Cơ pH 14 khuấy đều cho loang kiềm -> Cho chất khác vào sau."
-        }
+      "id": "huu_co_ph14",
+      "name": "1. HỮU CƠ pH 14",
+      "subTitle": "Kiềm Sinh Học Biochar Mỹ (Lon Thiếc 1L)",
+      "compounds": "Kiềm sinh học tự nhiên (pH > 13), Than hoạt hóa Biochar vi lỗ Mỹ, Axit Fulvic, Chất hữu cơ mùn 50-60%, Kali hữu hiệu (K2O) 7.5%.",
+      "crops": "Sầu riêng, Cam sành, Bưởi da xanh, Cà phê, Hồ tiêu, Thanh long, Ớt, Dưa hấu, Rau màu.",
+      "stages": [
+        "Phục hồi sau thu hoạch / Tỉa cành: Dập độc chất tồn dư, nâng pH đất để rễ phục hồi cấp tốc.",
+        "Trước khi nhú cơi đọt 7-10 ngày: Kích thích tầng rễ cám bung trắng phau đón cơi đọt mập.",
+        "Đầu và giữa mùa mưa: Dập toan tính do nước mưa, ngăn nấm thủy sinh Phytophthora thối rễ xì mủ.",
+        "Sau đậu trái non 15-20 ngày: Ổn định áp suất rễ, chống sốc nước làm rụng trái non."
+      ],
+      "dosage": "• Đất chua nặng (pH < 4.5): Pha 1 lon 1L / 600 - 800L nước.\n• Đất duy trì định kỳ: Pha 1 lon 1L / 1.000 - 1.500L nước (5 - 7 phuy 200L).\n• Định mức tưới: Cây con 5-8L/gốc; Cây lớn 12-15L/gốc. Rau màu tưới 1 công/lon.",
+      "effects": [
+        "Nâng pH đất lên 5.5 - 6.5 sau 24 - 48 giờ.",
+        "Dập phèn sắt, phèn nhôm, cắt độc rơm rạ mục và axit hữu cơ trong đất.",
+        "Mở khóa Lân bị keo đất giữ chặt, giúp cây hút phân tốt, tiết kiệm 20-30% phân NPK rải gốc.",
+        "Than Biochar giữ ẩm tơi xốp đất bền vững, thay thế hoàn toàn vôi nung không gây chai đất."
+      ],
+      "warning": "Không đổ nước thuốc đậm đặc chưa pha loãng vào sát cổ rễ. Không phun trúng hoa đang nở nhụy dưới nắng gắt.",
+      "mixing": {
+        "prohibited": "CẤM PHA CHUNG với thuốc trừ sâu Netto Plus 10EW (Bifenthrin) và các thuốc nấm gốc Đồng vô cơ, gốc nhũ dầu nóng (EC). Kiềm cao pH > 13 sẽ phá hủy hoạt chất thuốc trừ sâu bệnh.",
+        "allowed": "Pha chung được với nấm đối kháng Trichoderma, Bacillus, Axit Humic khi tưới gốc.",
+        "order": "Đổ 50-70% nước sạch vào bồn -> Rót Hữu Cơ pH 14 khuấy đều cho loang kiềm -> Cho chất khác vào sau."
+      }
     },
     {
-        "id": "zaki_ruoc_dong",
-        "name": "2. ZAKi RƯỚC ĐÒNG 1L",
-        "subTitle": "Hữu Cơ Nutricrop VF Mỹ (Lon Thiếc 1 Lít)",
-        "compounds": "Chất hữu cơ sinh học tinh khiết Mỹ 40%, Axit Fulvic tự nhiên 18%, Kali hữu hiệu (K2O) 3%, pH 5.0.",
-        "crops": "Sầu riêng, Cam sành, Bưởi, Cà phê, Hồ tiêu, Thanh long, Ớt, Dưa hấu, Cà chua, Rau màu.",
-        "stages": [
-            "Kéo cơi đọt non: Phun khi đọt non vừa nhú mũi giáo để kéo đọt mập, lá nở to bản dày bóng.",
-            "Dưỡng mắt cua & Mầm hoa: Phun khi mắt cua sầu riêng / cựa gà cam bưởi đạt 2-3cm giúp mập cuống, sáng bông, tăng sức sống hạt phấn.",
-            "Phục hồi cây suy: Sau đợt mang trái nặng hoặc sau khi xử lý bệnh rễ để cây tái tạo bộ lá mới."
-        ],
-        "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 lon 1L / 800 - 1.000L nước (4 - 5 phuy 200L).\n• Rau màu & Dưa hấu: Pha 30 - 40ml / bình 25L (1 lon xịt được 25 - 30 bình 25L).",
-        "effects": [
-            "Dung dịch hữu cơ sinh học mát cây 100%, hấp thu qua lá sau 2 giờ.",
-            "Axit Fulvic 18% dẫn truyền dinh dưỡng nhanh, không gây xót rễ hay cháy chóp lá non.",
-            "Kéo cơi đọt đồng loạt mập cọng, lá xanh dày bóng như lá tre, tăng khả năng quang hợp."
-        ],
-        "warning": "Không phun nồng độ quá đậm đặc vào giữa trưa nắng gắt trên 35°C.",
-        "mixing": {
-            "prohibited": "Tránh pha chung với các loại phân bón lá có hàm lượng đạm vô cơ quá cao trong thời kỳ cây đang mang mầm hoa.",
-            "allowed": "Pha chung cực tốt với Mix Combi (Ba Lan) để chống vàng lá gân xanh; pha chung với Netto Plus 10EW để vừa kéo đọt vừa trừ rầy nhảy, sâu vẽ bùa và bọ trĩ.",
-            "order": "Cho nước vào bình -> Cho ZAKi Rước Đòng vào khuấy tan -> Cho thuốc sâu/rầy/nấm vào sau cùng."
-        }
+      "id": "zaki_ruoc_dong",
+      "name": "2. ZAKi RƯỚC ĐÒNG 1L",
+      "subTitle": "Hữu Cơ Nutricrop VF Mỹ (Lon Thiếc 1 Lít)",
+      "compounds": "Chất hữu cơ sinh học tinh khiết Mỹ 40%, Axit Fulvic tự nhiên 18%, Kali hữu hiệu (K2O) 3%, pH 5.0.",
+      "crops": "Sầu riêng, Cam sành, Bưởi, Cà phê, Hồ tiêu, Thanh long, Ớt, Dưa hấu, Cà chua, Rau màu.",
+      "stages": [
+        "Kéo cơi đọt non: Phun khi đọt non vừa nhú mũi giáo để kéo đọt mập, lá nở to bản dày bóng.",
+        "Dưỡng mắt cua & Mầm hoa: Phun khi mắt cua sầu riêng / cựa gà cam bưởi đạt 2-3cm giúp mập cuống, sáng bông, tăng sức sống hạt phấn.",
+        "Phục hồi cây suy: Sau đợt mang trái nặng hoặc sau khi xử lý bệnh rễ để cây tái tạo bộ lá mới."
+      ],
+      "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 lon 1L / 800 - 1.000L nước (4 - 5 phuy 200L).\n• Rau màu & Dưa hấu: Pha 30 - 40ml / bình 25L (1 lon xịt được 25 - 30 bình 25L).",
+      "effects": [
+        "Dung dịch hữu cơ sinh học mát cây 100%, hấp thu qua lá sau 2 giờ.",
+        "Axit Fulvic 18% dẫn truyền dinh dưỡng nhanh, không gây xót rễ hay cháy chóp lá non.",
+        "Kéo cơi đọt đồng loạt mập cọng, lá xanh dày bóng như lá tre, tăng khả năng quang hợp."
+      ],
+      "warning": "Không phun nồng độ quá đậm đặc vào giữa trưa nắng gắt trên 35°C.",
+      "mixing": {
+        "prohibited": "Tránh pha chung với các loại phân bón lá có hàm lượng đạm vô cơ quá cao trong thời kỳ cây đang mang mầm hoa.",
+        "allowed": "Pha chung cực tốt với Mix Combi (Ba Lan) để chống vàng lá gân xanh; pha chung với Netto Plus 10EW để vừa kéo đọt vừa trừ rầy nhảy, sâu vẽ bùa và bọ trĩ.",
+        "order": "Cho nước vào bình -> Cho ZAKi Rước Đòng vào khuấy tan -> Cho thuốc sâu/rầy/nấm vào sau cùng."
+      }
     },
     {
-        "id": "sieu_vo_gao_zaki",
-        "name": "3. SIÊU VÔ GẠO ZAKi 1L",
-        "subTitle": "Gel Sữa PK Green King Kali (Lon Thiếc 1 Lít)",
-        "compounds": "Lân hữu hiệu (P2O5) 32.5%, Kali hữu hiệu (K2O) 23.5%, Kẽm Chelate 1.500 ppm, Bo hòa tan 400 ppm, pH 6.0.",
-        "crops": "Sầu riêng, Cam sành, Bưởi da xanh, Cà phê, Hồ tiêu, Thanh long, Ớt, Dưa hấu, Cà chua.",
-        "stages": [
-            "Sầu riêng chặn đọt: Dằn đọt không cho le đọt non khi đang nuôi cơm, tránh rụng trái méo trái và sượng cơm.",
-            "Sầu riêng nuôi cơm: Cơm vàng dẻo béo, lên màu đẹp, vỏ mỏng khít gai, chống nứt gai rụng trái.",
-            "Cam, Bưởi: Phân hóa mầm hoa nghịch vụ; giai đoạn nuôi trái già tăng độ ngọt Brix, mọng tép nước, tép bưởi hồng đẹp.",
-            "Cà phê & Hồ tiêu: Nuôi quả non đến chắc nhân (chống rụng quả non sinh lý, hạt tiêu sọ đen bóng, nhân cà phê nặng ký).",
-            "Thanh long & Rau màu: Vuốt tai dưỡng trái xanh cứng dày vỏ; dưa hấu chắc ruột đỏ thắm ngọt đậm."
-        ],
-        "dosage": "• Nuôi trái, lên cơm, tăng độ ngọt: Pha 1 lon 1L / 800 - 1.000L nước.\n• Dằn đọt / Chặn đọt sầu riêng khẩn cấp: Pha 1 lon 1L / 400 - 500L nước phun rìa ngoài tán lá.",
-        "effects": [
-            "Gel sữa mát cây 100%, không chứa Clo nên không gây cháy chóp lá già hay rụng hoa non.",
-            "Năng lượng Lân ATP kết hợp Kali sữa chuyển hóa đường bột thần tốc về trái, giúp trái lớn nhanh, nặng ký.",
-            "Kẽm Chelate và Bo hòa tan gia cố tầng rời cuống trái, giảm tỷ lệ rụng trái non đến 70%."
-        ],
-        "warning": "CẤM DÙNG ở giai đoạn cây con hoặc lúc cây đang cần nuôi sinh khối thân cành non (sẽ làm hãm đọt, cây chuyển sang già lá sớm).",
-        "mixing": {
-            "prohibited": "Không pha chung với phân bón lá giàu đạm N vô cơ khi đang xử lý chặn đọt hoặc lên cơm cho sầu riêng.",
-            "allowed": "Pha chung cực tốt với thuốc trừ thán thư, phấn trắng, ghẻ sẹo, rệp sáp; cộng hưởng rất mạnh với Siêu Loang Trải Luke.",
-            "order": "Cho nước vào bình -> Đổ Siêu Vô Gạo ZAKi vào khuấy đều -> Thêm thuốc BVTV -> Cho chất loang trải sau cùng."
-        }
+      "id": "sieu_vo_gao_zaki",
+      "name": "3. SIÊU VÔ GẠO ZAKi 1L",
+      "subTitle": "Gel Sữa PK Green King Kali (Lon Thiếc 1 Lít)",
+      "compounds": "Lân hữu hiệu (P2O5) 32.5%, Kali hữu hiệu (K2O) 23.5%, Kẽm Chelate 1.500 ppm, Bo hòa tan 400 ppm, pH 6.0.",
+      "crops": "Sầu riêng, Cam sành, Bưởi da xanh, Cà phê, Hồ tiêu, Thanh long, Ớt, Dưa hấu, Cà chua.",
+      "stages": [
+        "Sầu riêng chặn đọt: Dằn đọt không cho le đọt non khi đang nuôi cơm, tránh rụng trái méo trái và sượng cơm.",
+        "Sầu riêng nuôi cơm: Cơm vàng dẻo béo, lên màu đẹp, vỏ mỏng khít gai, chống nứt gai rụng trái.",
+        "Cam, Bưởi: Phân hóa mầm hoa nghịch vụ; giai đoạn nuôi trái già tăng độ ngọt Brix, mọng tép nước, tép bưởi hồng đẹp.",
+        "Cà phê & Hồ tiêu: Nuôi quả non đến chắc nhân (chống rụng quả non sinh lý, hạt tiêu sọ đen bóng, nhân cà phê nặng ký).",
+        "Thanh long & Rau màu: Vuốt tai dưỡng trái xanh cứng dày vỏ; dưa hấu chắc ruột đỏ thắm ngọt đậm."
+      ],
+      "dosage": "• Nuôi trái, lên cơm, tăng độ ngọt: Pha 1 lon 1L / 800 - 1.000L nước.\n• Dằn đọt / Chặn đọt sầu riêng khẩn cấp: Pha 1 lon 1L / 400 - 500L nước phun rìa ngoài tán lá.",
+      "effects": [
+        "Gel sữa mát cây 100%, không chứa Clo nên không gây cháy chóp lá già hay rụng hoa non.",
+        "Năng lượng Lân ATP kết hợp Kali sữa chuyển hóa đường bột thần tốc về trái, giúp trái lớn nhanh, nặng ký.",
+        "Kẽm Chelate và Bo hòa tan gia cố tầng rời cuống trái, giảm tỷ lệ rụng trái non đến 70%."
+      ],
+      "warning": "CẤM DÙNG ở giai đoạn cây con hoặc lúc cây đang cần nuôi sinh khối thân cành non (sẽ làm hãm đọt, cây chuyển sang già lá sớm).",
+      "mixing": {
+        "prohibited": "Không pha chung với phân bón lá giàu đạm N vô cơ khi đang xử lý chặn đọt hoặc lên cơm cho sầu riêng.",
+        "allowed": "Pha chung cực tốt với thuốc trừ thán thư, phấn trắng, ghẻ sẹo, rệp sáp; cộng hưởng rất mạnh với Siêu Loang Trải Luke.",
+        "order": "Cho nước vào bình -> Đổ Siêu Vô Gạo ZAKi vào khuấy đều -> Thêm thuốc BVTV -> Cho chất loang trải sau cùng."
+      }
     },
     {
-        "id": "netto_plus_10ew",
-        "name": "4. NETTO PLUS 10EW",
-        "subTitle": "Thuốc Trừ Sâu Rầy Dạng Sữa (Chai 1L)",
-        "compounds": "Hoạt chất Bifenthrin 100g/L, công nghệ nhũ tương dầu trong nước dạng sữa (EW - Emulsion Water-based) không dùng dung môi nóng.",
-        "crops": "Sầu riêng (Rầy nhảy, sâu đục trái); Cam bưởi (Sâu vẽ bùa, nhện đỏ); Cà phê/tiêu (Rệp sáp, bọ xít muỗi); Rau màu (Bọ trĩ, sâu tơ).",
-        "stages": [
-            "Cơi đọt non: Phun ngay khi cơi đọt vừa nhú mũi giáo để bảo vệ búp đọt trước rầy nhảy sầu riêng và sâu vẽ bùa cam bưởi.",
-            "Nụ hoa & Nuôi trái non: Phun bảo vệ chùm bông và cuống trái non trước bọ trĩ, sâu đục trái, bọ xít muỗi."
-        ],
-        "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 chai 1L / 800 - 1.000L nước (4 - 5 phuy 200L).\n• Lúa & Rau màu: Pha 30 - 50ml / bình 25L (1 chai 1L xịt 20 - 30 công tầm cắt 1.000m² / bay Drone 2 - 3 ha).",
-        "effects": [
-            "Dạng nước sữa EW mát bông mát đọt 100%, không làm teo mầm hoa hay cháy chóp lá non như các loại thuốc EC dầu nóng.",
-            "Lực xông hơi và tiếp xúc cực mạnh, thấm sâu vào nách lá tiêu diệt rầy rệp ẩn nấp.",
-            "Sâu rầy trúng thuốc ngưng cắn phá ngay sau 15-30 phút."
-        ],
-        "warning": "CẤM PHA CHUNG VỚI HỮU CƠ pH 14 vì nồng độ kiềm cao sẽ thủy phân hoạt chất Bifenthrin. Luân phiên gốc thuốc chống kháng.",
-        "mixing": {
-            "prohibited": "TUYỆT ĐỐI KHÔNG PHA CHUNG VỚI HỮU CƠ pH 14 HOẶC CÁC CHẤT CÓ TÍNH KIỀM CAO (pH > 8).",
-            "allowed": "Pha chung an toàn với ZAKi Rước Đòng, Siêu Vô Gạo ZAKi, Mix Combi Ba Lan, Siêu Loang Trải Luke và thuốc trừ nấm bệnh (Metalaxyl, Azoxystrobin, Mancozeb).",
-            "order": "Nước sạch trong bình -> Phân bón lá ZAKi / Thuốc bệnh -> Rót Netto Plus vào -> Cho Loang Trải Luke sau cùng -> Khuấy đều rồi phun."
-        }
+      "id": "netto_plus_10ew",
+      "name": "4. NETTO PLUS 10EW",
+      "subTitle": "Thuốc Trừ Sâu Rầy Dạng Sữa (Chai 1L)",
+      "compounds": "Hoạt chất Bifenthrin 100g/L, công nghệ nhũ tương dầu trong nước dạng sữa (EW - Emulsion Water-based) không dùng dung môi nóng.",
+      "crops": "Sầu riêng (Rầy nhảy, sâu đục trái); Cam bưởi (Sâu vẽ bùa, nhện đỏ); Cà phê/tiêu (Rệp sáp, bọ xít muỗi); Rau màu (Bọ trĩ, sâu tơ).",
+      "stages": [
+        "Cơi đọt non: Phun ngay khi cơi đọt vừa nhú mũi giáo để bảo vệ búp đọt trước rầy nhảy sầu riêng và sâu vẽ bùa cam bưởi.",
+        "Nụ hoa & Nuôi trái non: Phun bảo vệ chùm bông và cuống trái non trước bọ trĩ, sâu đục trái, bọ xít muỗi."
+      ],
+      "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 chai 1L / 800 - 1.000L nước (4 - 5 phuy 200L).\n• Lúa & Rau màu: Pha 30 - 50ml / bình 25L (1 chai 1L xịt 20 - 30 công tầm cắt 1.000m² / bay Drone 2 - 3 ha).",
+      "effects": [
+        "Dạng nước sữa EW mát bông mát đọt 100%, không làm teo mầm hoa hay cháy chóp lá non như các loại thuốc EC dầu nóng.",
+        "Lực xông hơi và tiếp xúc cực mạnh, thấm sâu vào nách lá tiêu diệt rầy rệp ẩn nấp.",
+        "Sâu rầy trúng thuốc ngưng cắn phá ngay sau 15-30 phút."
+      ],
+      "warning": "CẤM PHA CHUNG VỚI HỮU CƠ pH 14 vì nồng độ kiềm cao sẽ thủy phân hoạt chất Bifenthrin. Luân phiên gốc thuốc chống kháng.",
+      "mixing": {
+        "prohibited": "TUYỆT ĐỐI KHÔNG PHA CHUNG VỚI HỮU CƠ pH 14 HOẶC CÁC CHẤT CÓ TÍNH KIỀM CAO (pH > 8).",
+        "allowed": "Pha chung an toàn với ZAKi Rước Đòng, Siêu Vô Gạo ZAKi, Mix Combi Ba Lan, Siêu Loang Trải Luke và thuốc trừ nấm bệnh (Metalaxyl, Azoxystrobin, Mancozeb).",
+        "order": "Nước sạch trong bình -> Phân bón lá ZAKi / Thuốc bệnh -> Rót Netto Plus vào -> Cho Loang Trải Luke sau cùng -> Khuấy đều rồi phun."
+      }
     },
     {
-        "id": "mix_combi",
-        "name": "5. MIX COMBI (BA LAN)",
-        "subTitle": "Vi Lượng EDTA Chelate Tinh Khiết (Gói 25g)",
-        "compounds": "Kẽm 40.000 ppm, Sắt 40.000 ppm, Mangan 30.000 ppm, Đồng 10.000 ppm, Bo 5.000 ppm (toàn bộ dạng Chelate hữu cơ 100%).",
-        "crops": "Toàn bộ cây ăn trái (Sầu riêng, Cam, Bưởi, Xoài), Cây công nghiệp (Cà phê, Tiêu) và Rau màu.",
-        "stages": [
-            "Phun khi cây nhú cơi đọt non, giai đoạn chuẩn bị làm bông và giai đoạn nuôi trái non chống dị tật méo trái."
-        ],
-        "dosage": "• 1 gói 25g pha cho 200 Lít nước (1 phuy) hoặc chia ra 10 bình 20L (2.5g/bình).",
-        "effects": [
-            "Dạng Chelate hữu cơ chuẩn Châu Âu tan trong suốt 100%, hấp thu qua lá sau 15 phút.",
-            "Không bị kết tủa trong nước phèn hoặc nước cứng.",
-            "Giải quyết triệt để hiện tượng vàng lá gân xanh, đọt non nhỏ xíu (thiếu kẽm), chết chồi ngọn (thiếu bo) và bạc trắng lá non (thiếu sắt)."
-        ],
-        "warning": "Dùng đúng liều lượng khuyến cáo, không tự ý tăng liều gấp 3-4 lần.",
-        "mixing": {
-            "prohibited": "Tránh pha chung với các loại phân bón gốc chưa qua tinh chế dễ gây kết tủa cục bộ.",
-            "allowed": "Pha chung được với hầu hết tất cả các loại phân bón lá và thuốc trừ sâu bệnh sinh học.",
-            "order": "Hòa tan gói Mix Combi vào nước trước, sau đó cho các phân bón và thuốc BVTV khác vào khuấy đều."
-        }
+      "id": "mix_combi",
+      "name": "5. MIX COMBI (BA LAN)",
+      "subTitle": "Vi Lượng EDTA Chelate Tinh Khiết (Gói 25g)",
+      "compounds": "Kẽm 40.000 ppm, Sắt 40.000 ppm, Mangan 30.000 ppm, Đồng 10.000 ppm, Bo 5.000 ppm (toàn bộ dạng Chelate hữu cơ 100%).",
+      "crops": "Toàn bộ cây ăn trái (Sầu riêng, Cam, Bưởi, Xoài), Cây công nghiệp (Cà phê, Tiêu) và Rau màu.",
+      "stages": [
+        "Phun khi cây nhú cơi đọt non, giai đoạn chuẩn bị làm bông và giai đoạn nuôi trái non chống dị tật méo trái."
+      ],
+      "dosage": "• 1 gói 25g pha cho 200 Lít nước (1 phuy) hoặc chia ra 10 bình 20L (2.5g/bình).",
+      "effects": [
+        "Dạng Chelate hữu cơ chuẩn Châu Âu tan trong suốt 100%, hấp thu qua lá sau 15 phút.",
+        "Không bị kết tủa trong nước phèn hoặc nước cứng.",
+        "Giải quyết triệt để hiện tượng vàng lá gân xanh, đọt non nhỏ xíu (thiếu kẽm), chết chồi ngọn (thiếu bo) và bạc trắng lá non (thiếu sắt)."
+      ],
+      "warning": "Dùng đúng liều lượng khuyến cáo, không tự ý tăng liều gấp 3-4 lần.",
+      "mixing": {
+        "prohibited": "Tránh pha chung với các loại phân bón gốc chưa qua tinh chế dễ gây kết tủa cục bộ.",
+        "allowed": "Pha chung được với hầu hết tất cả các loại phân bón lá và thuốc trừ sâu bệnh sinh học.",
+        "order": "Hòa tan gói Mix Combi vào nước trước, sau đó cho các phân bón và thuốc BVTV khác vào khuấy đều."
+      }
     },
     {
-        "id": "sieu_loang_trai_luke",
-        "name": "6. SIÊU LOANG TRẢI LUKE",
-        "subTitle": "Silicon Hữu Cơ Thấm Sâu Chống Mưa (Chai 100ml)",
-        "compounds": "Hoạt chất Polyether Polymethylsiloxane Copolymer 100% (Silicon hữu cơ nông nghiệp cao cấp).",
-        "crops": "Đặc biệt cần thiết cho Sầu riêng, Cam, Bưởi, Hành tím, Bắp cải, Thanh long, Cà phê.",
-        "stages": [
-            "Pha kèm trong tất cả các lần phun thuốc trừ sâu, thuốc trừ nấm bệnh và phân bón lá trên cây trồng."
-        ],
-        "dosage": "• 1 chai 100ml pha cho 400 - 500 Lít nước (2 - 2.5 phuy 200L), hoặc pha 5ml cho bình 25L.",
-        "effects": [
-            "Giảm sức căng bề mặt nước gấp 5 lần, phá vỡ lớp sáp cutin khó thấm của lá cây và vỏ côn trùng.",
-            "Dẫn thuốc ngấm sâu vào mô cây sau 15 phút, chống mưa rửa trôi cực tốt.",
-            "Loang đều giọt thuốc thành màng phim mỏng, không đọng giọt gây cháy chóp lá, cực chuẩn khi bay Drone nông nghiệp."
-        ],
-        "warning": "Không dùng quá liều khuyến cáo (chỉ cần 5ml cho bình 25L là đủ).",
-        "mixing": {
-            "prohibited": "Không có chống chỉ định đặc biệt.",
-            "allowed": "Phối hợp với mọi loại thuốc trừ sâu, trừ bệnh, diệt cỏ và phân bón lá.",
-            "order": "LUÔN CHO VÀO SAU CÙNG sau khi đã hòa tan tất cả các loại thuốc và phân bón khác trong bình/phuy."
-        }
+      "id": "sieu_loang_trai_luke",
+      "name": "6. SIÊU LOANG TRẢI LUKE",
+      "subTitle": "Silicon Hữu Cơ Thấm Sâu Chống Mưa (Chai 100ml)",
+      "compounds": "Hoạt chất Polyether Polymethylsiloxane Copolymer 100% (Silicon hữu cơ nông nghiệp cao cấp).",
+      "crops": "Đặc biệt cần thiết cho Sầu riêng, Cam, Bưởi, Hành tím, Bắp cải, Thanh long, Cà phê.",
+      "stages": [
+        "Pha kèm trong tất cả các lần phun thuốc trừ sâu, thuốc trừ nấm bệnh và phân bón lá trên cây trồng."
+      ],
+      "dosage": "• 1 chai 100ml pha cho 400 - 500 Lít nước (2 - 2.5 phuy 200L), hoặc pha 5ml cho bình 25L.",
+      "effects": [
+        "Giảm sức căng bề mặt nước gấp 5 lần, phá vỡ lớp sáp cutin khó thấm của lá cây và vỏ côn trùng.",
+        "Dẫn thuốc ngấm sâu vào mô cây sau 15 phút, chống mưa rửa trôi cực tốt.",
+        "Loang đều giọt thuốc thành màng phim mỏng, không đọng giọt gây cháy chóp lá, cực chuẩn khi bay Drone nông nghiệp."
+      ],
+      "warning": "Không dùng quá liều khuyến cáo (chỉ cần 5ml cho bình 25L là đủ).",
+      "mixing": {
+        "prohibited": "Không có chống chỉ định đặc biệt.",
+        "allowed": "Phối hợp với mọi loại thuốc trừ sâu, trừ bệnh, diệt cỏ và phân bón lá.",
+        "order": "LUÔN CHO VÀO SAU CÙNG sau khi đã hòa tan tất cả các loại thuốc và phân bón khác trong bình/phuy."
+      }
     },
     {
-        "id": "unic_75_tim",
-        "name": "7. UNIC 75 TÍM 500ML",
-        "subTitle": "Thuốc Trừ Bệnh Cao Cấp 400g/L SC (Azoxystrobin 250g/L + Difenoconazole 150g/L)",
-        "compounds": "Azoxystrobin 250g/L + Difenoconazole 150g/L (Tổng 400g/L), Phụ gia sữa nano SC tinh khiết mát cây.",
-        "crops": "Sầu riêng, Cây có múi (Cam, Bưởi), Xoài, Nhãn, Thanh long, Cà phê, Hồ tiêu, Ớt, Dưa hấu, Hoa kiểng.",
-        "stages": [
-            "Cơi đọt non & Dưỡng bông mắt cua: Phun khi vừa nhú đọt hoặc mắt cua hoa để chặn đứng thán thư, đốm lá, nấm hồng.",
-            "Dưỡng trái non & Trước thu hoạch: Phun định kỳ 10-15 ngày giúp vỏ trái sáng đẹp, không thối cuống, không đen gai sầu riêng, tẩy sạch nám da lu cam bưởi.",
-            "Mùa mưa ẩm ướt / Sau mưa dầm: Phun phủ chặn đứng nấm Phytophthora, Colletotrichum xâm nhập phá hoại cuống hoa, trái non."
-        ],
-        "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 Chai 500ml cho 400 – 500 Lít nước (2 – 2.5 Phuy 200L) cữ phòng ngừa; Khi bệnh nặng tăng liều pha 1 Chai cho 250 – 300 Lít nước.\n• Rau màu & Hoa kiểng: Phòng ngừa pha 25ml / bình 25L cho 20 công 1.000m²; Khi điều trị tăng liều 40 – 50ml / bình 25L (xịt 10 – 12 công).",
-        "effects": [
-            "Đặc trị và quét sạch thán thư, nứt thân xì mủ, nấm hồng, đốm mắt cua, rỉ sắt, sương mai, phấn trắng.",
-            "Dạng SC sữa nano cực mát bông, mát trái, an toàn tuyệt đối khi hoa đang nở nhụy, không gây táp hoa hay rụng trái non.",
-            "Hiệu ứng Greening Effect: Giúp lá cây xanh dày, bóng mượt, quang hợp mạnh, hạn chế vàng lá rụng cành mùa mưa dông.",
-            "Tạo lớp áo giáp nano bám dính siêu bền ngoài vỏ trái, chống mưa rửa trôi, trái lên màu đẹp không vết thâm nám."
-        ],
-        "warning": "Không phun lúc trưa nắng gắt trên 35°C. Thời gian cách ly (PHI) 14 ngày trước thu hoạch.",
-        "mixing": {
-            "prohibited": "CẤM PHA CHUNG với Hữu Cơ pH 14 (pH > 13) và các thuốc gốc Đồng vô cơ (Booc-đô, Oxyclorua đồng) vì kiềm cao phân hủy hoạt chất.",
-            "allowed": "Pha chung rất tốt với thuốc sâu sữa Netto Plus 10EW, Dinh dưỡng ZAKi Vô Gạo, Rước Đòng, Vi lượng Mix Combi và Siêu Loang Trải Luke.",
-            "order": "Cho nước vào 2/3 bình/phuy -> Đổ UniC 75 Tím khuấy đều -> Đổ thuốc sâu / dinh dưỡng vào sau -> Cho Siêu Loang Trải Luke cuối cùng."
-        }
-    },
-    {
-        "id": "unic_75_xanh",
-        "name": "8. UNIC 75 XANH 500ML",
-        "subTitle": "Thuốc Trừ Bệnh & Cứng Cây 100g/L SC (Hexaconazole 100g/L Technology of Japan)",
-        "compounds": "Hexaconazole 100g/L (Đậm đặc gấp 2 lần Anvil 50g/L), Phụ gia công nghệ Nhật Bản (Technology of Japan) dạng SC sữa trắng mịn.",
-        "crops": "Sầu riêng, Cam sành, Bưởi, Cà phê, Cao su, Tiêu, Xoài, Rau màu, Đậu, Dưa, Hoa kiểng.",
-        "stages": [
-            "Giai đoạn phát triển thân lá & Chặn đọt: Phun làm dày lá, lùn lóng, hạ ngọn kiểm soát cơi đọt sầu riêng khi nuôi trái, chống đọt non cạnh tranh dinh dưỡng.",
-            "Xử lý nấm đất, gốc rạ, chân cành: Phun sát gốc tẩy sạch nấm hồng, rỉ sắt, đốm vằn, lở cổ rễ mùa mưa.",
-            "Giai đoạn kiến thiết cơ bản / Phục hồi: Xịt định kỳ phòng ngừa nấm bệnh chi phí cực rẻ."
-        ],
-        "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 Chai 500ml cho 400 – 500 Lít nước (2 – 2.5 Phuy 200L) phòng ngừa; Trị nấm hồng, rỉ sắt: Pha 1 Chai cho 250 – 300 Lít nước.\n• Rau màu & Ngắn ngày: Phòng ngừa pha 25ml / bình 25L cho 20 công 1.000m²; Khi điều trị tăng liều 40 – 50ml / bình (xịt 10 – 12 công).",
-        "effects": [
-            "Đặc trị nấm hồng, rỉ sắt, khô vằn, đốm mắt cua, lở cổ rễ và cô lập hạch nấm bệnh.",
-            "CỨNG CÂY, DÀY LÁ, LÙN LÓNG: Ức chế Gibberellin thực vật giúp lá dày bóng, đứng lá, chống đổ ngã và hãm đọt hiệu quả.",
-            "Lưu dẫn nội hấp mạnh mẽ, thấm sâu nhanh qua mạch dẫn của cây sau 30 phút, chống mưa rửa trôi.",
-            "Giá thành chuẩn sàn kinh tế (chỉ 165k/chai, mua 3 chai Freeship), xịt định kỳ cho vườn lớn cực kỳ tiết kiệm chi phí."
-        ],
-        "warning": "Hạn chế phun quá liều khi hoa đang nở rộ vì thuốc có tính năng ức chế sinh trưởng nhẹ làm ngắn mô non.",
-        "mixing": {
-            "prohibited": "CẤM PHA CHUNG với Hữu Cơ pH 14 và thuốc gốc Đồng vô cơ.",
-            "allowed": "Pha chung cực tốt với Netto Plus 10EW, ZAKi Rước Đòng, Mix Combi, Siêu Loang Trải Luke.",
-            "order": "Nước sạch 2/3 phuy -> Lắc đều UniC 75 Xanh rót vào khuấy đều -> Cho phân bón lá / thuốc sâu vào sau cùng."
-        }
+      "id": "unic_75",
+      "name": "7. THUỐC TRỪ BỆNH UNIC 75 (ASMILTATOP SUPER 400SC)",
+      "subTitle": "Thuốc Trừ Bệnh Cao Cấp 400SC (Azoxystrobin 250g/L + Difenoconazole 150g/L - Chai 500ML)",
+      "compounds": "Azoxystrobin 250g/L + Difenoconazole 150g/L (Tổng 400g/L SC), Phụ gia dạng sữa nano SC tinh khiết mát cây.",
+      "crops": "Sầu riêng, Cây có múi (Cam sành, Bưởi da xanh), Xoài, Nhãn, Thanh long, Cà phê, Hồ tiêu, Ớt, Dưa hấu, Cà chua, Rau màu, Hoa kiểng.",
+      "stages": [
+        "Cơi đọt non & Dưỡng bông mắt cua: Phun khi vừa nhú đọt hoặc mắt cua hoa để chặn đứng thán thư, đốm lá, nấm hồng.",
+        "Dưỡng trái non & Trước thu hoạch: Phun định kỳ 10-15 ngày giúp vỏ trái sáng đẹp, không thối cuống, không đen gai sầu riêng, tẩy sạch nám da lu cam bưởi.",
+        "Mùa mưa ẩm ướt / Sau mưa dầm: Phun phủ chặn đứng nấm Phytophthora, Colletotrichum xâm nhập phá hoại cuống hoa, trái non."
+      ],
+      "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 Chai 500ml cho 400 – 500 Lít nước (2 – 2.5 Phuy 200L) cữ phòng ngừa; Khi bệnh nặng tăng liều pha 1 Chai cho 250 – 300 Lít nước.\n• Rau màu & Hoa kiểng: Phòng ngừa pha 20 – 25ml / bình 25L (1 chai 500ml cho 20 bình); Khi điều trị tăng liều 35 – 40ml / bình 25L.",
+      "effects": [
+        "Đặc trị và quét sạch thán thư, nứt thân xì mủ, nấm hồng, đốm mắt cua, rỉ sắt, sương mai, phấn trắng.",
+        "Dạng SC sữa nano cực mát bông, mát trái, an toàn tuyệt đối khi hoa đang nở nhụy, không gây táp hoa hay rụng trái non.",
+        "Hiệu ứng Greening Effect: Giúp lá cây xanh dày, bóng mượt, quang hợp mạnh, hạn chế vàng lá rụng cành mùa mưa dông.",
+        "Tạo lớp áo giáp nano bám dính siêu bền ngoài vỏ trái, chống mưa rửa trôi, trái lên màu đẹp không vết thâm nám."
+      ],
+      "warning": "Không phun lúc trưa nắng gắt trên 35°C. Thời gian cách ly (PHI) 10 ngày trước thu hoạch.",
+      "mixing": {
+        "prohibited": "CẤM PHA CHUNG với Hữu Cơ pH 14 (pH > 13) và các thuốc gốc Đồng vô cơ (Booc-đô, Oxyclorua đồng) vì kiềm cao phân hủy hoạt chất.",
+        "allowed": "Pha chung rất tốt với thuốc sâu sữa Netto Plus 10EW, Dinh dưỡng ZAKi Vô Gạo, Rước Đòng, Vi lượng Mix Combi và Siêu Loang Trải Luke.",
+        "order": "Cho nước vào 2/3 bình/phuy -> Đổ UniC 75 khuấy đều -> Đổ thuốc sâu / dinh dưỡng vào sau -> Cho Siêu Loang Trải Luke cuối cùng."
+      }
     }
-],
+  ],
   "mixingMatrix": {
-    "title": "9. BẢNG TƯƠNG THÍCH PHỐI TRỘN THUỐC BVTV & PHÂN BÓN LÚA (BAO GỒM BỘ ĐÔI UNIC 75 TÍM & XANH, NETTO PLUS VÀ BỘ 3 ZAKI)",
-    "description": "Bảng tra cứu tương thích 2 chiều: Dấu tích [ ✓ ] là PHỐI TRỘN ĐƯỢC AN TOÀN; Ô TRỐNG là KHÔNG TRỘN ĐƯỢC (dễ gây kết tủa, cháy đọt, giảm hiệu lực). Bộ đôi UniC 75 Tím & UniC 75 Xanh dạng SC sữa nano tương thích 100% khi pha chung với ZAKi Rước Đòng, Vô Gạo, Netto Plus, Mix Combi và Luke.",
+    "title": "9. BẢNG TƯƠNG THÍCH PHỐI TRỘN THUỐC BVTV & PHÂN BÓN LÚA (BAO GỒM THUỐC TRỪ BỆNH UNIC 75, NETTO PLUS VÀ BỘ 3 ZAKI)",
+    "description": "Bảng tra cứu tương thích 2 chiều: Dấu tích [ ✓ ] là PHỐI TRỘN ĐƯỢC AN TOÀN; Ô TRỐNG là KHÔNG TRỘN ĐƯỢC (dễ gây kết tủa, cháy đọt, giảm hiệu lực). Thuốc trừ bệnh UniC 75 (Asmiltatop Super 400SC) dạng SC sữa nano tương thích 100% khi pha chung với ZAKi Rước Đòng, Vô Gạo, Netto Plus, Mix Combi và Luke.",
     "items": [
-        {
-            "id": "ph14",
-            "code": "1",
-            "name": "1. HỮU CƠ pH 14",
-            "short": "1. Hữu Cơ pH 14",
-            "category": "Cải tạo đất (Kiềm sinh học pH>13)"
-        },
-        {
-            "id": "ruoc_dong",
-            "code": "2",
-            "name": "2. ZAKi Rước Đòng",
-            "short": "2. ZAKi Rước Đòng",
-            "category": "Dinh dưỡng đòng (Hữu cơ Mỹ 40%)"
-        },
-        {
-            "id": "vo_gao",
-            "code": "3",
-            "name": "3. Siêu Vô Gạo ZAKi",
-            "short": "3. Siêu Vô Gạo ZAKi",
-            "category": "Nuôi hạt (Gel sữa PK 32.5-23.5)"
-        },
-        {
-            "id": "mix_combi",
-            "code": "4",
-            "name": "4. Mix Combi (Ba Lan)",
-            "short": "4. Mix Combi",
-            "category": "Vi lượng (EDTA Chelate tinh khiết)"
-        },
-        {
-            "id": "luke",
-            "code": "5",
-            "name": "5. Siêu Loang Trải Luke",
-            "short": "5. Loang Trải Luke",
-            "category": "Trợ lực thấm sâu (Silicon 100%)"
-        },
-        {
-            "id": "bifenthrin",
-            "code": "6",
-            "name": "6. Bifenthrin (Netto Plus)",
-            "short": "6. Bifenthrin (EW)",
-            "category": "Trừ sâu rầy mát cây (Nước sữa EW)"
-        },
-        {
-            "id": "thiamethoxam",
-            "code": "7",
-            "name": "7. Thiamethoxam",
-            "short": "7. Thiamethoxam",
-            "category": "Trừ rầy nâu, bọ trĩ (Neonicotinoid)"
-        },
-        {
-            "id": "chloran",
-            "code": "8",
-            "name": "8. Chlorantraniliprole",
-            "short": "8. Chloran",
-            "category": "Trừ sâu cuốn lá, sâu đục thân"
-        },
-        {
-            "id": "tricyclazole",
-            "code": "9",
-            "name": "9. Tricyclazole",
-            "short": "9. Tricyclazole",
-            "category": "Đặc trị đạo ôn lá & cổ bông"
-        },
-        {
-            "id": "unic_xanh",
-            "code": "10",
-            "name": "10. UniC 75 Xanh (Hexaconazole 100g/L)",
-            "short": "10. UniC Xanh (Hexa)",
-            "category": "Thuốc bệnh UniC 75 Xanh (Sữa SC công nghệ Nhật Bản)"
-        },
-        {
-            "id": "unic_tim",
-            "code": "11",
-            "name": "11. UniC 75 Tím (Azoxystrobin 250 + Difen 150)",
-            "short": "11. UniC Tím (Azoxy)",
-            "category": "Thuốc bệnh UniC 75 Tím (Sữa SC nano 400g/L)"
-        },
-        {
-            "id": "kasugamycin",
-            "code": "12",
-            "name": "12. Kasugamycin",
-            "short": "12. Kasugamycin",
-            "category": "Kháng sinh trừ vi khuẩn cháy bìa lá"
-        },
-        {
-            "id": "copper",
-            "code": "13",
-            "name": "13. Gốc Đồng vô cơ (Copper)",
-            "short": "13. Gốc Đồng (Copper)",
-            "category": "Sát khuẩn gốc đồng (Tính oxy hóa cao)"
-        },
-        {
-            "id": "npk_leaf",
-            "code": "14",
-            "name": "14. Phân bón lá NPK Đạm cao",
-            "short": "14. NPK Đạm cao",
-            "category": "Dưỡng mạ, đẻ nhánh (Đạm cao)"
-        }
+      {
+        "id": "ph14",
+        "code": "1",
+        "name": "1. HỮU CƠ pH 14",
+        "short": "1. Hữu Cơ pH 14",
+        "category": "Cải tạo đất (Kiềm sinh học pH>13)"
+      },
+      {
+        "id": "ruoc_dong",
+        "code": "2",
+        "name": "2. ZAKi Rước Đòng",
+        "short": "2. ZAKi Rước Đòng",
+        "category": "Dinh dưỡng đòng (Hữu cơ Mỹ 40%)"
+      },
+      {
+        "id": "vo_gao",
+        "code": "3",
+        "name": "3. Siêu Vô Gạo ZAKi",
+        "short": "3. Siêu Vô Gạo ZAKi",
+        "category": "Nuôi hạt (Gel sữa PK 32.5-23.5)"
+      },
+      {
+        "id": "mix_combi",
+        "code": "4",
+        "name": "4. Mix Combi (Ba Lan)",
+        "short": "4. Mix Combi",
+        "category": "Vi lượng (EDTA Chelate tinh khiết)"
+      },
+      {
+        "id": "luke",
+        "code": "5",
+        "name": "5. Siêu Loang Trải Luke",
+        "short": "5. Loang Trải Luke",
+        "category": "Trợ lực thấm sâu (Silicon 100%)"
+      },
+      {
+        "id": "bifenthrin",
+        "code": "6",
+        "name": "6. Bifenthrin (Netto Plus)",
+        "short": "6. Bifenthrin (EW)",
+        "category": "Trừ sâu rầy mát cây (Nước sữa EW)"
+      },
+      {
+        "id": "thiamethoxam",
+        "code": "7",
+        "name": "7. Thiamethoxam",
+        "short": "7. Thiamethoxam",
+        "category": "Trừ rầy nâu, bọ trĩ (Neonicotinoid)"
+      },
+      {
+        "id": "chloran",
+        "code": "8",
+        "name": "8. Chlorantraniliprole",
+        "short": "8. Chloran",
+        "category": "Trừ sâu cuốn lá, sâu đục thân"
+      },
+      {
+        "id": "tricyclazole",
+        "code": "9",
+        "name": "9. Tricyclazole",
+        "short": "9. Tricyclazole",
+        "category": "Đặc trị đạo ôn lá & cổ bông"
+      },
+      {
+        "id": "unic_75",
+        "code": "10",
+        "name": "10. Thuốc Bệnh UniC 75 (Asmiltatop 400SC)",
+        "short": "10. UniC 75 (400SC)",
+        "category": "Thuốc trừ bệnh UniC 75 (Sữa SC nano 400g/L)"
+      },
+      {
+        "id": "kasugamycin",
+        "code": "11",
+        "name": "11. Kasugamycin",
+        "short": "11. Kasugamycin",
+        "category": "Kháng sinh trừ vi khuẩn cháy bìa lá"
+      },
+      {
+        "id": "copper",
+        "code": "12",
+        "name": "12. Gốc Đồng vô cơ (Copper)",
+        "short": "12. Gốc Đồng (Copper)",
+        "category": "Sát khuẩn gốc đồng (Tính oxy hóa cao)"
+      },
+      {
+        "id": "npk_leaf",
+        "code": "13",
+        "name": "13. Phân bón lá NPK Đạm cao",
+        "short": "13. NPK Đạm cao",
+        "category": "Dưỡng mạ, đẻ nhánh (Đạm cao)"
+      }
     ],
     "allowedPairs": [
-        [
-            1,
-            3
-        ],
-        [
-            1,
-            4
-        ],
-        [
-            1,
-            5
-        ],
-        [
-            1,
-            6
-        ],
-        [
-            1,
-            7
-        ],
-        [
-            1,
-            8
-        ],
-        [
-            1,
-            9
-        ],
-        [
-            1,
-            10
-        ],
-        [
-            1,
-            11
-        ],
-        [
-            1,
-            13
-        ],
-        [
-            2,
-            3
-        ],
-        [
-            2,
-            4
-        ],
-        [
-            2,
-            5
-        ],
-        [
-            2,
-            6
-        ],
-        [
-            2,
-            7
-        ],
-        [
-            2,
-            8
-        ],
-        [
-            2,
-            9
-        ],
-        [
-            2,
-            10
-        ],
-        [
-            2,
-            11
-        ],
-        [
-            3,
-            4
-        ],
-        [
-            3,
-            5
-        ],
-        [
-            3,
-            6
-        ],
-        [
-            3,
-            7
-        ],
-        [
-            3,
-            8
-        ],
-        [
-            3,
-            9
-        ],
-        [
-            3,
-            10
-        ],
-        [
-            3,
-            11
-        ],
-        [
-            3,
-            13
-        ],
-        [
-            4,
-            5
-        ],
-        [
-            4,
-            6
-        ],
-        [
-            4,
-            7
-        ],
-        [
-            4,
-            8
-        ],
-        [
-            4,
-            9
-        ],
-        [
-            4,
-            10
-        ],
-        [
-            4,
-            11
-        ],
-        [
-            4,
-            13
-        ],
-        [
-            5,
-            6
-        ],
-        [
-            5,
-            7
-        ],
-        [
-            5,
-            8
-        ],
-        [
-            5,
-            9
-        ],
-        [
-            5,
-            10
-        ],
-        [
-            5,
-            11
-        ],
-        [
-            5,
-            13
-        ],
-        [
-            6,
-            7
-        ],
-        [
-            6,
-            8
-        ],
-        [
-            6,
-            9
-        ],
-        [
-            6,
-            10
-        ],
-        [
-            6,
-            11
-        ],
-        [
-            6,
-            13
-        ],
-        [
-            7,
-            8
-        ],
-        [
-            7,
-            9
-        ],
-        [
-            7,
-            10
-        ],
-        [
-            7,
-            11
-        ],
-        [
-            7,
-            13
-        ],
-        [
-            8,
-            9
-        ],
-        [
-            8,
-            10
-        ],
-        [
-            8,
-            11
-        ],
-        [
-            8,
-            13
-        ],
-        [
-            9,
-            10
-        ],
-        [
-            9,
-            11
-        ],
-        [
-            9,
-            13
-        ],
-        [
-            10,
-            11
-        ]
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        9,
+        10
+      ]
     ],
     "rulesNotes": [
-        {
-            "title": "🍇 UNIC 75 TÍM (Azoxystrobin 250 + Difenoconazole 150 - 400g/L SC):",
-            "text": "Tương thích 100% khi pha chung với Thuốc sâu Netto Plus 10EW, ZAKi Rước Đòng, Siêu Vô Gạo, Mix Combi, Luke và Kasugamycin. Dạng sữa nano cực mát bông, trổ thoát rộ, sạch đạo ôn cổ bông, lem lép hạt và dưỡng xanh 3 lá đòng. CẤM PHA Hữu Cơ pH 14 và Đồng vô cơ."
-        },
-        {
-            "title": "🍃 UNIC 75 XANH (Hexaconazole 100g/L SC Technology of Japan):",
-            "text": "Pha chung an toàn tuyệt đối với Netto Plus 10EW, ZAKi Rước Đòng, Mix Combi, Luke. Đặc trị sạch khô vằn chân bẹ, kích thích lùn lóng, dày bẹ lá, đứng sững chống đổ ngã. CẤM PHA Hữu Cơ pH 14 và Đồng vô cơ."
-        },
-
-        {
-            "title": "🚫 HỮU CƠ pH 14:",
-            "text": "Kiềm sinh học tự nhiên cực cao (pH > 13). CẤM PHA CHUNG với tất cả thuốc trừ sâu bệnh hóa học và phân bón lá (môi trường kiềm phá vỡ hoạt chất thuốc). Chỉ dùng tưới gốc, xả bùn hoặc sục rãnh dập phèn độc lập."
-        },
-        {
-            "title": "🚫 Gốc Đồng Vô Cơ (Copper):",
-            "text": "Tính oxy hóa rất mạnh, dễ gây kết tủa, cháy lá và phá hủy kháng sinh (Kasugamycin). Khuyến cáo CHỈ PHUN ĐƠN."
-        },
-        {
-            "title": "✅ Cặp cữ Rước Đòng (40-45 ngày):",
-            "text": "ZAKi Rước Đòng + Mix Combi + Thuốc sâu đục thân/đạo ôn lá giúp đòng mập ú, trổ thoát rộ."
-        },
-        {
-            "title": "✅ Cặp cữ Vô Gạo (65-75 ngày):",
-            "text": "Siêu Vô Gạo ZAKi + Luke + Thuốc lem lép hạt (Azoxystrobin) + Vi khuẩn (Kasugamycin) nén dịch sữa no hạt tới cậy, giữ xanh lá đòng. Tuyệt đối KHÔNG cộng thêm đạm cao."
-        },
-        {
-            "title": "💧 Thứ tự hòa tan chuẩn vào bồn/phuy:",
-            "text": "Nước sạch 50-70% bồn -> 1. Thuốc bột / Vi lượng Chelate (Mix Combi) -> 2. Dạng Gel sữa / Nước sữa EW (Siêu Vô Gạo, Netto Plus) -> 3. Thuốc trừ bệnh lỏng -> 4. Siêu Loang Trải Luke cho vào cuối cùng -> Châm đủ nước khuấy đều rồi phun."
-        }
+      {
+        "title": "🍇 THUỐC TRỪ BỆNH UNIC 75 (ASMILTATOP SUPER 400SC):",
+        "text": "Thành phần Azoxystrobin 250g/L + Difenoconazole 150g/L (Tổng 400g/L SC sữa nano). Tương thích 100% khi pha chung với Thuốc sâu Netto Plus 10EW, ZAKi Rước Đòng, Siêu Vô Gạo, Mix Combi, Luke và Kasugamycin. Dạng sữa nano cực mát bông, trổ thoát rộ, quét sạch đạo ôn cổ bông, lem lép hạt và dưỡng xanh 3 lá đòng. TUYỆT ĐỐI CẤM PHA Hữu Cơ pH 14 và Đồng vô cơ."
+      },
+      {
+        "title": "🚫 HỮU CƠ pH 14:",
+        "text": "Kiềm sinh học tự nhiên cực cao (pH > 13). CẤM PHA CHUNG với tất cả thuốc trừ sâu bệnh hóa học và phân bón lá (môi trường kiềm phá vỡ hoạt chất thuốc). Chỉ dùng tưới gốc, xả bùn hoặc sục rãnh dập phèn độc lập."
+      },
+      {
+        "title": "🚫 Gốc Đồng Vô Cơ (Copper):",
+        "text": "Tính oxy hóa rất mạnh, dễ gây kết tủa, cháy lá và phá hủy kháng sinh (Kasugamycin). Khuyến cáo CHỈ PHUN ĐƠN."
+      },
+      {
+        "title": "✅ Cặp cữ Rước Đòng (40-45 ngày):",
+        "text": "ZAKi Rước Đòng + Mix Combi + Thuốc sâu đục thân/đạo ôn lá giúp đòng mập ú, trổ thoát rộ."
+      },
+      {
+        "title": "✅ Cặp cữ Vô Gạo (65-75 ngày):",
+        "text": "Siêu Vô Gạo ZAKi + Luke + Thuốc lem lép hạt (Azoxystrobin) + Vi khuẩn (Kasugamycin) nén dịch sữa no hạt tới cậy, giữ xanh lá đòng. Tuyệt đối KHÔNG cộng thêm đạm cao."
+      },
+      {
+        "title": "💧 Thứ tự hòa tan chuẩn vào bồn/phuy:",
+        "text": "Nước sạch 50-70% bồn -> 1. Thuốc bột / Vi lượng Chelate (Mix Combi) -> 2. Dạng Gel sữa / Nước sữa EW (Siêu Vô Gạo, Netto Plus) -> 3. Thuốc trừ bệnh lỏng -> 4. Siêu Loang Trải Luke cho vào cuối cùng -> Châm đủ nước khuấy đều rồi phun."
+      }
     ]
-}
+  }
 };
