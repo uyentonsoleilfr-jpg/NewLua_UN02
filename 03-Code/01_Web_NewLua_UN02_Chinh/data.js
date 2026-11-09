@@ -430,13 +430,13 @@ window.AGRIZEN_DATA = {
       "origin": "Hoạt chất Azoxystrobin & Difenoconazole cao cấp nhập khẩu (Jiangsu Frey / Danyang Xingneng) - Đóng gói bởi Cty CP Hóa Chất Nông Nghiệp Hà Long",
       "distributor": "Hợp tác phân phối độc quyền: CÔNG TY CỔ PHẦN PHÂN BÓN MN (Hotline: 039.899.2419)",
       "pricing": {
-        "usageRate": "1 Chai 500ml xịt 1 - 1.25 Hecta (10 - 12.5 công tầm lớn 1.296m² hoặc 12 - 15 công 1.000m²)",
+        "usageRate": "1 Chai 500ml xịt 2 Hecta (20 công 1.000m² / 15-16 công tầm lớn 1.296m²) cữ phòng ngừa | Khi điều trị: 1 Chai xịt 1 đến 1.2 Hecta (10 - 12 công)",
         "listed": "480.000đ/chai",
         "sale": "396.000đ/chai",
         "discount": "-18%",
         "unit": "Chai 500ML (Dạng SC sữa nano)",
         "offer": "Combo Sâu Bệnh Toàn Diện: 1 Sâu Netto Plus 1L + 1 Bệnh UniC 75 500ml = 990.000đ TẶNG THÊM 1 CHAI SIÊU LOANG TRẢI LUKE 100ML (120k) | Mua Thùng 20 Chai: 6.600.000đ (chỉ 330k/chai)",
-        "policyNote": "Quy chuẩn nhãn Cục BVTV: Lem lép hạt pha 14ml/bình 16L (20-22ml/bình 25L); Đạo ôn pha 20-25ml/bình 16L (30-40ml/bình 25L). Phun 2.5 bình 16L/1.000m² (400-500L nước/ha). Khui thùng kiểm tra trước khi nhận."
+        "policyNote": "Quy chuẩn: Phòng ngừa 1 chai 500ml pha 20 bình 25L xịt đủ 2 Hecta (chỉ ~19.8k/công). Khi có dịch đạo ôn/lem lép điều trị tăng liều pha 40-50ml/bình xịt 1 đến 1.2 Hecta để dập dịch đứng họng liền. Khui thùng kiểm tra trước khi nhận."
       },
       "specs": [
         {
@@ -484,19 +484,20 @@ window.AGRIZEN_DATA = {
       ],
       "dosage": {
         "dilutionRates": [
-          "💧 Phun bình 16L (Chuẩn nhãn): Lem lép hạt pha 14 ml / bình 16L. Đạo ôn pha 20 – 25 ml / bình 16L. Phun 2.5 bình/1.000m² (400 – 500L nước/ha).",
-          "💧 Phun bình máy 25L: Lem lép hạt pha 20 – 22 ml / bình 25L. Đạo ôn pha 30 – 40 ml / bình 25L (1 chai 500ml pha 12 – 16 bình 25L xịt 1 – 1.25 Hecta).",
-          "🛢️ Phun Phuy 200L: Pha 1 Chai 500ml cho 2 Phuy (400L nước) phun phòng ngừa 1 Hecta. Khi dập dịch đạo ôn nặng: Pha 1 Chai cho 1 – 1.5 Phuy.",
-          "🚁 Phun máy bay Drone: 1 Chai 500ml bay cho 1 – 1.2 Hecta (10 – 12 công tầm lớn). Dạng sữa SC tan 100%, không cặn, cực chuẩn cho Drone."
+          "💧 Phun bình máy 25L: Phòng ngừa pha 25 ml / bình 25L (1 chai 500ml pha 20 bình xịt đủ 2 Hecta ~ 20 công 1.000m²). Khi điều trị: Pha 40 – 50 ml / bình 25L (1 chai xịt 1 đến 1.2 Hecta ~ 10 – 12 công).",
+          "🛢️ Phun Phuy 200L: Pha 1 Chai 500ml cho 2 Phuy (400L nước) phun phòng ngừa 2 Hecta. Khi điều trị dập dịch đạo ôn nặng: Pha 1 Chai cho 1 – 1.2 Phuy (200 – 250L nước) xịt 1 – 1.2 Hecta.",
+          "🚁 Phun máy bay Drone: 1 Chai 500ml bay cho 2 Hecta phòng ngừa (20 công 1.000m²). Khi điều trị nấm bệnh: 1 Chai bay cho 1 đến 1.2 Hecta (10 – 12 công tầm lớn). Dạng sữa SC tan 100%, không cặn nghẹt béc Drone.",
+          "💧 Phun bình 16L (Chuẩn nhãn): Lem lép hạt pha 14 ml / bình 16L. Đạo ôn pha 20 – 25 ml / bình 16L. Phun 2.5 bình/1.000m² (400 – 500L nước/ha)."
         ],
         "crops": [
           {
-            "name": "Cây Lúa Nước (Đặc trị Lem Lép Hạt & Đạo Ôn)",
-            "rate": "Liều lượng 0.4 – 0.5 L/ha (1 Chai 500ml xịt 1 – 1.25 Ha)",
+            "name": "Cây Lúa Nước (Quy trình 4 Cữ Phun Toàn Diện: Phòng Ngừa 2 Ha / Điều Trị 1 - 1.2 Ha)",
+            "rate": "Liều phòng ngừa: 1 Chai 500ml xịt 2 Hecta (20 công 1.000m² / 15-16 công tầm lớn). Liều điều trị dập dịch: 1 Chai xịt 1 đến 1.2 Hecta (10 - 12 công).",
             "stages": [
-              "Cữ Chuẩn bị trổ (Đón đòng 45-50 NSS): Quét sạch mầm nấm bẹ lá bao đòng, bảo vệ tim đèn và cổ bông non.",
-              "Cữ Trổ đều (Trổ xẹt - trổ thoát 60-65 NSS): Cực kỳ quan trọng. Mát bông, chống đạo ôn cổ bông, bảo vệ hạt phấn trổ thoát rộ 100%.",
-              "Cữ Cong trái me (70-75 NSS): Phòng ngừa lem lép hạt, giữ xanh 3 lá đòng, dồn tinh bột vô hạt cậy sát cổ bông."
+              "Cữ 1 (20 – 25 NSS - Đẻ nhánh rộ): Phun phòng ngừa sớm đạo ôn chấm kim, nấm bệnh đợt sớm, đọt non bung xòe êm ru, kích nở chồi hữu hiệu mập ú, rễ tơ bung trắng phau bám chặt đất.",
+              "Cữ 2 (40 – 45 NSS - Làm đòng tim đèn 1-2 ly): CỰC KỲ QUAN TRỌNG. Dập tắt nấm đạo ôn lá, giữ bẹ lá đòng xanh dày như lá tre, bảo vệ tim đèn mập ú phát triển tối đa số gié và số hạt.",
+              "Cữ 3 (60 – 65 NSS - Trổ lẹt xẹt 3-5%): CỰC KỲ THEN CHỐT. Dạng SC sữa nano siêu mát bông 100%, bảo vệ hạt phấn hoa lúa phơi màu, đặc trị đạo ôn cổ bông, bôi trơn trổ thoát rộ đồng loạt, chống lem lép hạt.",
+              "Cữ 4 (70 – 75 NSS - Cong trái me / Đỏ đuôi): Tái lập hàng rào bảo vệ vỏ trấu sáng mẩy, hiệu ứng Greening Effect giữ xanh 3 lá đòng đến ngày gặt, dồn tinh bột nén chặt hạt cậy sát cổ bông."
             ]
           }
         ],
@@ -2228,7 +2229,7 @@ window.AGRIZEN_DATA = {
     "title": "4. CẨM NANG UPSELL SÂU + BỆNH (NETTO PLUS 10EW & THUỐC BỆNH UNIC 75 ASMILTATOP SUPER 400SC)",
     "notes": [
       "💰 CHÍNH SÁCH ĐÒN BẨY GIÁ MUA CÙNG ZAKI: Khi bà con đặt đơn Dinh Dưỡng ZAKi, được hưởng đặc quyền mua BỘ ĐÔI SÂU + BỆNH 3 HA GIÁ CHỈ 990.000đ (Tiết kiệm ngay 210.000đ so với giá mua lẻ ngoài thị trường: Sâu Netto Plus lẻ 650k/lon + Bệnh UniC 75 lẻ 550k/chai = 1.200.000đ).",
-      "🌾 ĐỊNH MỨC DIỆN TÍCH BỘ 990K: 1 Lon sâu Netto Plus 1L + 1 Chai bệnh UniC 75 500ml là liều phòng bệnh chuẩn đi cho 3 HECTA (30 công tầm cắt 1.000m² hoặc ~23 công tầm lớn 1.296m²). Khi ruộng chớm xuất hiện vết bệnh đạo ôn hoặc sâu gối lứa thì tăng liều gấp đôi (xịt 1.5 Ha = 15 công) để dập dịch đứng bệnh tức thì.",
+      "🌾 ĐỊNH MỨC DIỆN TÍCH: UniC 75 (Chai 500ml) dùng 2 Hecta phòng ngừa (20 công 1.000m²); Khi điều trị dập dịch xịt 1 đến 1.2 Hecta (10 - 12 công). Sâu Netto Plus 1L dùng 2 - 3 Hecta. Bộ đôi 990k (1 Sâu + 1 Bệnh) bao phủ trọn vẹn 2 Hecta liều phòng ngừa chuẩn chỉnh (hoặc 1 đến 1.2 Ha dập dịch toàn diện).",
       "🎁 ĐẶC QUYỀN QUÀ TẶNG: Khách chốt Combo Sâu Bệnh 990k được TẶNG THÊM 1 CHAI SIÊU LOANG TRẢI LUKE 100ML (Trị giá 120.000đ) giúp dẫn thuốc thấm sâu sau 15-30 phút qua khí khổng, chống mưa rửa trôi cực chuẩn cho bình xịt và Drone.",
       "🔬 BẢN CHẤT DƯỢC LÝ UNIC 75 (ASMILTATOP SUPER 400SC): Phối hợp 2 hoạt chất Azoxystrobin 250g/L + Difenoconazole 150g/L (400g/L SC sữa nano) nội hấp lưu dẫn 2 chiều cực mạnh, diệt nấm sau khi phun. Đặc trị Đạo ôn (cổ bông, lá) và Lem lép hạt, hiệu ứng Greening Effect giữ 3 lá đòng xanh dày như lá tre tới ngày gặt.",
       "⚠️ NGUYÊN TẮC PHỐI TRỘN AN TOÀN: Netto Plus 10EW và UniC 75 dạng sữa nano tương thích 100% khi pha chung với ZAKi Rước Đòng, Vô Gạo, Mix Combi, Luke. TUYỆT ĐỐI CẤM PHA CHUNG VỚI HỮU pH 14 (pH > 13) hoặc Thuốc gốc Đồng vô cơ."
@@ -2451,7 +2452,7 @@ window.AGRIZEN_DATA = {
         "Dưỡng trái non & Trước thu hoạch: Phun định kỳ 10-15 ngày giúp vỏ trái sáng đẹp, không thối cuống, không đen gai sầu riêng, tẩy sạch nám da lu cam bưởi.",
         "Mùa mưa ẩm ướt / Sau mưa dầm: Phun phủ chặn đứng nấm Phytophthora, Colletotrichum xâm nhập phá hoại cuống hoa, trái non."
       ],
-      "dosage": "• Cây ăn trái & Cây công nghiệp: Pha 1 Chai 500ml cho 400 – 500 Lít nước (2 – 2.5 Phuy 200L) cữ phòng ngừa; Khi bệnh nặng tăng liều pha 1 Chai cho 250 – 300 Lít nước.\n• Rau màu & Hoa kiểng: Phòng ngừa pha 20 – 25ml / bình 25L (1 chai 500ml cho 20 bình); Khi điều trị tăng liều 35 – 40ml / bình 25L.",
+      "dosage": "• Cây Lúa Nước: Phòng ngừa 1 Chai 500ml pha 400L nước xịt 2 Hecta (20 công 1.000m² / 15-16 công tầm lớn); Điều trị dập dịch đạo ôn và lem lép hạt pha 200 – 250L nước xịt 1 đến 1.2 Hecta (10 – 12 công).\n• Cây ăn trái & Cây công nghiệp: Pha 1 Chai 500ml cho 400 – 500 Lít nước (2 – 2.5 Phuy 200L) cữ phòng ngừa; Khi bệnh nặng tăng liều pha 1 Chai cho 250 – 300 Lít nước.\n• Rau màu & Hoa kiểng: Phòng ngừa pha 20 – 25ml / bình 25L (1 chai 500ml cho 20 bình); Khi điều trị tăng liều 35 – 40ml / bình 25L.",
       "effects": [
         "Đặc trị và quét sạch thán thư, nứt thân xì mủ, nấm hồng, đốm mắt cua, rỉ sắt, sương mai, phấn trắng.",
         "Dạng SC sữa nano cực mát bông, mát trái, an toàn tuyệt đối khi hoa đang nở nhụy, không gây táp hoa hay rụng trái non.",
